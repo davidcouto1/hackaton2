@@ -1,0 +1,84 @@
+{
+  "info": {
+    "name": "hackaton2",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Simulação de Crédito",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"valorDesejado\": 900.00,\n  \"prazo\": 5\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/simulacoes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "simulacoes"]
+        }
+      }
+    },
+    {
+      "name": "Listar Simulações",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/simulacoes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "simulacoes"]
+        }
+      }
+    },
+    {
+      "name": "Listar Produtos",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/produtos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "produtos"]
+        }
+      }
+    },
+    {
+      "name": "Listar Telemetria",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/telemetria",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "telemetria"]
+        }
+      }
+    }
+    ,
+    {
+      "name": "Relatório por Produto e Dia",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/relatorio/por-produto-dia?data=2025-08-24",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "relatorio", "por-produto-dia"],
+          "query": [
+            { "key": "data", "value": "2025-08-24" }
+          ]
+        }
+      }
+    }
+  ]
+}
