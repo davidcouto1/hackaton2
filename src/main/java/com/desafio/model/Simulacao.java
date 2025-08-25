@@ -45,4 +45,11 @@ public class Simulacao {
     public void setDataSimulacao(LocalDateTime dataSimulacao) { this.dataSimulacao = dataSimulacao; }
     public List<Parcela> getParcelas() { return parcelas; }
     public void setParcelas(List<Parcela> parcelas) { this.parcelas = parcelas; }
+
+    @PrePersist
+    public void prePersist() {
+        if (this.dataSimulacao == null) {
+            this.dataSimulacao = java.time.LocalDateTime.now();
+        }
+    }
 }

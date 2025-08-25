@@ -27,7 +27,7 @@ public class ProdutoService {
     @CircuitBreaker(name = "default")
     @RateLimiter(name = "default")
     public List<ProdutoDTO> buscarProdutos() throws Exception {
-    logger.info("[AUDITORIA] Buscando produtos no SQL Server");
+        logger.info("[AUDITORIA] Buscando produtos no SQL Server");
         List<ProdutoDTO> produtos = new ArrayList<>();
         try (Connection conn = DriverManager.getConnection(url, username, password)) {
             String sql = "SELECT CO_PRODUTO, NO_PRODUTO, PC_TAXA_JUROS, NU_MINIMO_MESES, NU_MAXIMO_MESES, VR_MINIMO, VR_MAXIMO FROM dbo.PRODUTO";
@@ -45,6 +45,9 @@ public class ProdutoService {
                     produtos.add(dto);
                 }
             }
+        } catch (Exception e) {
+            logger.error("[ERRO] Falha ao buscar produtos: " + e.getMessage(), e);
+            throw e;
         }
         return produtos;
     }

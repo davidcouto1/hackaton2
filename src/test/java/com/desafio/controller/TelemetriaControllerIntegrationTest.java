@@ -49,11 +49,8 @@ public class TelemetriaControllerIntegrationTest {
         var telemetria = new com.desafio.model.Telemetria();
         telemetria.setDataReferencia(java.time.LocalDate.now());
         telemetria.setNomeApi("/api/teste");
-        telemetria.setQtdRequisicoes(5);
-        telemetria.setTempoMedio(100);
-        telemetria.setTempoMinimo(80);
-        telemetria.setTempoMaximo(120);
-        telemetria.setPercentualSucesso(100.0);
+        telemetria.setTempoRespostaMs(100);
+        telemetria.setStatusHttp(200);
         mockMvc.perform(
             org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post("/api/telemetria")
                 .contentType(MediaType.APPLICATION_JSON)
