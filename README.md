@@ -11,10 +11,15 @@ API para simulação de crédito, consulta de produtos, persistência de simula�
 - Docker (opcional)
 
 ### Rodando localmente
-```bash
-mvn clean package spring-boot:repackage
-java -jar target/hackaton2-1.0-SNAPSHOT.jar
+```powershell
+mvn clean package
+mvn spring-boot:repackage
+java -jar target\hackaton2-1.0-SNAPSHOT.jar
 ```
+
+> **Importante:**
+> 1. Sempre rode `mvn clean package` antes de `mvn spring-boot:repackage` para evitar o erro "Source file must not be null".
+> 2. O comando `spring-boot:repackage` garante que o JAR seja executável e evita o erro "nenhum atributo de manifesto principal".
 
 ### Rodando com Docker
 ```bash

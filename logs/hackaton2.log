@@ -270,3 +270,403 @@
 2025-08-24T22:16:43.395-03:00  INFO 2164 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-08-24T22:16:43.402-03:00  INFO 2164 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-08-24T22:16:43.410-03:00  INFO 2164 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-24T22:20:25.564-03:00  INFO 10684 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Starting AuditoriaControllerIntegrationTest using Java 17.0.16 with PID 10684 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-24T22:20:25.573-03:00  INFO 10684 --- [main] c.d.c.AuditoriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T22:20:44.666-03:00  INFO 10684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-24T22:20:47.162-03:00  INFO 10684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2383 ms. Found 3 JPA repository interfaces.
+2025-08-24T22:20:52.558-03:00  INFO 10684 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-24T22:20:54.161-03:00  INFO 10684 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-24T22:20:54.168-03:00  INFO 10684 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-24T22:20:57.812-03:00  INFO 10684 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-24T22:20:58.666-03:00  INFO 10684 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-24T22:20:58.868-03:00  INFO 10684 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-24T22:21:02.112-03:00  INFO 10684 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-24T22:21:02.382-03:00  WARN 10684 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24T22:21:06.562-03:00  INFO 10684 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-24T22:21:06.601-03:00  INFO 10684 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:21:18.774-03:00  WARN 10684 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24T22:21:28.284-03:00  INFO 10684 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-24T22:21:28.327-03:00  INFO 10684 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-24T22:21:28.420-03:00  INFO 10684 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-08-24T22:21:28.609-03:00  INFO 10684 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 272 ms
+2025-08-24T22:21:28.999-03:00  INFO 10684 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Started AuditoriaControllerIntegrationTest in 66.297 seconds (process running for 75.233)
+2025-08-24T22:21:32.318-03:00  INFO 10684 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.RelatorioControllerIntegrationTest]: RelatorioControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:21:32.354-03:00  INFO 10684 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.RelatorioControllerIntegrationTest
+2025-08-24T22:21:33.315-03:00  INFO 10684 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@50cefed2
+2025-08-24T22:21:33.319-03:00  INFO 10684 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:21:35.038-03:00  INFO 10684 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@257a59c
+2025-08-24T22:21:35.039-03:00  INFO 10684 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:21:36.002-03:00  INFO 10684 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:21:38.639-03:00  INFO 10684 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.SimulacaoControllerIntegrationTest]: SimulacaoControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:21:38.654-03:00  INFO 10684 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.SimulacaoControllerIntegrationTest
+2025-08-24T22:21:38.769-03:00  INFO 10684 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@223459f
+2025-08-24T22:21:38.770-03:00  INFO 10684 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:21:39.134-03:00  INFO 10684 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@328f4e46
+2025-08-24T22:21:39.141-03:00  INFO 10684 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:21:39.189-03:00  INFO 10684 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:21:39.333-03:00  INFO 10684 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.SimulacaoControllerValidationTest]: SimulacaoControllerValidationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:21:39.345-03:00  INFO 10684 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.SimulacaoControllerValidationTest
+2025-08-24T22:21:39.738-03:00  INFO 10684 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.TelemetriaControllerIntegrationTest]: TelemetriaControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:21:39.889-03:00  INFO 10684 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.TelemetriaControllerIntegrationTest
+2025-08-24T22:21:40.036-03:00  INFO 10684 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@7de47f81
+2025-08-24T22:21:40.264-03:00  INFO 10684 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:21:40.612-03:00  INFO 10684 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:21:40.829-03:00  INFO 10684 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:21:42.670-03:00  INFO 10684 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:21:42.697-03:00  INFO 10684 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-24T22:21:43.031-03:00  INFO 10684 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-24T22:24:05.571-03:00  INFO 6660 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Starting AuditoriaControllerIntegrationTest using Java 17.0.16 with PID 6660 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-24T22:24:05.576-03:00  INFO 6660 --- [main] c.d.c.AuditoriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T22:24:10.122-03:00  INFO 6660 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-24T22:24:10.724-03:00  INFO 6660 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 535 ms. Found 3 JPA repository interfaces.
+2025-08-24T22:24:13.170-03:00  INFO 6660 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-24T22:24:13.988-03:00  INFO 6660 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-24T22:24:13.995-03:00  INFO 6660 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-24T22:24:14.564-03:00  INFO 6660 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-24T22:24:14.795-03:00  INFO 6660 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-24T22:24:14.952-03:00  INFO 6660 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-24T22:24:15.957-03:00  INFO 6660 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-24T22:24:16.127-03:00  WARN 6660 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24T22:24:18.992-03:00  INFO 6660 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-24T22:24:19.000-03:00  INFO 6660 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:24:23.003-03:00  WARN 6660 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24T22:24:28.615-03:00  INFO 6660 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-24T22:24:28.616-03:00  INFO 6660 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-24T22:24:28.662-03:00  INFO 6660 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-08-24T22:24:28.756-03:00  INFO 6660 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 139 ms
+2025-08-24T22:24:28.998-03:00  INFO 6660 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Started AuditoriaControllerIntegrationTest in 24.387 seconds (process running for 29.869)
+2025-08-24T22:24:32.487-03:00  INFO 6660 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.RelatorioControllerIntegrationTest]: RelatorioControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:24:32.526-03:00  INFO 6660 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.RelatorioControllerIntegrationTest
+2025-08-24T22:24:32.921-03:00  INFO 6660 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@289bb421
+2025-08-24T22:24:32.923-03:00  INFO 6660 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:24:34.415-03:00  INFO 6660 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@2e13c72b
+2025-08-24T22:24:34.416-03:00  INFO 6660 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:24:34.762-03:00  INFO 6660 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:24:35.518-03:00  INFO 6660 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.SimulacaoControllerIntegrationTest]: SimulacaoControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:24:35.528-03:00  INFO 6660 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.SimulacaoControllerIntegrationTest
+2025-08-24T22:24:35.630-03:00  INFO 6660 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@2be9dfb0
+2025-08-24T22:24:35.631-03:00  INFO 6660 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:24:35.859-03:00  INFO 6660 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@deddccb
+2025-08-24T22:24:35.860-03:00  INFO 6660 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:24:35.888-03:00  INFO 6660 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:24:35.956-03:00  INFO 6660 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.SimulacaoControllerValidationTest]: SimulacaoControllerValidationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:24:35.983-03:00  INFO 6660 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.SimulacaoControllerValidationTest
+2025-08-24T22:24:36.211-03:00  INFO 6660 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.TelemetriaControllerIntegrationTest]: TelemetriaControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:24:36.316-03:00  INFO 6660 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.TelemetriaControllerIntegrationTest
+2025-08-24T22:24:36.465-03:00  INFO 6660 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@2351ad5a
+2025-08-24T22:24:36.588-03:00  INFO 6660 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:24:36.684-03:00  INFO 6660 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:24:36.790-03:00  INFO 6660 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:24:37.176-03:00  INFO 6660 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:24:37.185-03:00  INFO 6660 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-24T22:24:37.192-03:00  INFO 6660 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-24T22:29:57.485-03:00  INFO 464 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Starting AuditoriaControllerIntegrationTest using Java 17.0.16 with PID 464 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-24T22:29:57.491-03:00  INFO 464 --- [main] c.d.c.AuditoriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T22:30:03.306-03:00  INFO 464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-24T22:30:03.810-03:00  INFO 464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 474 ms. Found 3 JPA repository interfaces.
+2025-08-24T22:30:06.893-03:00  INFO 464 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-24T22:30:07.814-03:00  INFO 464 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-24T22:30:07.820-03:00  INFO 464 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-24T22:30:08.537-03:00  INFO 464 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-24T22:30:08.808-03:00  INFO 464 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-24T22:30:08.987-03:00  INFO 464 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-24T22:30:10.087-03:00  INFO 464 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-24T22:30:10.338-03:00  WARN 464 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24T22:30:13.180-03:00  INFO 464 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-24T22:30:13.188-03:00  INFO 464 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:30:18.159-03:00  WARN 464 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24T22:30:24.135-03:00  INFO 464 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-24T22:30:24.137-03:00  INFO 464 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-24T22:30:24.181-03:00  INFO 464 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-08-24T22:30:24.355-03:00  INFO 464 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 213 ms
+2025-08-24T22:30:24.639-03:00  INFO 464 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Started AuditoriaControllerIntegrationTest in 30.03 seconds (process running for 35.931)
+2025-08-24T22:30:26.851-03:00  INFO 464 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.RelatorioControllerIntegrationTest]: RelatorioControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:30:26.865-03:00  INFO 464 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.RelatorioControllerIntegrationTest
+2025-08-24T22:30:27.471-03:00  INFO 464 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@b772e2b
+2025-08-24T22:30:27.474-03:00  INFO 464 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:30:29.388-03:00  INFO 464 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@51c316cb
+2025-08-24T22:30:29.390-03:00  INFO 464 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:30:29.916-03:00  INFO 464 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:30:31.198-03:00  INFO 464 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.SimulacaoControllerIntegrationTest]: SimulacaoControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:30:31.211-03:00  INFO 464 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.SimulacaoControllerIntegrationTest
+2025-08-24T22:30:31.262-03:00  INFO 464 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@44cefd71
+2025-08-24T22:30:31.265-03:00  INFO 464 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:30:31.523-03:00  INFO 464 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@6307382
+2025-08-24T22:30:31.524-03:00  INFO 464 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:30:31.568-03:00  INFO 464 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:30:31.682-03:00  INFO 464 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.SimulacaoControllerValidationTest]: SimulacaoControllerValidationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:30:31.694-03:00  INFO 464 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.SimulacaoControllerValidationTest
+2025-08-24T22:30:31.949-03:00  INFO 464 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.TelemetriaControllerIntegrationTest]: TelemetriaControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:30:31.967-03:00  INFO 464 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.TelemetriaControllerIntegrationTest
+2025-08-24T22:30:32.116-03:00  INFO 464 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@28ef75c
+2025-08-24T22:30:32.244-03:00  INFO 464 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:30:32.378-03:00  INFO 464 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:30:32.482-03:00  INFO 464 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:30:33.617-03:00  INFO 464 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:30:33.661-03:00  INFO 464 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-24T22:30:33.780-03:00  INFO 464 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-24T22:34:05.215-03:00  INFO 14364 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Starting AuditoriaControllerIntegrationTest using Java 17.0.16 with PID 14364 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-24T22:34:05.222-03:00  INFO 14364 --- [main] c.d.c.AuditoriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T22:34:10.092-03:00  INFO 14364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-24T22:34:10.664-03:00  INFO 14364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 537 ms. Found 3 JPA repository interfaces.
+2025-08-24T22:34:13.645-03:00  INFO 14364 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-24T22:34:14.547-03:00  INFO 14364 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-24T22:34:14.553-03:00  INFO 14364 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-24T22:34:15.287-03:00  INFO 14364 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-24T22:34:15.565-03:00  INFO 14364 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-24T22:34:15.846-03:00  INFO 14364 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-24T22:34:17.466-03:00  INFO 14364 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-24T22:34:17.654-03:00  WARN 14364 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24T22:34:20.801-03:00  INFO 14364 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-24T22:34:20.809-03:00  INFO 14364 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:34:25.926-03:00  WARN 14364 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24T22:34:32.178-03:00  INFO 14364 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-24T22:34:32.180-03:00  INFO 14364 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-24T22:34:32.213-03:00  INFO 14364 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-08-24T22:34:32.301-03:00  INFO 14364 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 120 ms
+2025-08-24T22:34:32.653-03:00  INFO 14364 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Started AuditoriaControllerIntegrationTest in 28.855 seconds (process running for 32.617)
+2025-08-24T22:34:34.926-03:00  INFO 14364 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.RelatorioControllerIntegrationTest]: RelatorioControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:34:34.966-03:00  INFO 14364 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.RelatorioControllerIntegrationTest
+2025-08-24T22:34:35.680-03:00  INFO 14364 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@6626204e
+2025-08-24T22:34:35.706-03:00  INFO 14364 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:34:37.117-03:00  INFO 14364 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@52b11deb
+2025-08-24T22:34:37.118-03:00  INFO 14364 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:34:37.694-03:00  INFO 14364 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:34:39.204-03:00  INFO 14364 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.SimulacaoControllerIntegrationTest]: SimulacaoControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:34:39.273-03:00  INFO 14364 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.SimulacaoControllerIntegrationTest
+2025-08-24T22:34:39.309-03:00  INFO 14364 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@67f3b72d
+2025-08-24T22:34:39.314-03:00  INFO 14364 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:34:39.597-03:00  INFO 14364 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@538a1adf
+2025-08-24T22:34:39.598-03:00  INFO 14364 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:34:39.634-03:00  INFO 14364 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:34:39.741-03:00  INFO 14364 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.SimulacaoControllerValidationTest]: SimulacaoControllerValidationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:34:39.754-03:00  INFO 14364 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.SimulacaoControllerValidationTest
+2025-08-24T22:34:40.041-03:00  INFO 14364 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.TelemetriaControllerIntegrationTest]: TelemetriaControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:34:40.055-03:00  INFO 14364 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.TelemetriaControllerIntegrationTest
+2025-08-24T22:34:40.184-03:00  INFO 14364 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@33cdd
+2025-08-24T22:34:40.303-03:00  INFO 14364 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:34:40.375-03:00  INFO 14364 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:34:40.477-03:00  INFO 14364 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:34:41.324-03:00  INFO 14364 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:34:41.336-03:00  INFO 14364 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-24T22:34:41.387-03:00  INFO 14364 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-24T22:35:46.450-03:00  INFO 3396 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Starting AuditoriaControllerIntegrationTest using Java 17.0.16 with PID 3396 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-24T22:35:46.457-03:00  INFO 3396 --- [main] c.d.c.AuditoriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T22:35:51.685-03:00  INFO 3396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-24T22:35:52.383-03:00  INFO 3396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 634 ms. Found 3 JPA repository interfaces.
+2025-08-24T22:35:55.271-03:00  INFO 3396 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-24T22:35:56.160-03:00  INFO 3396 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-24T22:35:56.166-03:00  INFO 3396 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-24T22:35:56.850-03:00  INFO 3396 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-24T22:35:57.119-03:00  INFO 3396 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-24T22:35:57.262-03:00  INFO 3396 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-24T22:35:58.403-03:00  INFO 3396 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-24T22:35:58.615-03:00  WARN 3396 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24T22:36:02.018-03:00  INFO 3396 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-24T22:36:02.026-03:00  INFO 3396 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:36:06.873-03:00  WARN 3396 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24T22:36:12.632-03:00  INFO 3396 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-24T22:36:12.633-03:00  INFO 3396 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-24T22:36:12.670-03:00  INFO 3396 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-08-24T22:36:12.809-03:00  INFO 3396 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 175 ms
+2025-08-24T22:36:13.114-03:00  INFO 3396 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Started AuditoriaControllerIntegrationTest in 27.713 seconds (process running for 31.779)
+2025-08-24T22:36:15.394-03:00  INFO 3396 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.RelatorioControllerIntegrationTest]: RelatorioControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:36:15.449-03:00  INFO 3396 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.RelatorioControllerIntegrationTest
+2025-08-24T22:36:15.895-03:00  INFO 3396 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@19106753
+2025-08-24T22:36:15.897-03:00  INFO 3396 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:36:17.643-03:00  INFO 3396 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@647b7f63
+2025-08-24T22:36:17.645-03:00  INFO 3396 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:36:18.239-03:00  INFO 3396 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:36:19.557-03:00  INFO 3396 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.SimulacaoControllerIntegrationTest]: SimulacaoControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:36:19.572-03:00  INFO 3396 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.SimulacaoControllerIntegrationTest
+2025-08-24T22:36:19.683-03:00  INFO 3396 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@13b85e31
+2025-08-24T22:36:19.690-03:00  INFO 3396 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:36:19.935-03:00  INFO 3396 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@73145db2
+2025-08-24T22:36:19.936-03:00  INFO 3396 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:36:19.982-03:00  INFO 3396 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:36:20.070-03:00  INFO 3396 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.SimulacaoControllerValidationTest]: SimulacaoControllerValidationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:36:20.078-03:00  INFO 3396 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.SimulacaoControllerValidationTest
+2025-08-24T22:36:20.354-03:00  INFO 3396 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.TelemetriaControllerIntegrationTest]: TelemetriaControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:36:20.399-03:00  INFO 3396 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.TelemetriaControllerIntegrationTest
+2025-08-24T22:36:20.639-03:00  INFO 3396 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@32f3174d
+2025-08-24T22:36:20.740-03:00  INFO 3396 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:36:20.874-03:00  INFO 3396 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:36:20.989-03:00  INFO 3396 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:36:21.236-03:00  INFO 3396 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:36:21.257-03:00  INFO 3396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-24T22:36:21.271-03:00  INFO 3396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-24T22:37:32.513-03:00  INFO 13256 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Starting AuditoriaControllerIntegrationTest using Java 17.0.16 with PID 13256 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-24T22:37:32.522-03:00  INFO 13256 --- [main] c.d.c.AuditoriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T22:37:37.709-03:00  INFO 13256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-24T22:37:38.175-03:00  INFO 13256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 441 ms. Found 3 JPA repository interfaces.
+2025-08-24T22:37:40.948-03:00  INFO 13256 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-24T22:37:41.834-03:00  INFO 13256 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-24T22:37:41.840-03:00  INFO 13256 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-24T22:37:42.611-03:00  INFO 13256 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-24T22:37:43.307-03:00  INFO 13256 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-24T22:37:43.459-03:00  INFO 13256 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-24T22:37:44.570-03:00  INFO 13256 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-24T22:37:44.784-03:00  WARN 13256 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24T22:37:47.870-03:00  INFO 13256 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-24T22:37:47.878-03:00  INFO 13256 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:37:53.184-03:00  WARN 13256 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24T22:37:58.418-03:00  INFO 13256 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-24T22:37:58.419-03:00  INFO 13256 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-24T22:37:58.449-03:00  INFO 13256 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-08-24T22:37:58.601-03:00  INFO 13256 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 180 ms
+2025-08-24T22:37:58.864-03:00  INFO 13256 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Started AuditoriaControllerIntegrationTest in 27.549 seconds (process running for 31.685)
+2025-08-24T22:38:01.536-03:00  INFO 13256 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.RelatorioControllerIntegrationTest]: RelatorioControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:38:01.590-03:00  INFO 13256 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.RelatorioControllerIntegrationTest
+2025-08-24T22:38:02.288-03:00  INFO 13256 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@4ed70448
+2025-08-24T22:38:02.290-03:00  INFO 13256 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:38:03.876-03:00  INFO 13256 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@29810fa0
+2025-08-24T22:38:03.878-03:00  INFO 13256 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:38:04.457-03:00  INFO 13256 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:38:06.273-03:00  INFO 13256 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.SimulacaoControllerIntegrationTest]: SimulacaoControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:38:06.288-03:00  INFO 13256 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.SimulacaoControllerIntegrationTest
+2025-08-24T22:38:06.368-03:00  INFO 13256 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@7499553f
+2025-08-24T22:38:06.370-03:00  INFO 13256 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:38:06.620-03:00  INFO 13256 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@31a89b54
+2025-08-24T22:38:06.621-03:00  INFO 13256 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:38:06.676-03:00  INFO 13256 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:38:06.836-03:00  INFO 13256 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.SimulacaoControllerValidationTest]: SimulacaoControllerValidationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:38:06.848-03:00  INFO 13256 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.SimulacaoControllerValidationTest
+2025-08-24T22:38:07.057-03:00  INFO 13256 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.TelemetriaControllerIntegrationTest]: TelemetriaControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:38:07.124-03:00  INFO 13256 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.TelemetriaControllerIntegrationTest
+2025-08-24T22:38:07.321-03:00  INFO 13256 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@288cca9
+2025-08-24T22:38:07.442-03:00  INFO 13256 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:38:07.583-03:00  INFO 13256 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:38:07.681-03:00  INFO 13256 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:38:08.307-03:00  INFO 13256 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:38:08.366-03:00  INFO 13256 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-24T22:38:08.378-03:00  INFO 13256 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-24T22:39:46.594-03:00  INFO 13488 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Starting AuditoriaControllerIntegrationTest using Java 17.0.16 with PID 13488 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-24T22:39:46.616-03:00  INFO 13488 --- [main] c.d.c.AuditoriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T22:39:51.672-03:00  INFO 13488 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-24T22:39:52.229-03:00  INFO 13488 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 520 ms. Found 3 JPA repository interfaces.
+2025-08-24T22:39:55.277-03:00  INFO 13488 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-24T22:39:56.149-03:00  INFO 13488 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-24T22:39:56.154-03:00  INFO 13488 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-24T22:39:56.821-03:00  INFO 13488 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-24T22:39:57.081-03:00  INFO 13488 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-24T22:39:57.244-03:00  INFO 13488 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-24T22:39:58.371-03:00  INFO 13488 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-24T22:39:58.595-03:00  WARN 13488 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24T22:40:01.830-03:00  INFO 13488 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-24T22:40:01.838-03:00  INFO 13488 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:40:06.349-03:00  WARN 13488 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24T22:40:12.057-03:00  INFO 13488 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-24T22:40:12.058-03:00  INFO 13488 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-24T22:40:12.111-03:00  INFO 13488 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-08-24T22:40:12.261-03:00  INFO 13488 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 203 ms
+2025-08-24T22:40:12.522-03:00  INFO 13488 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Started AuditoriaControllerIntegrationTest in 27.027 seconds (process running for 30.983)
+2025-08-24T22:40:14.678-03:00  INFO 13488 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.RelatorioControllerIntegrationTest]: RelatorioControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:40:14.703-03:00  INFO 13488 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.RelatorioControllerIntegrationTest
+2025-08-24T22:40:15.307-03:00  INFO 13488 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@68b2a686
+2025-08-24T22:40:15.309-03:00  INFO 13488 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:40:16.986-03:00  INFO 13488 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@60cc749d
+2025-08-24T22:40:16.987-03:00  INFO 13488 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:40:17.465-03:00  INFO 13488 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:40:18.596-03:00  INFO 13488 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.SimulacaoControllerIntegrationTest]: SimulacaoControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:40:18.661-03:00  INFO 13488 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.SimulacaoControllerIntegrationTest
+2025-08-24T22:40:18.712-03:00  INFO 13488 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@72ba8111
+2025-08-24T22:40:18.716-03:00  INFO 13488 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:40:18.968-03:00  INFO 13488 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@3c9b416a
+2025-08-24T22:40:18.969-03:00  INFO 13488 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:40:19.007-03:00  INFO 13488 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:40:19.179-03:00  INFO 13488 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.SimulacaoControllerValidationTest]: SimulacaoControllerValidationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:40:19.191-03:00  INFO 13488 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.SimulacaoControllerValidationTest
+2025-08-24T22:40:19.459-03:00  INFO 13488 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.TelemetriaControllerIntegrationTest]: TelemetriaControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:40:19.469-03:00  INFO 13488 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.TelemetriaControllerIntegrationTest
+2025-08-24T22:40:19.629-03:00  INFO 13488 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@6a35f9fd
+2025-08-24T22:40:19.772-03:00  INFO 13488 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:40:19.928-03:00  INFO 13488 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:40:19.977-03:00  INFO 13488 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:40:20.715-03:00  INFO 13488 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:40:20.725-03:00  INFO 13488 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-24T22:40:20.733-03:00  INFO 13488 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-24T22:41:28.673-03:00  INFO 2160 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Starting AuditoriaControllerIntegrationTest using Java 17.0.16 with PID 2160 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-24T22:41:28.679-03:00  INFO 2160 --- [main] c.d.c.AuditoriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T22:41:33.689-03:00  INFO 2160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-24T22:41:34.255-03:00  INFO 2160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 529 ms. Found 3 JPA repository interfaces.
+2025-08-24T22:41:37.267-03:00  INFO 2160 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-24T22:41:38.168-03:00  INFO 2160 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-24T22:41:38.177-03:00  INFO 2160 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-24T22:41:39.223-03:00  INFO 2160 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-24T22:41:39.473-03:00  INFO 2160 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-24T22:41:39.622-03:00  INFO 2160 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-24T22:41:40.768-03:00  INFO 2160 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-24T22:41:40.986-03:00  WARN 2160 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24T22:41:44.393-03:00  INFO 2160 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-24T22:41:44.401-03:00  INFO 2160 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:41:50.212-03:00  WARN 2160 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24T22:41:57.829-03:00  INFO 2160 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-24T22:41:57.830-03:00  INFO 2160 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-24T22:41:57.866-03:00  INFO 2160 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-08-24T22:41:58.002-03:00  INFO 2160 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 171 ms
+2025-08-24T22:41:58.294-03:00  INFO 2160 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Started AuditoriaControllerIntegrationTest in 30.788 seconds (process running for 34.611)
+2025-08-24T22:42:00.593-03:00  INFO 2160 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.RelatorioControllerIntegrationTest]: RelatorioControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:42:00.610-03:00  INFO 2160 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.RelatorioControllerIntegrationTest
+2025-08-24T22:42:01.264-03:00  INFO 2160 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@29ad358c
+2025-08-24T22:42:01.268-03:00  INFO 2160 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:42:05.169-03:00  INFO 2160 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@70d336f5
+2025-08-24T22:42:05.170-03:00  INFO 2160 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:42:06.008-03:00  INFO 2160 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:42:09.388-03:00  INFO 2160 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.SimulacaoControllerIntegrationTest]: SimulacaoControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:42:09.406-03:00  INFO 2160 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.SimulacaoControllerIntegrationTest
+2025-08-24T22:42:09.441-03:00  INFO 2160 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@4de37f33
+2025-08-24T22:42:09.446-03:00  INFO 2160 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:42:09.692-03:00  INFO 2160 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@22c2365d
+2025-08-24T22:42:09.694-03:00  INFO 2160 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:42:09.730-03:00  INFO 2160 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:42:09.806-03:00  INFO 2160 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.SimulacaoControllerValidationTest]: SimulacaoControllerValidationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:42:09.837-03:00  INFO 2160 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.SimulacaoControllerValidationTest
+2025-08-24T22:42:10.092-03:00  INFO 2160 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.TelemetriaControllerIntegrationTest]: TelemetriaControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:42:10.103-03:00  INFO 2160 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.TelemetriaControllerIntegrationTest
+2025-08-24T22:42:10.246-03:00  INFO 2160 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@6a4fb518
+2025-08-24T22:42:10.345-03:00  INFO 2160 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:42:10.478-03:00  INFO 2160 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:42:10.625-03:00  INFO 2160 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:42:10.835-03:00  INFO 2160 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:42:10.842-03:00  INFO 2160 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-24T22:42:10.849-03:00  INFO 2160 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-24T22:43:04.254-03:00  INFO 14760 --- [main] com.desafio.Hackaton2Application         : Starting Hackaton2Application v1.0-SNAPSHOT using Java 17.0.16 with PID 14760 (C:\Desenvolvimento\projetos\hackaton2\target\hackaton2-1.0-SNAPSHOT.jar started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-24T22:43:04.328-03:00  INFO 14760 --- [main] com.desafio.Hackaton2Application         : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T22:43:09.257-03:00  INFO 14760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-24T22:43:09.830-03:00  INFO 14760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 513 ms. Found 3 JPA repository interfaces.
+2025-08-24T22:43:14.061-03:00  INFO 14760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-24T22:43:14.291-03:00  INFO 14760 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-24T22:43:14.365-03:00  INFO 14760 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-08-24T22:43:14.662-03:00  INFO 14760 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-24T22:43:14.666-03:00  INFO 14760 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9942 ms
+2025-08-24T22:43:16.087-03:00  INFO 14760 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-24T22:43:16.922-03:00  INFO 14760 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-24T22:43:16.937-03:00  INFO 14760 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-24T22:43:17.621-03:00  INFO 14760 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-24T22:43:17.925-03:00  INFO 14760 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-24T22:43:18.095-03:00  INFO 14760 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-24T22:43:19.205-03:00  INFO 14760 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-24T22:43:19.444-03:00  WARN 14760 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24T22:43:22.681-03:00  INFO 14760 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-24T22:43:22.690-03:00  INFO 14760 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:43:26.288-03:00  WARN 14760 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24T22:43:31.640-03:00  INFO 14760 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-08-24T22:43:32.003-03:00  INFO 14760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-08-24T22:43:32.090-03:00  INFO 14760 --- [main] com.desafio.Hackaton2Application         : Started Hackaton2Application in 30.231 seconds (process running for 32.288)
+2025-08-24T22:44:59.892-03:00  INFO 14760 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-24T22:44:59.897-03:00  INFO 14760 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-24T22:44:59.961-03:00  INFO 14760 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 48 ms
+2025-08-24T22:45:03.490-03:00  INFO 14760 --- [http-nio-8080-exec-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 2514 ms
+2025-08-24T22:45:08.060-03:00  INFO 14760 --- [http-nio-8080-exec-6] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@7e0eff00
+2025-08-24T22:45:08.063-03:00  INFO 14760 --- [http-nio-8080-exec-6] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:45:09.894-03:00  INFO 14760 --- [http-nio-8080-exec-6] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@5acfc556
+2025-08-24T22:45:10.036-03:00  INFO 14760 --- [http-nio-8080-exec-6] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:45:10.877-03:00  INFO 14760 --- [http-nio-8080-exec-6] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:47:18.466-03:00  INFO 14760 --- [http-nio-8080-exec-10] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@3b9946af
+2025-08-24T22:47:18.468-03:00  INFO 14760 --- [http-nio-8080-exec-10] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:47:18.743-03:00  INFO 14760 --- [http-nio-8080-exec-10] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@662a7436
+2025-08-24T22:47:18.751-03:00  INFO 14760 --- [http-nio-8080-exec-10] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:47:20.641-03:00  INFO 14760 --- [http-nio-8080-exec-10] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 2, Prazo: 47, Valor: 49000.00
+2025-08-24T22:47:49.880-03:00  INFO 14760 --- [http-nio-8080-exec-1] com.desafio.service.SimulacaoService     : [AUDITORIA] Listando simulações
+2025-08-24T22:47:59.374-03:00  INFO 14760 --- [http-nio-8080-exec-4] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:48:16.994-03:00  INFO 14760 --- [http-nio-8080-exec-9] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias

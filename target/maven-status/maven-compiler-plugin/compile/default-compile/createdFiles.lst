@@ -1,8 +1,10 @@
 com\desafio\Main.class
 com\desafio\config\SwaggerConfig.class
+com\desafio\exception\GlobalExceptionHandler.class
 com\desafio\service\AmortizacaoService$ParcelaDTO.class
 com\desafio\service\AmortizacaoService.class
 com\desafio\service\ProdutoService$ProdutoDTO.class
+com\desafio\controller\AuditoriaController.class
 com\desafio\controller\SimulacaoController.class
 com\desafio\service\ProdutoService.class
 com\desafio\model\Simulacao.class
