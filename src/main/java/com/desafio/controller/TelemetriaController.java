@@ -52,23 +52,16 @@ public class TelemetriaController {
     })
     @GetMapping
     public Object listarTelemetria(@RequestParam(value = "data", required = false) String data) {
-        java.time.LocalDate dataRef = null;
+        java.time.LocalDate dataRef;
         if (data != null) {
             dataRef = java.time.LocalDate.parse(data);
-        }
-        var listaEndpoints = dataRef != null ? telemetriaService.buscarPorData(dataRef) : telemetriaService.buscarTodosAgrupados();
-        java.util.Map<String, Object> envelope = new java.util.HashMap<>();
-        // Preenche dataReferencia corretamente
-        if (dataRef != null) {
-            envelope.put("dataReferencia", dataRef);
-        } else if (!listaEndpoints.isEmpty() && listaEndpoints.get(0) instanceof com.desafio.dto.TelemetriaDTO) {
-            // Se houver dados, tenta pegar a data do primeiro DTO (se existir)
-            // envelope.put("dataReferencia", ...); // Se DTO tiver campo de data
-            envelope.put("dataReferencia", java.time.LocalDate.now());
         } else {
-            envelope.put("dataReferencia", java.time.LocalDate.now());
+            dataRef = java.time.LocalDate.now();
         }
-        envelope.put("endpoints", listaEndpoints);
+        var listaEndpoints = telemetriaService.buscarPorData(dataRef);
+        java.util.Map<String, Object> envelope = new java.util.HashMap<>();
+        envelope.put("dataReferencia", dataRef);
+        envelope.put("listaEndpoints", listaEndpoints);
         return envelope;
     }
 }

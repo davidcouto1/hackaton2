@@ -1,6 +1,7 @@
-com\desafio\controller\SimulacaoControllerValidationTest.class
 com\desafio\repository\TelemetriaRepositoryIntegrationTest.class
 com\desafio\controller\RelatorioControllerIntegrationTest.class
+com\desafio\integration\ApplicationIntegrationTest.class
+com\desafio\controller\SimulacaoControllerValidationTest.class
 com\desafio\controller\TelemetriaControllerIntegrationTest.class
 com\desafio\controller\AuditoriaControllerIntegrationTest.class
 com\desafio\controller\SimulacaoControllerIntegrationTest.class
