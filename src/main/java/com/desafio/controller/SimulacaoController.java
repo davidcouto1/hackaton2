@@ -1,4 +1,3 @@
-
 package com.desafio.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -44,36 +43,44 @@ public class SimulacaoController {
         if (simulacao.getPrazo() < 1) {
             return ResponseEntity.badRequest().body(java.util.Map.of("erro", "Prazo deve ser maior ou igual a 1."));
         }
-        Simulacao resultado = simulacaoService.salvarSimulacao(simulacao);
-        // Agrupar parcelas por tipo
-        var sacParcelas = resultado.getParcelas().stream().filter(p -> "SAC".equals(p.getTipo())).toList();
-        var priceParcelas = resultado.getParcelas().stream().filter(p -> "PRICE".equals(p.getTipo())).toList();
-        var envelope = new java.util.LinkedHashMap<String, Object>();
-        envelope.put("idSimulacao", resultado.getIdSimulacao());
-        envelope.put("codigoProduto", resultado.getCodigoProduto());
-        envelope.put("nomeProduto", resultado.getNomeProduto());
-        envelope.put("taxaJuros", resultado.getTaxaJuros());
-        java.util.List<java.util.Map<String, Object>> resultadosSimulacao = new java.util.ArrayList<>();
-        java.util.Map<String, Object> sac = new java.util.LinkedHashMap<>();
-        sac.put("tipo", "SAC");
-        sac.put("parcelas", sacParcelas.stream().map(p -> java.util.Map.of(
-            "numero", p.getNumero(),
-            "valorAmortizacao", p.getValorAmortizacao(),
-            "valorJuros", p.getValorJuros(),
-            "valorPrestacao", p.getValorPrestacao()
-        )).toList());
-        resultadosSimulacao.add(sac);
-        java.util.Map<String, Object> price = new java.util.LinkedHashMap<>();
-        price.put("tipo", "PRICE");
-        price.put("parcelas", priceParcelas.stream().map(p -> java.util.Map.of(
-            "numero", p.getNumero(),
-            "valorAmortizacao", p.getValorAmortizacao(),
-            "valorJuros", p.getValorJuros(),
-            "valorPrestacao", p.getValorPrestacao()
-        )).toList());
-        resultadosSimulacao.add(price);
-        envelope.put("resultadosSimulacao", resultadosSimulacao);
-        return ResponseEntity.ok(envelope);
+        try {
+            Simulacao resultado = simulacaoService.salvarSimulacao(simulacao);
+            // Agrupar parcelas por tipo
+            var sacParcelas = resultado.getParcelas().stream().filter(p -> "SAC".equals(p.getTipo())).toList();
+            var priceParcelas = resultado.getParcelas().stream().filter(p -> "PRICE".equals(p.getTipo())).toList();
+            var envelope = new java.util.LinkedHashMap<String, Object>();
+            envelope.put("idSimulacao", resultado.getIdSimulacao());
+            envelope.put("codigoProduto", resultado.getCodigoProduto());
+            envelope.put("nomeProduto", resultado.getNomeProduto());
+            envelope.put("taxaJuros", resultado.getTaxaJuros());
+            java.util.List<java.util.Map<String, Object>> resultadosSimulacao = new java.util.ArrayList<>();
+            java.util.Map<String, Object> sac = new java.util.LinkedHashMap<>();
+            sac.put("tipo", "SAC");
+            sac.put("parcelas", sacParcelas.stream().map(p -> java.util.Map.of(
+                "numero", p.getNumero(),
+                "valorAmortizacao", p.getValorAmortizacao(),
+                "valorJuros", p.getValorJuros(),
+                "valorPrestacao", p.getValorPrestacao()
+            )).toList());
+            resultadosSimulacao.add(sac);
+            java.util.Map<String, Object> price = new java.util.LinkedHashMap<>();
+            price.put("tipo", "PRICE");
+            price.put("parcelas", priceParcelas.stream().map(p -> java.util.Map.of(
+                "numero", p.getNumero(),
+                "valorAmortizacao", p.getValorAmortizacao(),
+                "valorJuros", p.getValorJuros(),
+                "valorPrestacao", p.getValorPrestacao()
+            )).toList());
+            resultadosSimulacao.add(price);
+            envelope.put("resultadosSimulacao", resultadosSimulacao);
+            return ResponseEntity.ok(envelope);
+        } catch (RuntimeException e) {
+            String msg = e.getMessage();
+            if (msg != null && msg.contains("Nenhum produto válido encontrado")) {
+                return ResponseEntity.badRequest().body(java.util.Map.of("erro", "Parâmetros fora dos limites permitidos para os produtos. Verifique valor e prazo."));
+            }
+            return ResponseEntity.status(500).body(java.util.Map.of("erro", "Erro interno na simulação."));
+        }
     }
 
     @Operation(summary = "Listar simulações", description = "Retorna envelope paginado das simulações realizadas.")

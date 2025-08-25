@@ -19,6 +19,31 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 public class SimulacaoControllerValidationTest {
+    @Test
+    void deveRetornarErroParaValorAcimaDoMaximoDoProduto() throws Exception {
+        Map<String, Object> request = Map.of(
+            "valorDesejado", new BigDecimal("1000000.01"),
+            "prazo", 96
+        );
+        mockMvc.perform(post("/api/simulacoes")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(request)))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.erro").value("Parâmetros fora dos limites permitidos para os produtos. Verifique valor e prazo."));
+    }
+
+    @Test
+    void deveRetornarErroParaPrazoAcimaDoMaximoDoProduto() throws Exception {
+        Map<String, Object> request = Map.of(
+            "valorDesejado", new BigDecimal("1000.00"),
+            "prazo", 999
+        );
+        mockMvc.perform(post("/api/simulacoes")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(request)))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.erro").value("Parâmetros fora dos limites permitidos para os produtos. Verifique valor e prazo."));
+    }
     @Autowired
     private MockMvc mockMvc;
     @Autowired

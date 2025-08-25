@@ -53,7 +53,10 @@ mvn test
 ```
 
 ## Endpoints
-- Documentados via Swagger: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) (acessível com a aplicação rodando)
+- Documentados via Swagger: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+- Para acessar o Swagger, rode a aplicação com:
+	- `mvn spring-boot:run` (sem gerar o JAR)
+	- ou siga os comandos de build/JAR para rodar manualmente
 
 
 
