@@ -1,4 +1,12 @@
+
 package com.desafio.controller;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
 import com.desafio.model.Simulacao;
 import com.desafio.model.Parcela;
@@ -17,8 +25,15 @@ public class SimulacaoController {
     private SimulacaoService simulacaoService;
 
 
+    @Operation(summary = "Criar simulação de crédito", description = "Realiza a simulação de crédito e retorna envelope agrupado por tipo de amortização.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Simulação realizada com sucesso",
+            content = @Content(mediaType = "application/json")),
+        @ApiResponse(responseCode = "400", description = "Requisição inválida", content = @Content),
+        @ApiResponse(responseCode = "500", description = "Erro interno", content = @Content)
+    })
     @PostMapping
-    public ResponseEntity<?> criarSimulacao(@RequestBody Simulacao simulacao) {
+    public ResponseEntity<?> criarSimulacao(@org.springframework.web.bind.annotation.RequestBody Simulacao simulacao) {
         Simulacao resultado = simulacaoService.salvarSimulacao(simulacao);
         // Agrupar parcelas por tipo
         var sacParcelas = resultado.getParcelas().stream().filter(p -> "SAC".equals(p.getTipo())).toList();
@@ -51,6 +66,13 @@ public class SimulacaoController {
         return ResponseEntity.ok(envelope);
     }
 
+    @Operation(summary = "Listar simulações", description = "Retorna envelope paginado das simulações realizadas.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Lista de simulações",
+            content = @Content(mediaType = "application/json")),
+        @ApiResponse(responseCode = "400", description = "Parâmetros inválidos", content = @Content),
+        @ApiResponse(responseCode = "500", description = "Erro interno", content = @Content)
+    })
     @GetMapping
     public ResponseEntity<?> listarSimulacoes(@RequestParam(defaultValue = "1") int pagina,
                           @RequestParam(defaultValue = "200") int qtdRegistrosPagina) {

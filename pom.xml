@@ -22,6 +22,12 @@
     </properties>
 
     <dependencies>
+        <!-- Resilience4j (Circuit Breaker & Rate Limiter) -->
+        <dependency>
+            <groupId>io.github.resilience4j</groupId>
+            <artifactId>resilience4j-spring-boot3</artifactId>
+            <version>2.2.0</version>
+        </dependency>
         <!-- Spring Boot Starter Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -52,6 +58,11 @@
             <scope>runtime</scope>
         </dependency>
 
+            <!-- Spring Boot Actuator (métricas e monitoramento) -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+            </dependency>
         <!-- Azure EventHub -->
         <dependency>
             <groupId>com.azure</groupId>
@@ -65,6 +76,19 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- Swagger/OpenAPI 3 (springdoc) -->
+        <dependency>
+             <groupId>org.springdoc</groupId>
+             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+             <version>2.5.0</version>
+        </dependency>
+                    <!-- Caffeine Cache -->
+                    <dependency>
+                        <groupId>com.github.ben-manes.caffeine</groupId>
+                        <artifactId>caffeine</artifactId>
+                        <version>3.1.8</version>
+                    </dependency>
     </dependencies>
 
 </project>

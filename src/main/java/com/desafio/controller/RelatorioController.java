@@ -1,4 +1,10 @@
+
 package com.desafio.controller;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 
 import com.desafio.model.Simulacao;
 import com.desafio.repository.SimulacaoRepository;
@@ -18,6 +24,13 @@ public class RelatorioController {
     @Autowired
     private SimulacaoRepository simulacaoRepository;
 
+    @Operation(summary = "Relatório por produto e dia", description = "Retorna envelope de relatório agrupado por produto e data.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Relatório gerado",
+            content = @Content(mediaType = "application/json")),
+        @ApiResponse(responseCode = "400", description = "Parâmetros inválidos", content = @Content),
+        @ApiResponse(responseCode = "500", description = "Erro interno", content = @Content)
+    })
     @GetMapping("/por-produto-dia")
     public Map<String, Object> relatorioPorProdutoDia(@RequestParam("data") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate data) {
         List<Simulacao> simulacoes = simulacaoRepository.findAll().stream()

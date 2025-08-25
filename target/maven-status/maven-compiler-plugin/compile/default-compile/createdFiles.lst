@@ -1,4 +1,5 @@
 com\desafio\Main.class
+com\desafio\config\SwaggerConfig.class
 com\desafio\service\AmortizacaoService$ParcelaDTO.class
 com\desafio\service\AmortizacaoService.class
 com\desafio\service\ProdutoService$ProdutoDTO.class

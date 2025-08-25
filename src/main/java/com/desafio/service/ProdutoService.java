@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.math.BigDecimal;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
+
 @Service
 public class ProdutoService {
     @Value("${sqlserver.datasource.url}")
@@ -17,6 +20,8 @@ public class ProdutoService {
     @Value("${sqlserver.datasource.password}")
     private String password;
 
+    @CircuitBreaker(name = "default")
+    @RateLimiter(name = "default")
     public List<ProdutoDTO> buscarProdutos() throws Exception {
         List<ProdutoDTO> produtos = new ArrayList<>();
         try (Connection conn = DriverManager.getConnection(url, username, password)) {

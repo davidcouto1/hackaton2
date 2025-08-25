@@ -14,6 +14,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
+
 import java.util.List;
 
 @Service
@@ -30,6 +33,8 @@ public class SimulacaoService {
 
 
     @Transactional
+    @CircuitBreaker(name = "default")
+    @RateLimiter(name = "default")
     public Simulacao salvarSimulacao(Simulacao simulacao) {
         // Buscar produto válido
         ProdutoDTO produtoValido = null;
