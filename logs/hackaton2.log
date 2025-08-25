@@ -8420,3 +8420,80 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2025-08-25T16:08:30.153-03:00  INFO 4292 --- [http-nio-8080-exec-5] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@249a91fa
 2025-08-25T16:08:35.441-03:00  INFO 4292 --- [http-nio-8080-exec-4] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@695c683e
 2025-08-25T16:08:40.172-03:00  INFO 4292 --- [http-nio-8080-exec-6] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@1498d725
+2025-08-25T16:09:49.874-03:00  INFO 4292 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-25T16:09:49.886-03:00  INFO 4292 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-25T16:16:54.430-03:00  INFO 6536 --- [main] com.desafio.Hackaton2Application         : Starting Hackaton2Application using Java 17.0.16 with PID 6536 (C:\Desenvolvimento\projetos\hackaton2\target\classes started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-25T16:16:54.443-03:00  INFO 6536 --- [main] com.desafio.Hackaton2Application         : No active profile set, falling back to 1 default profile: "default"
+2025-08-25T16:17:03.956-03:00  INFO 6536 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-25T16:17:03.958-03:00  INFO 6536 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-08-25T16:17:04.258-03:00  INFO 6536 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-25T16:17:05.338-03:00  INFO 6536 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-25T16:17:06.012-03:00  INFO 6536 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-25T16:17:06.019-03:00  INFO 6536 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-25T16:17:06.952-03:00  INFO 6536 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-25T16:17:08.058-03:00  INFO 6536 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-25T16:17:08.375-03:00  INFO 6536 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-25T16:17:09.532-03:00  WARN 6536 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-25T16:17:13.384-03:00  INFO 6536 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-25T16:17:26.307-03:00  INFO 6536 --- [main] com.desafio.Hackaton2Application         : Started Hackaton2Application in 33.858 seconds (process running for 36.936)
+2025-08-25T16:17:30.650-03:00  INFO 6536 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-25T16:17:30.781-03:00  INFO 6536 --- [http-nio-8080-exec-1] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@5a133d19
+2025-08-25T16:17:31.224-03:00  INFO 6536 --- [http-nio-8080-exec-1] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@1093c0f6
+2025-08-25T16:17:33.951-03:00  INFO 6536 --- [http-nio-8080-exec-3] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@2be96c5c
+2025-08-25T16:17:33.958-03:00  INFO 6536 --- [http-nio-8080-exec-3] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@2b2d81a6
+2025-08-25T16:17:36.228-03:00  INFO 6536 --- [http-nio-8080-exec-4] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@8ae6827
+2025-08-25T16:17:36.244-03:00  INFO 6536 --- [http-nio-8080-exec-4] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@6ed2f2d5
+2025-08-25T16:17:37.762-03:00  INFO 6536 --- [http-nio-8080-exec-5] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@73141fc3
+2025-08-25T16:17:37.770-03:00  INFO 6536 --- [http-nio-8080-exec-5] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@50688602
+2025-08-25T16:17:39.268-03:00  INFO 6536 --- [http-nio-8080-exec-6] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@610882d8
+2025-08-25T16:17:39.278-03:00  INFO 6536 --- [http-nio-8080-exec-6] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@3464a05d
+2025-08-25T16:17:40.887-03:00  INFO 6536 --- [http-nio-8080-exec-7] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@7c3b2b41
+2025-08-25T16:17:40.902-03:00  INFO 6536 --- [http-nio-8080-exec-7] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@5dcce2dd
+2025-08-25T16:17:44.601-03:00  INFO 6536 --- [http-nio-8080-exec-8] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@7cf58de0
+2025-08-25T16:17:46.963-03:00  INFO 6536 --- [http-nio-8080-exec-9] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@cf98018
+2025-08-25T16:17:50.801-03:00  INFO 6536 --- [http-nio-8080-exec-10] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@db18c89
+2025-08-25T16:17:50.812-03:00  INFO 6536 --- [http-nio-8080-exec-10] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@1f364f7d
+2025-08-25T16:18:03.384-03:00  INFO 6536 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-25T16:18:03.392-03:00  INFO 6536 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-25T16:22:58.057-03:00  INFO 14692 --- [main] com.desafio.Hackaton2Application         : Starting Hackaton2Application using Java 17.0.16 with PID 14692 (C:\Desenvolvimento\projetos\hackaton2\target\classes started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-25T16:22:58.076-03:00  INFO 14692 --- [main] com.desafio.Hackaton2Application         : No active profile set, falling back to 1 default profile: "default"
+2025-08-25T16:23:03.702-03:00  INFO 14692 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-25T16:23:03.703-03:00  INFO 14692 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-08-25T16:23:03.891-03:00  INFO 14692 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-25T16:23:04.695-03:00  INFO 14692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-25T16:23:05.538-03:00  INFO 14692 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-25T16:23:05.542-03:00  INFO 14692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-25T16:23:05.897-03:00  INFO 14692 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-25T16:23:06.053-03:00  INFO 14692 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-25T16:23:06.152-03:00  INFO 14692 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-25T16:23:07.961-03:00  WARN 14692 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-25T16:23:10.084-03:00  INFO 14692 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-25T16:23:19.813-03:00  INFO 14692 --- [main] com.desafio.Hackaton2Application         : Started Hackaton2Application in 22.749 seconds (process running for 23.612)
+2025-08-25T16:24:09.985-03:00  INFO 14692 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-25T16:24:10.852-03:00  INFO 14692 --- [http-nio-8080-exec-1] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@75d33bc2
+2025-08-25T16:24:10.861-03:00  INFO 14692 --- [http-nio-8080-exec-1] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T16:24:12.792-03:00  INFO 14692 --- [http-nio-8080-exec-1] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@265113af
+2025-08-25T16:24:12.794-03:00  INFO 14692 --- [http-nio-8080-exec-1] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T16:24:13.158-03:00  INFO 14692 --- [http-nio-8080-exec-1] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-25T16:24:13.313-03:00  INFO 14692 --- [http-nio-8080-exec-1] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@5f05e2ca
+2025-08-25T16:24:15.289-03:00  INFO 14692 --- [http-nio-8080-exec-3] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@247e83
+2025-08-25T16:24:15.291-03:00  INFO 14692 --- [http-nio-8080-exec-3] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T16:24:15.802-03:00  INFO 14692 --- [http-nio-8080-exec-3] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@51391947
+2025-08-25T16:24:15.805-03:00  INFO 14692 --- [http-nio-8080-exec-3] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T16:24:15.902-03:00  INFO 14692 --- [http-nio-8080-exec-3] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-25T16:24:15.916-03:00  INFO 14692 --- [http-nio-8080-exec-3] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@7d28e647
+2025-08-25T16:24:17.728-03:00  INFO 14692 --- [http-nio-8080-exec-4] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@68b35006
+2025-08-25T16:24:17.730-03:00  INFO 14692 --- [http-nio-8080-exec-4] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T16:24:18.239-03:00  INFO 14692 --- [http-nio-8080-exec-4] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@149dc712
+2025-08-25T16:24:18.241-03:00  INFO 14692 --- [http-nio-8080-exec-4] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T16:24:18.353-03:00  INFO 14692 --- [http-nio-8080-exec-4] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-25T16:24:18.383-03:00  INFO 14692 --- [http-nio-8080-exec-4] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@422c40d1
+2025-08-25T16:24:22.013-03:00  INFO 14692 --- [http-nio-8080-exec-5] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Listando simulações
+2025-08-25T16:24:22.267-03:00  INFO 14692 --- [http-nio-8080-exec-5] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@402678eb
+2025-08-25T16:24:27.506-03:00  INFO 14692 --- [http-nio-8080-exec-6] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T16:24:28.019-03:00  INFO 14692 --- [http-nio-8080-exec-6] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@2bc3df37
+2025-08-25T16:24:35.495-03:00  INFO 14692 --- [http-nio-8080-exec-7] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@536a8c9e
+2025-08-25T16:24:44.331-03:00  INFO 14692 --- [http-nio-8080-exec-8] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@55422bb0
+2025-08-25T16:25:03.667-03:00  INFO 14692 --- [http-nio-8080-exec-9] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@3aacf2ae
+2025-08-25T16:27:15.587-03:00  INFO 14692 --- [http-nio-8080-exec-1] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@4fbf0a36
+2025-08-25T16:27:53.783-03:00  INFO 14692 --- [http-nio-8080-exec-3] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@3218ae

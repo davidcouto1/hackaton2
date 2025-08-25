@@ -43,7 +43,6 @@ public class TelemetriaService {
 
     // Opcional: método para buscar todos agrupados (caso precise para o controller)
     public List<com.desafio.dto.TelemetriaDTO> buscarTodosAgrupados() {
-    // Retorna todos agrupados por nomeApi, sem filtro de data
-    return telemetriaRepository.buscarPorData(null);
+        return telemetriaRepository.buscarAgregadoSemData();
     }
 }

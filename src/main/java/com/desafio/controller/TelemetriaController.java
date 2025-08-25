@@ -15,6 +15,19 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/telemetria")
 public class TelemetriaController {
+    @GetMapping("/todos")
+    public List<Telemetria> listarTodosRegistrosTelemetria() {
+        return telemetriaService.listarTelemetria();
+    }
+    @PostMapping("/teste")
+    public Telemetria criarTelemetriaTeste() {
+        Telemetria telemetria = new Telemetria();
+        telemetria.setDataReferencia(java.time.LocalDate.now());
+        telemetria.setNomeApi("/api/teste");
+        telemetria.setTempoRespostaMs(123);
+        telemetria.setStatusHttp(200);
+        return telemetriaService.salvarTelemetria(telemetria);
+    }
     @Autowired
     private TelemetriaService telemetriaService;
 

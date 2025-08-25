@@ -20,6 +20,19 @@ public interface TelemetriaRepository extends JpaRepository<Telemetria, Long> {
 			SUM(CASE WHEN t.statusHttp = 200 THEN 1 ELSE 0 END) * 1.0 / COUNT(t.idTelemetria)
 		)
 		FROM Telemetria t
+		GROUP BY t.nomeApi
+	""")
+	List<TelemetriaDTO> buscarAgregadoSemData();
+	@Query("""
+		SELECT new com.desafio.dto.TelemetriaDTO(
+			t.nomeApi,
+			COUNT(t.idTelemetria),
+			AVG(t.tempoRespostaMs),
+			MIN(t.tempoRespostaMs),
+			MAX(t.tempoRespostaMs),
+			SUM(CASE WHEN t.statusHttp = 200 THEN 1 ELSE 0 END) * 1.0 / COUNT(t.idTelemetria)
+		)
+		FROM Telemetria t
 		WHERE t.dataReferencia = :data
 		GROUP BY t.nomeApi
 	""")
