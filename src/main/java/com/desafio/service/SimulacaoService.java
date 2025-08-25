@@ -19,8 +19,12 @@ import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @Service
 public class SimulacaoService {
+    private static final Logger logger = LoggerFactory.getLogger(SimulacaoService.class);
     @Autowired
     private SimulacaoRepository simulacaoRepository;
     @Autowired
@@ -36,9 +40,11 @@ public class SimulacaoService {
     @CircuitBreaker(name = "default")
     @RateLimiter(name = "default")
     public Simulacao salvarSimulacao(Simulacao simulacao) {
+    logger.info("[AUDITORIA] Iniciando simulação: {}", simulacao);
         // Buscar produto válido
         ProdutoDTO produtoValido = null;
         try {
+            logger.info("[AUDITORIA] Consultando produtos para simulação");
             for (ProdutoDTO produto : produtoService.buscarProdutos()) {
                 boolean prazoOk = simulacao.getPrazo() >= produto.getMinimoMeses() && (produto.getMaximoMeses() == null || simulacao.getPrazo() <= produto.getMaximoMeses());
                 boolean valorOk = simulacao.getValorDesejado().compareTo(produto.getValorMinimo()) >= 0 && (produto.getValorMaximo() == null || simulacao.getValorDesejado().compareTo(produto.getValorMaximo()) <= 0);
@@ -48,13 +54,18 @@ public class SimulacaoService {
                 }
             }
         } catch (Exception e) {
+            logger.error("[AUDITORIA] Erro ao consultar produtos: {}", e.getMessage());
             throw new RuntimeException("Erro ao consultar produtos", e);
         }
         if (produtoValido == null) throw new RuntimeException("Nenhum produto válido encontrado para os parâmetros informados.");
 
+    logger.info("[AUDITORIA] Produto válido encontrado: {}", produtoValido);
+
         simulacao.setCodigoProduto(produtoValido.getCodigo());
         simulacao.setNomeProduto(produtoValido.getNome());
         simulacao.setTaxaJuros(produtoValido.getTaxaJuros());
+
+    logger.info("[AUDITORIA] Calculando parcelas SAC e PRICE");
 
         // Calcular SAC
         var sacParcelas = amortizacaoService.calcularSAC(simulacao.getValorDesejado(), simulacao.getPrazo(), produtoValido.getTaxaJuros());

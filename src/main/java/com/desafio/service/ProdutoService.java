@@ -11,8 +11,12 @@ import java.math.BigDecimal;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @Service
 public class ProdutoService {
+    private static final Logger logger = LoggerFactory.getLogger(ProdutoService.class);
     @Value("${sqlserver.datasource.url}")
     private String url;
     @Value("${sqlserver.datasource.username}")
@@ -23,6 +27,7 @@ public class ProdutoService {
     @CircuitBreaker(name = "default")
     @RateLimiter(name = "default")
     public List<ProdutoDTO> buscarProdutos() throws Exception {
+    logger.info("[AUDITORIA] Buscando produtos no SQL Server");
         List<ProdutoDTO> produtos = new ArrayList<>();
         try (Connection conn = DriverManager.getConnection(url, username, password)) {
             String sql = "SELECT CO_PRODUTO, NO_PRODUTO, PC_TAXA_JUROS, NU_MINIMO_MESES, NU_MAXIMO_MESES, VR_MINIMO, VR_MAXIMO FROM dbo.PRODUTO";
