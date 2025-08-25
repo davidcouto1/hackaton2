@@ -27,10 +27,17 @@ docker build -t hackaton2 .
 docker run -p 8080:8080 hackaton2
 ```
 
-### Rodando com Docker Compose
-```bash
+
+### Rodando com Docker Compose (com Load Balance)
+```powershell
 docker-compose up
 ```
+O ambiente irá subir múltiplas réplicas do app e um NGINX como proxy reverso para balanceamento de carga.
+O acesso à API será feito via `http://localhost:8080` (NGINX distribui as requisições entre as instâncias).
+
+Arquivos relevantes:
+- `docker-compose.yml`: define réplicas e serviços
+- `nginx.conf`: configuração do balanceamento
 
 ## Automação de Deploy
 - Para ambientes de produção, utilize o `docker-compose.yml` para orquestrar o deploy do app e banco.
@@ -105,10 +112,10 @@ Arquivo de configuração Prometheus: `prometheus.yml` já incluso.
 > Exemplo de resultado:
 > ![Resultado K6](docs/k6-result.png)
 
-## Observações
-- Projeto pronto para avaliação, seguindo boas práticas REST, documentação, testes e automação.
 
-- Resiliente contra falhas e sobrecarga, com cache, circuit breaker e rate limiter.
+## Observações
+- Projeto pronto para avaliação, seguindo boas práticas REST, documentação, testes, automação e agora com balanceamento de carga via NGINX e múltiplas réplicas Docker.
+- Resiliente contra falhas e sobrecarga, com cache, circuit breaker, rate limiter e load balance.
 
 ## Padrões de Projeto
 - O cálculo das parcelas de amortização (SAC/PRICE) foi refatorado usando os padrões Strategy + Factory, facilitando extensibilidade e manutenção.
