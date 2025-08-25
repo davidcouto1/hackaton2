@@ -52,6 +52,116 @@ Arquivos relevantes:
 mvn test
 ```
 
+### Cobertura de Testes (JaCoCo)
+Para gerar o relatório de cobertura Jacoco:
+```sh
+mvn clean test jacoco:report
+```
+O relatório será gerado em:
+```
+target/site/jacoco/index.html
+```
+Abra esse arquivo no navegador para visualizar a cobertura dos testes do projeto.
+
+### Collection Postman
+Uma collection pronta para testar todos os endpoints está disponível em `postman_collection.json`.
+
+**Como importar:**
+1. Abra o Postman
+2. Clique em "Import"
+3. Selecione o arquivo `postman_collection.json`
+4. Todos os endpoints principais estarão disponíveis para teste.
+
+### Exemplos de uso dos principais endpoints
+
+#### Simulação de Crédito
+**Requisição (POST):**
+```json
+{
+	"valorDesejado": 900.00,
+	"prazo": 5
+}
+```
+**Resposta:**
+```json
+{
+	"idSimulacao": 20180702,
+	"codigoProduto": 1,
+	"nomeProduto": "Produto 1",
+	"taxaJuros": 0.0179,
+	"resultadosSimulacao": [
+		{
+			"tipo": "SAC",
+			"parcelas": [ ... ]
+		},
+		{
+			"tipo": "PRICE",
+			"parcelas": [ ... ]
+		}
+	]
+}
+```
+
+#### Listar Simulações
+**Requisição (GET):**
+```
+GET /api/simulacoes
+```
+**Resposta:**
+```json
+{
+	"pagina": 1,
+	"qtdRegistros": 404,
+	"qtdRegistrosPagina": 200,
+	"registros": [
+		{
+			"idSimulacao": 20180702,
+			"valorDesejado": 900.00,
+			"prazo": 5,
+			"valorTotalSac": 1243.28,
+			"valorTotalPrice": 1243.28
+		}
+	]
+}
+```
+
+#### Telemetria
+**Requisição (GET):**
+```
+GET /api/telemetria?data=2025-07-30
+```
+**Resposta:**
+```json
+{
+	"dataReferencia": "2025-07-30",
+	"listaEndpoints": [
+		{
+			"nomeApi": "Simulacao",
+			"qtdRequisicoes": 135,
+			"tempoMedio": 150,
+			"tempoMinimo": 23,
+			"tempoMaximo": 860,
+			"percentualSucesso": 0.98
+		}
+	]
+}
+```
+
+### Visualizando cobertura de testes (JaCoCo)
+Após rodar os testes, abra o relatório gerado em:
+```
+target/site/jacoco/index.html
+```
+Esse arquivo pode ser aberto no navegador para visualizar a cobertura dos testes.
+
+### Importando a Collection Postman
+O arquivo `postman_collection.json` está na raiz do projeto.
+Para importar:
+1. Abra o Postman
+2. Clique em "Import"
+3. Selecione o arquivo `postman_collection.json`
+4. Todos os endpoints principais estarão disponíveis para teste.
+
 ## Endpoints
 - Documentados via Swagger: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 - Para acessar o Swagger, rode a aplicação com:
