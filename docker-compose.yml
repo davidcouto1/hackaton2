@@ -8,6 +8,7 @@ services:
       SPRING_PROFILES_ACTIVE: default
     depends_on:
       - sqlserver
+
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2019-latest
     environment:
@@ -15,3 +16,19 @@ services:
       ACCEPT_EULA: "Y"
     ports:
       - "1433:1433"
+
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    depends_on:
+      - app
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus

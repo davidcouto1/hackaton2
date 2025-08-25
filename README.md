@@ -62,12 +62,23 @@ Arquivo `hackaton2.json` incluso no projeto.
 
 > Exemplo de diagrama: Caso não visualize acima, consulte o arquivo docs/diagrama.png ou adicione um link para o diagrama da arquitetura.
 
-## Métricas
-- Disponíveis em `/actuator/metrics` para Prometheus.
 
-## Monitoramento
-- Integração pronta para Prometheus (endpoint `/actuator/prometheus`).
-- Recomenda-se uso do Grafana para dashboards customizados.
+## Métricas e Monitoramento
+- Métricas expostas em `/actuator/metrics` e `/actuator/prometheus`.
+- Monitoramento completo via Prometheus e Grafana pelo Docker Compose.
+
+### Como usar Prometheus e Grafana
+1. Execute:
+	```powershell
+	docker-compose up
+	```
+2. Acesse as interfaces:
+	- Prometheus: [http://localhost:9090](http://localhost:9090)
+	- Grafana: [http://localhost:3000](http://localhost:3000) (login padrão: admin/admin)
+3. O Prometheus coleta métricas do app automaticamente.
+4. No Grafana, adicione o Prometheus como fonte de dados (`http://prometheus:9090`) e importe dashboards para Spring Boot.
+
+Arquivo de configuração Prometheus: `prometheus.yml` já incluso.
 
 ## Cache
 - Implementado com Caffeine para otimizar consultas e simulações.
