@@ -60,6 +60,8 @@ Arquivo `hackaton2.json` incluso no projeto.
 ## Diagrama
 ![Diagrama](docs/diagrama.png)
 
+> Exemplo de diagrama: Caso não visualize acima, consulte o arquivo docs/diagrama.png ou adicione um link para o diagrama da arquitetura.
+
 ## Métricas
 - Disponíveis em `/actuator/metrics` para Prometheus.
 
@@ -78,14 +80,19 @@ Arquivo `hackaton2.json` incluso no projeto.
 
 ## Cobertura de Testes
 - Relatório gerado por JaCoCo em `target/site/jacoco/index.html`
-
 - Testes de integração para simulação, telemetria e relatórios implementados.
+
+> Exemplo de cobertura:
+> ![Cobertura JaCoCo](docs/jacoco-example.png)
 
 ## Pipeline
 - Workflow GitHub Actions em `.github/workflows/ci.yml`
 
 ## Teste de carga
 - Scripts K6/JMeter em `loadtest/` e resultados no README.
+
+> Exemplo de resultado:
+> ![Resultado K6](docs/k6-result.png)
 
 ## Observações
 - Projeto pronto para avaliação, seguindo boas práticas REST, documentação, testes e automação.

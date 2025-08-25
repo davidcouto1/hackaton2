@@ -29,8 +29,12 @@ public class SimulacaoController {
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "Simulação realizada com sucesso",
             content = @Content(mediaType = "application/json")),
-        @ApiResponse(responseCode = "400", description = "Requisição inválida", content = @Content),
-        @ApiResponse(responseCode = "500", description = "Erro interno", content = @Content)
+        @ApiResponse(responseCode = "400", description = "Requisição inválida (ex: valor negativo, prazo inválido)",
+            content = @Content(mediaType = "application/json", schema = @Schema(example = "{ 'erro': 'Valor desejado deve ser positivo.' }"))),
+        @ApiResponse(responseCode = "401", description = "Não autorizado", content = @Content(mediaType = "application/json", schema = @Schema(example = "{ 'erro': 'Não autorizado.' }"))),
+        @ApiResponse(responseCode = "403", description = "Acesso proibido", content = @Content(mediaType = "application/json", schema = @Schema(example = "{ 'erro': 'Acesso proibido.' }"))),
+        @ApiResponse(responseCode = "404", description = "Recurso não encontrado", content = @Content(mediaType = "application/json", schema = @Schema(example = "{ 'erro': 'Recurso não encontrado.' }"))),
+        @ApiResponse(responseCode = "500", description = "Erro interno", content = @Content(mediaType = "application/json", schema = @Schema(example = "{ 'erro': 'Erro interno.' }")))
     })
     @PostMapping
     public ResponseEntity<?> criarSimulacao(@org.springframework.web.bind.annotation.RequestBody Simulacao simulacao) {

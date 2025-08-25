@@ -40,7 +40,8 @@ public class SimulacaoService {
     @CircuitBreaker(name = "default")
     @RateLimiter(name = "default")
     public Simulacao salvarSimulacao(Simulacao simulacao) {
-    logger.info("[AUDITORIA] Iniciando simulação: {}", simulacao);
+        String usuario = obterUsuarioAtual(); // mock para auditoria
+        logger.info("[AUDITORIA] Usuário: {} - Iniciando simulação: {}", usuario, simulacao);
     ProdutoDTO produtoValido = null;
     try {
         for (ProdutoDTO produto : produtoService.buscarProdutos()) {
@@ -52,15 +53,15 @@ public class SimulacaoService {
             }
         }
     } catch (Exception e) {
-        logger.error("[AUDITORIA] Erro ao consultar produtos para simulação: {}", simulacao, e);
+            logger.error("[AUDITORIA] Usuário: {} - Erro ao consultar produtos para simulação: {}", usuario, simulacao, e);
         throw new RuntimeException("Erro ao consultar produtos", e);
     }
     if (produtoValido == null) throw new RuntimeException("Nenhum produto válido encontrado para os parâmetros informados.");
-    logger.info("[AUDITORIA] Produto selecionado para simulação: {}", produtoValido);
+    logger.info("[AUDITORIA] Usuário: {} - Produto selecionado para simulação: {}", usuario, produtoValido);
     simulacao.setCodigoProduto(produtoValido.getCodigo());
     simulacao.setNomeProduto(produtoValido.getNome());
     simulacao.setTaxaJuros(produtoValido.getTaxaJuros());
-    logger.info("[AUDITORIA] Calculando parcelas SAC e PRICE");
+    logger.info("[AUDITORIA] Usuário: {} - Calculando parcelas SAC e PRICE", usuario);
     var sacParcelas = amortizacaoService.calcularSAC(simulacao.getValorDesejado(), simulacao.getPrazo(), produtoValido.getTaxaJuros());
     var priceParcelas = amortizacaoService.calcularPRICE(simulacao.getValorDesejado(), simulacao.getPrazo(), produtoValido.getTaxaJuros());
     List<Parcela> parcelas = new ArrayList<>();
@@ -97,12 +98,19 @@ public class SimulacaoService {
             parcela.setSimulacao(saved);
             parcelaRepository.save(parcela);
         }
-        logger.info("[AUDITORIA] Simulação concluída. Produto: {}, Prazo: {}, Valor: {}", produtoValido.getNome(), simulacao.getPrazo(), simulacao.getValorDesejado());
+    logger.info("[AUDITORIA] Usuário: {} - Simulação concluída. Produto: {}, Prazo: {}, Valor: {}", usuario, produtoValido.getNome(), simulacao.getPrazo(), simulacao.getValorDesejado());
         return saved;
     }
 
     public List<Simulacao> listarSimulacoes() {
-        logger.info("[AUDITORIA] Listando simulações");
+        String usuario = obterUsuarioAtual(); // mock para auditoria
+        logger.info("[AUDITORIA] Usuário: {} - Listando simulações", usuario);
         return simulacaoRepository.findAll();
+    }
+
+    // Mock para obter usuário atual
+    private String obterUsuarioAtual() {
+        // Em produção, integrar com autenticação
+        return "usuario-demo";
     }
 }
