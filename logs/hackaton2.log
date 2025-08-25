@@ -810,3 +810,368 @@ java.lang.RuntimeException: Nenhum produto válido encontrado para os parâmetros 
 2025-08-25T00:54:48.149-03:00  INFO 1820 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
 2025-08-25T00:54:48.541-03:00  INFO 1820 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-08-25T00:54:48.553-03:00  INFO 1820 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-25T00:55:33.886-03:00  INFO 13288 --- [main] c.d.c.SimulacaoControllerValidationTest  : Starting SimulacaoControllerValidationTest using Java 17.0.16 with PID 13288 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-25T00:55:33.893-03:00  INFO 13288 --- [main] c.d.c.SimulacaoControllerValidationTest  : No active profile set, falling back to 1 default profile: "default"
+2025-08-25T00:55:45.870-03:00  INFO 13288 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-25T00:55:47.384-03:00  INFO 13288 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-25T00:55:47.389-03:00  INFO 13288 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-25T00:55:48.753-03:00  INFO 13288 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-25T00:55:49.103-03:00  INFO 13288 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-25T00:55:49.290-03:00  INFO 13288 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-25T00:55:50.640-03:00  WARN 13288 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-25T00:55:55.437-03:00  INFO 13288 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-25T00:56:11.594-03:00  INFO 13288 --- [main] c.d.c.SimulacaoControllerValidationTest  : Started SimulacaoControllerValidationTest in 39.393 seconds (process running for 43.653)
+2025-08-25T00:56:14.343-03:00  INFO 13288 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - Iniciando simulaÃ§Ã£o: com.desafio.model.Simulacao@5c77cb42
+2025-08-25T00:56:14.349-03:00  INFO 13288 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T00:56:16.300-03:00  INFO 13288 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - Iniciando simulaÃ§Ã£o: com.desafio.model.Simulacao@58989a4c
+2025-08-25T00:56:16.304-03:00  INFO 13288 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T00:56:16.633-03:00  INFO 13288 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-25T00:56:16.642-03:00  INFO 13288 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-25T00:56:57.786-03:00  INFO 11000 --- [main] com.desafio.Hackaton2Application         : Starting Hackaton2Application using Java 17.0.16 with PID 11000 (C:\Desenvolvimento\projetos\hackaton2\target\classes started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-25T00:56:57.797-03:00  INFO 11000 --- [main] com.desafio.Hackaton2Application         : No active profile set, falling back to 1 default profile: "default"
+2025-08-25T00:57:08.071-03:00  INFO 11000 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-25T00:57:08.073-03:00  INFO 11000 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-08-25T00:57:08.448-03:00  INFO 11000 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-25T00:57:10.162-03:00  INFO 11000 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-25T00:57:11.911-03:00  INFO 11000 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-25T00:57:11.920-03:00  INFO 11000 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-25T00:57:12.472-03:00  INFO 11000 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-25T00:57:12.660-03:00  INFO 11000 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-25T00:57:12.809-03:00  INFO 11000 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-25T00:57:13.627-03:00  WARN 11000 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-25T00:57:16.173-03:00  INFO 11000 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-25T00:57:22.483-03:00  INFO 11000 --- [main] com.desafio.Hackaton2Application         : Started Hackaton2Application in 26.582 seconds (process running for 28.315)
+2025-08-25T00:58:15.324-03:00  INFO 11000 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-25T00:58:16.877-03:00  INFO 11000 --- [http-nio-8080-exec-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1106 ms
+2025-08-25T00:59:16.354-03:00  INFO 11000 --- [http-nio-8080-exec-2] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@4281311e
+2025-08-25T00:59:16.356-03:00  INFO 11000 --- [http-nio-8080-exec-2] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T00:59:55.373-03:00  INFO 11000 --- [http-nio-8080-exec-6] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@324f4b33
+2025-08-25T00:59:55.375-03:00  INFO 11000 --- [http-nio-8080-exec-6] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T00:59:55.649-03:00  INFO 11000 --- [http-nio-8080-exec-6] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@50a0d08
+2025-08-25T00:59:55.672-03:00  INFO 11000 --- [http-nio-8080-exec-6] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T00:59:58.006-03:00  INFO 11000 --- [http-nio-8080-exec-6] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 3, Prazo: 96, Valor: 1000000.00
+2025-08-25T01:00:05.668-03:00  INFO 11000 --- [http-nio-8080-exec-5] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@61ed0dd5
+2025-08-25T01:00:05.670-03:00  INFO 11000 --- [http-nio-8080-exec-5] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T01:00:05.936-03:00  INFO 11000 --- [http-nio-8080-exec-5] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@4cf369bb
+2025-08-25T01:00:05.937-03:00  INFO 11000 --- [http-nio-8080-exec-5] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T01:00:07.660-03:00  INFO 11000 --- [http-nio-8080-exec-5] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 4, Prazo: 97, Valor: 1000000.01
+2025-08-25T01:00:32.261-03:00  INFO 11000 --- [http-nio-8080-exec-7] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@63a6918a
+2025-08-25T01:00:32.266-03:00  INFO 11000 --- [http-nio-8080-exec-7] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T01:00:32.554-03:00  INFO 11000 --- [http-nio-8080-exec-7] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@22228d56
+2025-08-25T01:00:32.555-03:00  INFO 11000 --- [http-nio-8080-exec-7] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T01:00:33.800-03:00  INFO 11000 --- [http-nio-8080-exec-7] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 3, Prazo: 49, Valor: 1000000.00
+2025-08-25T01:00:46.012-03:00  INFO 11000 --- [http-nio-8080-exec-8] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@55355088
+2025-08-25T01:00:46.017-03:00  INFO 11000 --- [http-nio-8080-exec-8] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T01:01:09.953-03:00  INFO 11000 --- [http-nio-8080-exec-10] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@4b04d73c
+2025-08-25T01:01:09.956-03:00  INFO 11000 --- [http-nio-8080-exec-10] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T01:01:10.338-03:00  INFO 11000 --- [http-nio-8080-exec-10] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@68afffa
+2025-08-25T01:01:10.339-03:00  INFO 11000 --- [http-nio-8080-exec-10] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T01:01:10.984-03:00  INFO 11000 --- [http-nio-8080-exec-10] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 2, Prazo: 48, Valor: 100000.00
+2025-08-25T01:01:39.611-03:00  INFO 11000 --- [http-nio-8080-exec-1] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@346a38b0
+2025-08-25T01:01:39.613-03:00  INFO 11000 --- [http-nio-8080-exec-1] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T01:01:46.497-03:00  INFO 11000 --- [http-nio-8080-exec-2] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@231a998f
+2025-08-25T01:01:46.500-03:00  INFO 11000 --- [http-nio-8080-exec-2] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T01:02:01.414-03:00  INFO 11000 --- [http-nio-8080-exec-6] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@154b484d
+2025-08-25T01:02:01.440-03:00  INFO 11000 --- [http-nio-8080-exec-6] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T01:02:12.704-03:00  INFO 11000 --- [http-nio-8080-exec-7] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@65e1504
+2025-08-25T01:02:12.706-03:00  INFO 11000 --- [http-nio-8080-exec-7] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T01:02:12.923-03:00  INFO 11000 --- [http-nio-8080-exec-7] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@401b7bb9
+2025-08-25T01:02:12.931-03:00  INFO 11000 --- [http-nio-8080-exec-7] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T01:02:13.602-03:00  INFO 11000 --- [http-nio-8080-exec-7] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 1, Prazo: 24, Valor: 10000.00
+2025-08-25T01:02:20.445-03:00  INFO 11000 --- [http-nio-8080-exec-8] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Listando simulações
+2025-08-25T01:02:30.898-03:00  INFO 11000 --- [http-nio-8080-exec-9] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T01:02:39.047-03:00  INFO 11000 --- [http-nio-8080-exec-10] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-25T13:46:25.028-03:00  INFO 8056 --- [main] .d.c.TelemetriaControllerIntegrationTest : Starting TelemetriaControllerIntegrationTest using Java 17.0.16 with PID 8056 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-25T13:46:25.034-03:00  INFO 8056 --- [main] .d.c.TelemetriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-25T13:46:39.248-03:00  INFO 8056 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-25T13:46:40.745-03:00  INFO 8056 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-25T13:46:40.752-03:00  INFO 8056 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-25T13:46:41.819-03:00  INFO 8056 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-25T13:46:42.223-03:00  INFO 8056 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-25T13:46:42.376-03:00  INFO 8056 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-25T13:46:43.797-03:00  WARN 8056 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-25T13:46:48.169-03:00  INFO 8056 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-25T13:47:05.331-03:00  INFO 8056 --- [main] .d.c.TelemetriaControllerIntegrationTest : Started TelemetriaControllerIntegrationTest in 42.341 seconds (process running for 47.923)
+2025-08-25T13:47:07.681-03:00  INFO 8056 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@1d4cf8ea
+2025-08-25T13:47:08.127-03:00  INFO 8056 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-25T13:47:08.912-03:00  INFO 8056 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-25T13:47:08.977-03:00  INFO 8056 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-25T13:47:09.126-03:00  INFO 8056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-25T13:47:09.156-03:00  INFO 8056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-25T13:47:30.352-03:00  INFO 15552 --- [main] c.d.c.RelatorioControllerIntegrationTest : Starting RelatorioControllerIntegrationTest using Java 17.0.16 with PID 15552 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-25T13:47:30.364-03:00  INFO 15552 --- [main] c.d.c.RelatorioControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-25T13:47:41.209-03:00  INFO 15552 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-25T13:47:42.487-03:00  INFO 15552 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-25T13:47:42.499-03:00  INFO 15552 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-25T13:47:43.728-03:00  INFO 15552 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-25T13:47:44.234-03:00  INFO 15552 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-25T13:47:44.442-03:00  INFO 15552 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-25T13:47:45.989-03:00  WARN 15552 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-25T13:47:49.931-03:00  INFO 15552 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-25T13:48:06.092-03:00  INFO 15552 --- [main] c.d.c.RelatorioControllerIntegrationTest : Started RelatorioControllerIntegrationTest in 37.158 seconds (process running for 41.465)
+2025-08-25T13:48:08.341-03:00  INFO 15552 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - Iniciando simulaÃ§Ã£o: com.desafio.model.Simulacao@1ad55833
+2025-08-25T13:48:08.343-03:00  INFO 15552 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T13:48:10.704-03:00  INFO 15552 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - Produto selecionado para simulaÃ§Ã£o: com.desafio.service.ProdutoService$ProdutoDTO@5969665d
+2025-08-25T13:48:10.707-03:00  INFO 15552 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T13:48:11.251-03:00  INFO 15552 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - SimulaÃ§Ã£o concluÃ­da. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-25T13:48:13.252-03:00  INFO 15552 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-25T13:48:13.277-03:00  INFO 15552 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-25T13:49:56.471-03:00  INFO 15764 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Starting AuditoriaControllerIntegrationTest using Java 17.0.16 with PID 15764 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-25T13:49:56.485-03:00  INFO 15764 --- [main] c.d.c.AuditoriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-25T13:50:10.764-03:00  INFO 15764 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-25T13:50:12.618-03:00  INFO 15764 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-25T13:50:12.627-03:00  INFO 15764 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-25T13:50:13.662-03:00  INFO 15764 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-25T13:50:14.087-03:00  INFO 15764 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-25T13:50:14.340-03:00  INFO 15764 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-25T13:50:16.487-03:00  WARN 15764 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-25T13:50:21.981-03:00  INFO 15764 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-25T13:50:41.116-03:00  INFO 15764 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Started AuditoriaControllerIntegrationTest in 47.188 seconds (process running for 66.401)
+2025-08-25T13:50:45.736-03:00  INFO 15764 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@74cb2ec7
+2025-08-25T13:50:45.740-03:00  INFO 15764 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T13:50:48.304-03:00  INFO 15764 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@3d7aad2b
+2025-08-25T13:50:48.307-03:00  INFO 15764 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T13:50:48.942-03:00  INFO 15764 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-25T13:50:50.578-03:00  INFO 15764 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@39a2abc
+2025-08-25T13:50:50.580-03:00  INFO 15764 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T13:50:51.074-03:00  INFO 15764 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@eac5710
+2025-08-25T13:50:51.076-03:00  INFO 15764 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T13:50:51.152-03:00  INFO 15764 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-25T13:50:51.901-03:00  INFO 15764 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@327cbfea
+2025-08-25T13:50:52.006-03:00  INFO 15764 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T13:50:52.608-03:00  INFO 15764 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@669f1ae2
+2025-08-25T13:50:52.610-03:00  INFO 15764 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T13:50:54.258-03:00  INFO 15764 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@510d7b47
+2025-08-25T13:50:54.427-03:00  INFO 15764 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-25T13:50:54.512-03:00  INFO 15764 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-25T13:50:54.599-03:00  INFO 15764 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-25T13:50:55.408-03:00  INFO 15764 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-25T13:50:55.444-03:00  INFO 15764 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-25T13:51:47.985-03:00  INFO 6872 --- [main] com.desafio.Hackaton2Application         : Starting Hackaton2Application using Java 17.0.16 with PID 6872 (C:\Desenvolvimento\projetos\hackaton2\target\classes started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-25T13:51:47.993-03:00  INFO 6872 --- [main] com.desafio.Hackaton2Application         : No active profile set, falling back to 1 default profile: "default"
+2025-08-25T13:51:53.686-03:00  INFO 6872 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-25T13:51:53.687-03:00  INFO 6872 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-08-25T13:51:53.914-03:00  INFO 6872 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-25T13:51:54.738-03:00  INFO 6872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-25T13:51:55.328-03:00  INFO 6872 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-25T13:51:55.332-03:00  INFO 6872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-25T13:51:55.673-03:00  INFO 6872 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-25T13:51:55.819-03:00  INFO 6872 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-25T13:51:55.918-03:00  INFO 6872 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-25T13:51:56.578-03:00  WARN 6872 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-25T13:51:58.977-03:00  INFO 6872 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-25T13:52:05.732-03:00  INFO 6872 --- [main] com.desafio.Hackaton2Application         : Started Hackaton2Application in 19.089 seconds (process running for 20.105)
+2025-08-25T13:52:51.490-03:00  INFO 6872 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-25T13:52:53.725-03:00  INFO 6872 --- [http-nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1084 ms
+2025-08-25T13:53:49.006-03:00  INFO 6872 --- [http-nio-8080-exec-6] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@38b1fa84
+2025-08-25T13:53:49.009-03:00  INFO 6872 --- [http-nio-8080-exec-6] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T13:53:50.798-03:00  INFO 6872 --- [http-nio-8080-exec-6] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@cef0169
+2025-08-25T13:53:50.800-03:00  INFO 6872 --- [http-nio-8080-exec-6] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T13:53:51.622-03:00  INFO 6872 --- [http-nio-8080-exec-6] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 1, Prazo: 24, Valor: 10000.00
+2025-08-25T13:53:59.975-03:00  INFO 6872 --- [http-nio-8080-exec-2] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T13:54:06.406-03:00  INFO 6872 --- [http-nio-8080-exec-7] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Listando simulações
+2025-08-25T13:54:39.993-03:00  INFO 6872 --- [http-nio-8080-exec-8] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@608172c9
+2025-08-25T13:54:39.996-03:00  INFO 6872 --- [http-nio-8080-exec-8] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T13:54:45.154-03:00  INFO 6872 --- [http-nio-8080-exec-5] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@7069982e
+2025-08-25T13:54:45.156-03:00  INFO 6872 --- [http-nio-8080-exec-5] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T13:54:45.629-03:00  INFO 6872 --- [http-nio-8080-exec-5] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@59f05cb2
+2025-08-25T13:54:45.630-03:00  INFO 6872 --- [http-nio-8080-exec-5] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T13:54:46.265-03:00  INFO 6872 --- [http-nio-8080-exec-5] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 2, Prazo: 25, Valor: 10001.00
+2025-08-25T13:55:01.541-03:00  INFO 6872 --- [http-nio-8080-exec-3] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@7b6ba36f
+2025-08-25T13:55:01.543-03:00  INFO 6872 --- [http-nio-8080-exec-3] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T13:55:02.031-03:00  INFO 6872 --- [http-nio-8080-exec-3] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@46d08dd2
+2025-08-25T13:55:02.032-03:00  INFO 6872 --- [http-nio-8080-exec-3] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T13:55:03.789-03:00  INFO 6872 --- [http-nio-8080-exec-3] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 3, Prazo: 49, Valor: 100001.00
+2025-08-25T13:55:10.868-03:00  INFO 6872 --- [http-nio-8080-exec-10] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@2fc206f6
+2025-08-25T13:55:10.871-03:00  INFO 6872 --- [http-nio-8080-exec-10] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T13:55:11.730-03:00  INFO 6872 --- [http-nio-8080-exec-10] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@545e2409
+2025-08-25T13:55:11.731-03:00  INFO 6872 --- [http-nio-8080-exec-10] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T13:55:13.864-03:00  INFO 6872 --- [http-nio-8080-exec-10] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 3, Prazo: 96, Valor: 100001.00
+2025-08-25T13:55:17.982-03:00  INFO 6872 --- [http-nio-8080-exec-9] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@240c1584
+2025-08-25T13:55:17.984-03:00  INFO 6872 --- [http-nio-8080-exec-9] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T13:55:29.696-03:00  INFO 6872 --- [http-nio-8080-exec-6] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@111c562f
+2025-08-25T13:55:29.708-03:00  INFO 6872 --- [http-nio-8080-exec-6] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T13:55:31.609-03:00  INFO 6872 --- [http-nio-8080-exec-6] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@17b6a608
+2025-08-25T13:55:31.610-03:00  INFO 6872 --- [http-nio-8080-exec-6] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T13:55:32.989-03:00  INFO 6872 --- [http-nio-8080-exec-6] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 4, Prazo: 97, Valor: 1000001.00
+2025-08-25T13:55:47.633-03:00  INFO 6872 --- [http-nio-8080-exec-2] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Listando simulações
+2025-08-25T13:55:58.771-03:00  INFO 6872 --- [http-nio-8080-exec-7] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T13:56:06.758-03:00  INFO 6872 --- [http-nio-8080-exec-8] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-25T13:56:30.674-03:00  INFO 6872 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-25T13:56:30.680-03:00  INFO 6872 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-25T14:07:24.215-03:00  INFO 7864 --- [main] .d.c.TelemetriaControllerIntegrationTest : Starting TelemetriaControllerIntegrationTest using Java 17.0.16 with PID 7864 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-25T14:07:24.223-03:00  INFO 7864 --- [main] .d.c.TelemetriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-25T14:07:34.813-03:00  INFO 7864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-25T14:07:36.096-03:00  INFO 7864 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-25T14:07:36.108-03:00  INFO 7864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-25T14:07:37.080-03:00  INFO 7864 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-25T14:07:37.463-03:00  INFO 7864 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-25T14:07:37.696-03:00  INFO 7864 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-25T14:07:39.913-03:00  WARN 7864 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-25T14:07:43.627-03:00  INFO 7864 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-25T14:08:02.074-03:00  INFO 7864 --- [main] .d.c.TelemetriaControllerIntegrationTest : Started TelemetriaControllerIntegrationTest in 39.143 seconds (process running for 44.121)
+2025-08-25T14:08:04.725-03:00  INFO 7864 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@4aa95617
+2025-08-25T14:08:06.828-03:00  INFO 7864 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - Iniciando simulaÃ§Ã£o: com.desafio.model.Simulacao@59d2198d
+2025-08-25T14:08:06.839-03:00  INFO 7864 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T14:08:09.062-03:00  INFO 7864 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - Produto selecionado para simulaÃ§Ã£o: com.desafio.service.ProdutoService$ProdutoDTO@7d4c8606
+2025-08-25T14:08:09.063-03:00  INFO 7864 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T14:08:09.213-03:00  INFO 7864 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - SimulaÃ§Ã£o concluÃ­da. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-25T14:08:09.903-03:00  INFO 7864 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-25T14:08:09.959-03:00  INFO 7864 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-25T14:10:36.691-03:00  INFO 12864 --- [main] c.d.c.RelatorioControllerIntegrationTest : Starting RelatorioControllerIntegrationTest using Java 17.0.16 with PID 12864 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-25T14:10:36.696-03:00  INFO 12864 --- [main] c.d.c.RelatorioControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-25T14:10:47.372-03:00  INFO 12864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-25T14:10:48.535-03:00  INFO 12864 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-25T14:10:48.544-03:00  INFO 12864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-25T14:10:49.424-03:00  INFO 12864 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-25T14:10:49.777-03:00  INFO 12864 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-25T14:10:49.973-03:00  INFO 12864 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-25T14:10:51.378-03:00  WARN 12864 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-25T14:10:55.284-03:00  INFO 12864 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-25T14:11:14.469-03:00  INFO 12864 --- [main] c.d.c.RelatorioControllerIntegrationTest : Started RelatorioControllerIntegrationTest in 39.104 seconds (process running for 43.232)
+2025-08-25T14:11:16.622-03:00  INFO 12864 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - Iniciando simulaÃ§Ã£o: com.desafio.model.Simulacao@1771066e
+2025-08-25T14:11:16.624-03:00  INFO 12864 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T14:11:19.167-03:00  INFO 12864 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - Produto selecionado para simulaÃ§Ã£o: com.desafio.service.ProdutoService$ProdutoDTO@6a277ae5
+2025-08-25T14:11:19.168-03:00  INFO 12864 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T14:11:19.458-03:00  INFO 12864 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - SimulaÃ§Ã£o concluÃ­da. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-25T14:11:19.911-03:00  WARN 12864 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90022, SQLState: 90022
+2025-08-25T14:11:19.912-03:00 ERROR 12864 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Function "DATE" not found; SQL statement:
+select s1_0.codigo_produto,s1_0.nome_produto,cast(avg(s1_0.taxa_juros) as numeric(38,2)),cast(avg(((s1_0.valor_total_sac+s1_0.valor_total_price)/2)) as numeric(38,2)),sum(s1_0.valor_desejado),sum((s1_0.valor_total_sac+s1_0.valor_total_price)) from simulacao s1_0 where date(s1_0.data_simulacao)=? group by s1_0.codigo_produto,s1_0.nome_produto [90022-224]
+2025-08-25T14:11:20.085-03:00  WARN 12864 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90022, SQLState: 90022
+2025-08-25T14:11:20.085-03:00 ERROR 12864 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Function "DATE" not found; SQL statement:
+select s1_0.codigo_produto,s1_0.nome_produto,cast(avg(s1_0.taxa_juros) as numeric(38,2)),cast(avg(((s1_0.valor_total_sac+s1_0.valor_total_price)/2)) as numeric(38,2)),sum(s1_0.valor_desejado),sum((s1_0.valor_total_sac+s1_0.valor_total_price)) from simulacao s1_0 where date(s1_0.data_simulacao)=? group by s1_0.codigo_produto,s1_0.nome_produto [90022-224]
+2025-08-25T14:11:20.192-03:00  INFO 12864 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-25T14:11:20.198-03:00  INFO 12864 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-25T14:14:02.072-03:00  INFO 8100 --- [main] c.d.c.RelatorioControllerIntegrationTest : Starting RelatorioControllerIntegrationTest using Java 17.0.16 with PID 8100 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-25T14:14:02.086-03:00  INFO 8100 --- [main] c.d.c.RelatorioControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-25T14:14:12.753-03:00  INFO 8100 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-25T14:14:13.893-03:00  INFO 8100 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-25T14:14:13.904-03:00  INFO 8100 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-25T14:14:14.751-03:00  INFO 8100 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-25T14:14:15.044-03:00  INFO 8100 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-25T14:14:15.171-03:00  INFO 8100 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-25T14:14:16.496-03:00  WARN 8100 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-25T14:14:20.775-03:00  INFO 8100 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-25T14:14:40.586-03:00  INFO 8100 --- [main] c.d.c.RelatorioControllerIntegrationTest : Started RelatorioControllerIntegrationTest in 39.871 seconds (process running for 43.892)
+2025-08-25T14:14:42.627-03:00  INFO 8100 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - Iniciando simulaÃ§Ã£o: com.desafio.model.Simulacao@258925f4
+2025-08-25T14:14:42.628-03:00  INFO 8100 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T14:14:44.495-03:00  INFO 8100 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - Produto selecionado para simulaÃ§Ã£o: com.desafio.service.ProdutoService$ProdutoDTO@41ff6f38
+2025-08-25T14:14:44.496-03:00  INFO 8100 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T14:14:44.827-03:00  INFO 8100 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - SimulaÃ§Ã£o concluÃ­da. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-25T14:14:45.539-03:00  INFO 8100 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-25T14:14:45.546-03:00  INFO 8100 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-25T14:15:40.749-03:00  INFO 2736 --- [main] c.d.c.SimulacaoControllerIntegrationTest : Starting SimulacaoControllerIntegrationTest using Java 17.0.16 with PID 2736 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-25T14:15:40.755-03:00  INFO 2736 --- [main] c.d.c.SimulacaoControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-25T14:15:51.460-03:00  INFO 2736 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-25T14:15:52.471-03:00  INFO 2736 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-25T14:15:52.477-03:00  INFO 2736 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-25T14:15:53.339-03:00  INFO 2736 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-25T14:15:53.640-03:00  INFO 2736 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-25T14:15:53.819-03:00  INFO 2736 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-25T14:15:56.218-03:00  WARN 2736 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-25T14:16:00.426-03:00  INFO 2736 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-25T14:16:20.283-03:00  INFO 2736 --- [main] c.d.c.SimulacaoControllerIntegrationTest : Started SimulacaoControllerIntegrationTest in 40.84 seconds (process running for 44.759)
+2025-08-25T14:16:22.552-03:00  INFO 2736 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - Iniciando simulaÃ§Ã£o: com.desafio.model.Simulacao@4ebcd5dc
+2025-08-25T14:16:22.554-03:00  INFO 2736 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T14:16:24.537-03:00  INFO 2736 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - Produto selecionado para simulaÃ§Ã£o: com.desafio.service.ProdutoService$ProdutoDTO@49a8773b
+2025-08-25T14:16:24.538-03:00  INFO 2736 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T14:16:24.857-03:00  INFO 2736 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] UsuÃ¡rio: usuario-demo - SimulaÃ§Ã£o concluÃ­da. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-25T14:16:25.233-03:00  INFO 2736 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-25T14:16:25.239-03:00  INFO 2736 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-25T14:16:49.339-03:00  INFO 16120 --- [main] .d.c.TelemetriaControllerIntegrationTest : Starting TelemetriaControllerIntegrationTest using Java 17.0.16 with PID 16120 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-25T14:16:49.343-03:00  INFO 16120 --- [main] .d.c.TelemetriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-25T14:16:59.409-03:00  INFO 16120 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-25T14:17:00.649-03:00  INFO 16120 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-25T14:17:00.656-03:00  INFO 16120 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-25T14:17:01.520-03:00  INFO 16120 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-25T14:17:01.852-03:00  INFO 16120 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-25T14:17:02.051-03:00  INFO 16120 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-25T14:17:03.497-03:00  WARN 16120 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-25T14:17:08.456-03:00  INFO 16120 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-25T14:17:24.088-03:00  INFO 16120 --- [main] .d.c.TelemetriaControllerIntegrationTest : Started TelemetriaControllerIntegrationTest in 35.995 seconds (process running for 40.322)
+2025-08-25T14:17:26.204-03:00  INFO 16120 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@1f2fc50
+2025-08-25T14:17:26.978-03:00  INFO 16120 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-25T14:17:26.986-03:00  INFO 16120 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-25T14:18:29.187-03:00  INFO 3464 --- [main] .d.c.TelemetriaControllerIntegrationTest : Starting TelemetriaControllerIntegrationTest using Java 17.0.16 with PID 3464 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-25T14:18:29.193-03:00  INFO 3464 --- [main] .d.c.TelemetriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-25T14:18:41.123-03:00  INFO 3464 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-25T14:18:42.756-03:00  INFO 3464 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-25T14:18:42.766-03:00  INFO 3464 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-25T14:18:44.022-03:00  INFO 3464 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-25T14:18:44.424-03:00  INFO 3464 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-25T14:18:44.651-03:00  INFO 3464 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-25T14:18:46.059-03:00  WARN 3464 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-25T14:18:49.707-03:00  INFO 3464 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-25T14:19:05.195-03:00  INFO 3464 --- [main] .d.c.TelemetriaControllerIntegrationTest : Started TelemetriaControllerIntegrationTest in 37.503 seconds (process running for 42.14)
+2025-08-25T14:19:08.359-03:00  INFO 3464 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@5c7744f0
+2025-08-25T14:19:09.066-03:00  INFO 3464 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-25T14:19:09.073-03:00  INFO 3464 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-25T14:22:26.658-03:00  INFO 5748 --- [main] com.desafio.Hackaton2Application         : Starting Hackaton2Application using Java 17.0.16 with PID 5748 (C:\Desenvolvimento\projetos\hackaton2\target\classes started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-25T14:22:26.762-03:00  INFO 5748 --- [main] com.desafio.Hackaton2Application         : No active profile set, falling back to 1 default profile: "default"
+2025-08-25T14:22:33.739-03:00  INFO 5748 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-25T14:22:33.741-03:00  INFO 5748 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-08-25T14:22:33.997-03:00  INFO 5748 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-25T14:22:34.924-03:00  INFO 5748 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-25T14:22:35.720-03:00  INFO 5748 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-25T14:22:35.725-03:00  INFO 5748 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-25T14:22:36.156-03:00  INFO 5748 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-25T14:22:36.358-03:00  INFO 5748 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-25T14:22:36.478-03:00  INFO 5748 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-25T14:22:37.353-03:00  WARN 5748 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-25T14:22:44.836-03:00  INFO 5748 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-25T14:22:57.220-03:00  INFO 5748 --- [main] com.desafio.Hackaton2Application         : Started Hackaton2Application in 32.371 seconds (process running for 33.583)
+2025-08-25T14:23:00.648-03:00  INFO 5748 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-25T14:23:07.383-03:00  INFO 5748 --- [http-nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 3518 ms
+2025-08-25T14:23:11.552-03:00  INFO 5748 --- [http-nio-8080-exec-2] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@6f530e25
+2025-08-25T14:23:11.554-03:00  INFO 5748 --- [http-nio-8080-exec-2] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T14:23:13.862-03:00  INFO 5748 --- [http-nio-8080-exec-2] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@629863c3
+2025-08-25T14:23:13.867-03:00  INFO 5748 --- [http-nio-8080-exec-2] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T14:23:16.657-03:00  INFO 5748 --- [http-nio-8080-exec-2] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 4, Prazo: 97, Valor: 1000001.00
+2025-08-25T14:23:22.322-03:00  INFO 5748 --- [http-nio-8080-exec-3] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Listando simulações
+2025-08-25T14:23:27.545-03:00  INFO 5748 --- [http-nio-8080-exec-4] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T14:23:46.929-03:00  INFO 5748 --- [http-nio-8080-exec-7] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@15cd4037
+2025-08-25T14:23:46.931-03:00  INFO 5748 --- [http-nio-8080-exec-7] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T14:23:47.906-03:00  INFO 5748 --- [http-nio-8080-exec-7] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@24112745
+2025-08-25T14:23:47.907-03:00  INFO 5748 --- [http-nio-8080-exec-7] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T14:23:50.242-03:00  INFO 5748 --- [http-nio-8080-exec-7] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 4, Prazo: 97, Valor: 1000001.00
+2025-08-25T14:23:51.963-03:00  INFO 5748 --- [http-nio-8080-exec-9] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@63492c3f
+2025-08-25T14:23:51.965-03:00  INFO 5748 --- [http-nio-8080-exec-9] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T14:23:52.540-03:00  INFO 5748 --- [http-nio-8080-exec-9] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@1dfa394c
+2025-08-25T14:23:52.541-03:00  INFO 5748 --- [http-nio-8080-exec-9] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T14:23:54.140-03:00  INFO 5748 --- [http-nio-8080-exec-9] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 4, Prazo: 97, Valor: 1000001.00
+2025-08-25T14:23:55.785-03:00  INFO 5748 --- [http-nio-8080-exec-8] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@78b1ffb4
+2025-08-25T14:23:55.788-03:00  INFO 5748 --- [http-nio-8080-exec-8] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T14:23:56.285-03:00  INFO 5748 --- [http-nio-8080-exec-8] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@107833ed
+2025-08-25T14:23:56.286-03:00  INFO 5748 --- [http-nio-8080-exec-8] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T14:23:58.590-03:00  INFO 5748 --- [http-nio-8080-exec-8] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 4, Prazo: 97, Valor: 1000001.00
+2025-08-25T14:24:25.609-03:00  INFO 5748 --- [http-nio-8080-exec-10] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@9f8a6b9
+2025-08-25T14:24:25.612-03:00  INFO 5748 --- [http-nio-8080-exec-10] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T14:24:26.220-03:00  INFO 5748 --- [http-nio-8080-exec-10] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@42e487d9
+2025-08-25T14:24:26.222-03:00  INFO 5748 --- [http-nio-8080-exec-10] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T14:24:26.788-03:00  INFO 5748 --- [http-nio-8080-exec-10] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 1, Prazo: 24, Valor: 200.00
+2025-08-25T14:24:28.916-03:00  INFO 5748 --- [http-nio-8080-exec-1] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@3724d511
+2025-08-25T14:24:28.918-03:00  INFO 5748 --- [http-nio-8080-exec-1] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T14:24:29.670-03:00  INFO 5748 --- [http-nio-8080-exec-1] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@62b86377
+2025-08-25T14:24:29.679-03:00  INFO 5748 --- [http-nio-8080-exec-1] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T14:24:30.159-03:00  INFO 5748 --- [http-nio-8080-exec-1] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 1, Prazo: 24, Valor: 200.00
+2025-08-25T14:24:32.863-03:00  INFO 5748 --- [http-nio-8080-exec-2] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@1399f8b2
+2025-08-25T14:24:32.866-03:00  INFO 5748 --- [http-nio-8080-exec-2] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T14:24:33.535-03:00  INFO 5748 --- [http-nio-8080-exec-2] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@3376bbd3
+2025-08-25T14:24:33.541-03:00  INFO 5748 --- [http-nio-8080-exec-2] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T14:24:33.722-03:00  INFO 5748 --- [http-nio-8080-exec-2] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 1, Prazo: 12, Valor: 200.00
+2025-08-25T14:24:54.930-03:00  INFO 5748 --- [http-nio-8080-exec-3] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@3ea50171
+2025-08-25T14:24:54.935-03:00  INFO 5748 --- [http-nio-8080-exec-3] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T14:24:57.079-03:00  INFO 5748 --- [http-nio-8080-exec-5] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@27c921a2
+2025-08-25T14:24:57.082-03:00  INFO 5748 --- [http-nio-8080-exec-5] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T14:25:05.149-03:00  INFO 5748 --- [http-nio-8080-exec-7] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@3f6b50d8
+2025-08-25T14:25:05.159-03:00  INFO 5748 --- [http-nio-8080-exec-7] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T14:25:05.634-03:00  INFO 5748 --- [http-nio-8080-exec-7] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@5ff4a265
+2025-08-25T14:25:05.635-03:00  INFO 5748 --- [http-nio-8080-exec-7] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T14:25:06.185-03:00  INFO 5748 --- [http-nio-8080-exec-7] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 1, Prazo: 24, Valor: 2000.00
+2025-08-25T14:25:08.243-03:00  INFO 5748 --- [http-nio-8080-exec-9] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@fb05b19
+2025-08-25T14:25:08.245-03:00  INFO 5748 --- [http-nio-8080-exec-9] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-25T14:25:08.716-03:00  INFO 5748 --- [http-nio-8080-exec-9] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@5e109b1d
+2025-08-25T14:25:08.718-03:00  INFO 5748 --- [http-nio-8080-exec-9] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-25T14:25:09.061-03:00  INFO 5748 --- [http-nio-8080-exec-9] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 1, Prazo: 24, Valor: 2000.00
+2025-08-25T14:25:12.889-03:00  INFO 5748 --- [http-nio-8080-exec-8] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Listando simulações
+2025-08-25T14:25:18.764-03:00  INFO 5748 --- [http-nio-8080-exec-10] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server

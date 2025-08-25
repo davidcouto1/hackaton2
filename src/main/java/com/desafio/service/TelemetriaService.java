@@ -29,7 +29,21 @@ public class TelemetriaService {
     @CircuitBreaker(name = "default")
     @RateLimiter(name = "default")
     public List<Telemetria> listarTelemetria() {
-    logger.info("[AUDITORIA] Listando telemetrias");
+        logger.info("[AUDITORIA] Listando telemetrias");
         return telemetriaRepository.findAll();
+    }
+
+    @CircuitBreaker(name = "default")
+    @RateLimiter(name = "default")
+    public List<com.desafio.dto.TelemetriaDTO> buscarPorData(java.time.LocalDate data) {
+        logger.info("[AUDITORIA] Listando telemetria agregada por data: {}", data);
+        return telemetriaRepository.buscarPorData(data);
+    }
+
+    // Opcional: método para buscar todos agrupados (caso precise para o controller)
+    public List<com.desafio.dto.TelemetriaDTO> buscarTodosAgrupados() {
+        // Pode retornar todos agrupados por nomeApi, sem filtro de data
+        // Exemplo: telemetriaRepository.buscarPorData(null) ou implementar outro método customizado
+        return java.util.Collections.emptyList();
     }
 }

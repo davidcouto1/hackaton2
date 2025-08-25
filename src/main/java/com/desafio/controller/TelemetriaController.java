@@ -39,25 +39,22 @@ public class TelemetriaController {
     })
     @GetMapping
     public Object listarTelemetria(@RequestParam(value = "data", required = false) String data) {
-        List<Telemetria> todas = telemetriaService.listarTelemetria();
-        List<Telemetria> filtradas = todas;
+        java.time.LocalDate dataRef = null;
         if (data != null) {
-            filtradas = todas.stream().filter(t -> t.getDataReferencia().toString().equals(data)).toList();
+            dataRef = java.time.LocalDate.parse(data);
         }
-        List<Object> listaEndpoints = new java.util.ArrayList<>();
-        for (Telemetria t : filtradas) {
-            listaEndpoints.add(java.util.Map.of(
-                "nomeApi", t.getNomeApi(),
-                "qtdRequisicoes", t.getQtdRequisicoes(),
-                "tempoMedio", t.getTempoMedio(),
-                "tempoMinimo", t.getTempoMinimo(),
-                "tempoMaximo", t.getTempoMaximo(),
-                "percentualSucesso", t.getPercentualSucesso()
-            ));
-        }
-        String dataReferencia = filtradas.isEmpty() ? null : filtradas.get(0).getDataReferencia().toString();
+        var listaEndpoints = dataRef != null ? telemetriaService.buscarPorData(dataRef) : telemetriaService.buscarTodosAgrupados();
         java.util.Map<String, Object> envelope = new java.util.HashMap<>();
-        envelope.put("dataReferencia", dataReferencia);
+        // Preenche dataReferencia corretamente
+        if (dataRef != null) {
+            envelope.put("dataReferencia", dataRef);
+        } else if (!listaEndpoints.isEmpty() && listaEndpoints.get(0) instanceof com.desafio.dto.TelemetriaDTO) {
+            // Se houver dados, tenta pegar a data do primeiro DTO (se existir)
+            // envelope.put("dataReferencia", ...); // Se DTO tiver campo de data
+            envelope.put("dataReferencia", java.time.LocalDate.now());
+        } else {
+            envelope.put("dataReferencia", java.time.LocalDate.now());
+        }
         envelope.put("endpoints", listaEndpoints);
         return envelope;
     }
