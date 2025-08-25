@@ -22,7 +22,8 @@ public class TelemetriaService {
     @CircuitBreaker(name = "default")
     @RateLimiter(name = "default")
     public Telemetria salvarTelemetria(Telemetria telemetria) {
-    logger.info("[AUDITORIA] Salvando telemetria: {}", telemetria);
+        logger.info("[AUDITORIA] Salvando telemetria: {}", telemetria);
+        // Salva registro individual
         return telemetriaRepository.save(telemetria);
     }
 

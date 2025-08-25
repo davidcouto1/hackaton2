@@ -14,10 +14,10 @@ public interface TelemetriaRepository extends JpaRepository<Telemetria, Long> {
 		SELECT new com.desafio.dto.TelemetriaDTO(
 			t.nomeApi,
 			COUNT(t.idTelemetria),
-			AVG(t.tempoMedio),
-			MIN(t.tempoMinimo),
-			MAX(t.tempoMaximo),
-			SUM(CASE WHEN t.percentualSucesso = 1.0 THEN 1 ELSE 0 END) * 1.0 / COUNT(t.idTelemetria)
+			AVG(t.tempoRespostaMs),
+			MIN(t.tempoRespostaMs),
+			MAX(t.tempoRespostaMs),
+			SUM(CASE WHEN t.statusHttp = 200 THEN 1 ELSE 0 END) * 1.0 / COUNT(t.idTelemetria)
 		)
 		FROM Telemetria t
 		WHERE t.dataReferencia = :data
