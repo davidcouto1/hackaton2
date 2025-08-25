@@ -1,14 +1,15 @@
-com\desafio\Main.class
 com\desafio\config\SwaggerConfig.class
 com\desafio\exception\GlobalExceptionHandler.class
 com\desafio\service\AmortizacaoService$ParcelaDTO.class
 com\desafio\service\AmortizacaoService.class
 com\desafio\service\ProdutoService$ProdutoDTO.class
 com\desafio\controller\AuditoriaController.class
-com\desafio\controller\SimulacaoController.class
-com\desafio\service\ProdutoService.class
 com\desafio\model\Simulacao.class
 com\desafio\repository\SimulacaoRepository.class
+com\desafio\repository\ParcelaRepository.class
+com\desafio\Main.class
+com\desafio\controller\SimulacaoController.class
+com\desafio\service\ProdutoService.class
 com\desafio\Hackaton2Application.class
 com\desafio\service\SimulacaoService.class
 com\desafio\controller\ProdutoController.class
@@ -16,7 +17,6 @@ com\desafio\controller\RelatorioController.class
 com\desafio\controller\TelemetriaController.class
 com\desafio\model\Telemetria.class
 com\desafio\service\TelemetriaService.class
-com\desafio\repository\ParcelaRepository.class
 com\desafio\model\Parcela.class
 com\desafio\service\EventHubService.class
 com\desafio\repository\TelemetriaRepository.class

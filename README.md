@@ -98,3 +98,14 @@ Arquivo `hackaton2.json` incluso no projeto.
 - Projeto pronto para avaliação, seguindo boas práticas REST, documentação, testes e automação.
 
 - Resiliente contra falhas e sobrecarga, com cache, circuit breaker e rate limiter.
+
+## Padrões de Projeto
+- O cálculo das parcelas de amortização (SAC/PRICE) foi refatorado usando os padrões Strategy + Factory, facilitando extensibilidade e manutenção.
+
+## Princípios SOLID
+- O projeto segue os princípios SOLID:
+	- **SRP**: Cada classe tem responsabilidade única (ex: estratégias de amortização).
+	- **OCP**: Novas estratégias podem ser adicionadas sem alterar código existente (Strategy/Factory).
+	- **LSP**: Estratégias podem ser substituídas sem quebrar o contrato.
+	- **ISP**: Interfaces são pequenas e específicas.
+	- **DIP**: Estratégias são injetadas via Spring, dependência de abstrações.

@@ -4,7 +4,10 @@ import com.desafio.model.Simulacao;
 import com.desafio.model.Parcela;
 import com.desafio.repository.SimulacaoRepository;
 import com.desafio.repository.ParcelaRepository;
-import com.desafio.service.AmortizacaoService;
+import com.desafio.service.amortizacao.TipoAmortizacao;
+import com.desafio.service.amortizacao.AmortizacaoStrategy;
+import com.desafio.service.amortizacao.SACStrategy;
+import com.desafio.service.amortizacao.PRICEStrategy;
 import com.desafio.service.ProdutoService;
 import com.desafio.service.ProdutoService.ProdutoDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +34,9 @@ public class SimulacaoService {
     private ParcelaRepository parcelaRepository;
 
     @Autowired
-    private AmortizacaoService amortizacaoService;
+    private SACStrategy sacStrategy;
+    @Autowired
+    private PRICEStrategy priceStrategy;
     @Autowired
     private ProdutoService produtoService;
 
@@ -62,12 +67,12 @@ public class SimulacaoService {
     simulacao.setNomeProduto(produtoValido.getNome());
     simulacao.setTaxaJuros(produtoValido.getTaxaJuros());
     logger.info("[AUDITORIA] Usuário: {} - Calculando parcelas SAC e PRICE", usuario);
-    var sacParcelas = amortizacaoService.calcularSAC(simulacao.getValorDesejado(), simulacao.getPrazo(), produtoValido.getTaxaJuros());
-    var priceParcelas = amortizacaoService.calcularPRICE(simulacao.getValorDesejado(), simulacao.getPrazo(), produtoValido.getTaxaJuros());
+    var sacParcelas = sacStrategy.calcular(simulacao.getValorDesejado(), simulacao.getPrazo(), produtoValido.getTaxaJuros());
+    var priceParcelas = priceStrategy.calcular(simulacao.getValorDesejado(), simulacao.getPrazo(), produtoValido.getTaxaJuros());
     List<Parcela> parcelas = new ArrayList<>();
     BigDecimal totalSac = BigDecimal.ZERO;
     BigDecimal totalPrice = BigDecimal.ZERO;
-    for (AmortizacaoService.ParcelaDTO p : sacParcelas) {
+    for (AmortizacaoStrategy.ParcelaDTO p : sacParcelas) {
             Parcela parcela = new Parcela();
             parcela.setTipo("SAC");
             parcela.setNumero(p.numero);
@@ -78,7 +83,7 @@ public class SimulacaoService {
             parcelas.add(parcela);
             totalSac = totalSac.add(p.valorPrestacao);
         }
-        for (AmortizacaoService.ParcelaDTO p : priceParcelas) {
+        for (AmortizacaoStrategy.ParcelaDTO p : priceParcelas) {
             Parcela parcela = new Parcela();
             parcela.setTipo("PRICE");
             parcela.setNumero(p.numero);
