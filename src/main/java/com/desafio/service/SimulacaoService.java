@@ -41,41 +41,32 @@ public class SimulacaoService {
     @RateLimiter(name = "default")
     public Simulacao salvarSimulacao(Simulacao simulacao) {
     logger.info("[AUDITORIA] Iniciando simulação: {}", simulacao);
-        // Buscar produto válido
-        ProdutoDTO produtoValido = null;
-        try {
-            logger.info("[AUDITORIA] Consultando produtos para simulação");
-            for (ProdutoDTO produto : produtoService.buscarProdutos()) {
-                boolean prazoOk = simulacao.getPrazo() >= produto.getMinimoMeses() && (produto.getMaximoMeses() == null || simulacao.getPrazo() <= produto.getMaximoMeses());
-                boolean valorOk = simulacao.getValorDesejado().compareTo(produto.getValorMinimo()) >= 0 && (produto.getValorMaximo() == null || simulacao.getValorDesejado().compareTo(produto.getValorMaximo()) <= 0);
-                if (prazoOk && valorOk) {
-                    produtoValido = produto;
-                    break;
-                }
+    ProdutoDTO produtoValido = null;
+    try {
+        for (ProdutoDTO produto : produtoService.buscarProdutos()) {
+            boolean prazoOk = simulacao.getPrazo() >= produto.getMinimoMeses() && (produto.getMaximoMeses() == null || simulacao.getPrazo() <= produto.getMaximoMeses());
+            boolean valorOk = simulacao.getValorDesejado().compareTo(produto.getValorMinimo()) >= 0 && (produto.getValorMaximo() == null || simulacao.getValorDesejado().compareTo(produto.getValorMaximo()) <= 0);
+            if (prazoOk && valorOk) {
+                produtoValido = produto;
+                break;
             }
-        } catch (Exception e) {
-            logger.error("[AUDITORIA] Erro ao consultar produtos: {}", e.getMessage());
-            throw new RuntimeException("Erro ao consultar produtos", e);
         }
-        if (produtoValido == null) throw new RuntimeException("Nenhum produto válido encontrado para os parâmetros informados.");
-
-    logger.info("[AUDITORIA] Produto válido encontrado: {}", produtoValido);
-
-        simulacao.setCodigoProduto(produtoValido.getCodigo());
-        simulacao.setNomeProduto(produtoValido.getNome());
-        simulacao.setTaxaJuros(produtoValido.getTaxaJuros());
-
+    } catch (Exception e) {
+        logger.error("[AUDITORIA] Erro ao consultar produtos para simulação: {}", simulacao, e);
+        throw new RuntimeException("Erro ao consultar produtos", e);
+    }
+    if (produtoValido == null) throw new RuntimeException("Nenhum produto válido encontrado para os parâmetros informados.");
+    logger.info("[AUDITORIA] Produto selecionado para simulação: {}", produtoValido);
+    simulacao.setCodigoProduto(produtoValido.getCodigo());
+    simulacao.setNomeProduto(produtoValido.getNome());
+    simulacao.setTaxaJuros(produtoValido.getTaxaJuros());
     logger.info("[AUDITORIA] Calculando parcelas SAC e PRICE");
-
-        // Calcular SAC
-        var sacParcelas = amortizacaoService.calcularSAC(simulacao.getValorDesejado(), simulacao.getPrazo(), produtoValido.getTaxaJuros());
-        // Calcular PRICE
-        var priceParcelas = amortizacaoService.calcularPRICE(simulacao.getValorDesejado(), simulacao.getPrazo(), produtoValido.getTaxaJuros());
-
-        List<Parcela> parcelas = new ArrayList<>();
-        BigDecimal totalSac = BigDecimal.ZERO;
-        BigDecimal totalPrice = BigDecimal.ZERO;
-        for (AmortizacaoService.ParcelaDTO p : sacParcelas) {
+    var sacParcelas = amortizacaoService.calcularSAC(simulacao.getValorDesejado(), simulacao.getPrazo(), produtoValido.getTaxaJuros());
+    var priceParcelas = amortizacaoService.calcularPRICE(simulacao.getValorDesejado(), simulacao.getPrazo(), produtoValido.getTaxaJuros());
+    List<Parcela> parcelas = new ArrayList<>();
+    BigDecimal totalSac = BigDecimal.ZERO;
+    BigDecimal totalPrice = BigDecimal.ZERO;
+    for (AmortizacaoService.ParcelaDTO p : sacParcelas) {
             Parcela parcela = new Parcela();
             parcela.setTipo("SAC");
             parcela.setNumero(p.numero);
@@ -106,10 +97,12 @@ public class SimulacaoService {
             parcela.setSimulacao(saved);
             parcelaRepository.save(parcela);
         }
+        logger.info("[AUDITORIA] Simulação concluída. Produto: {}, Prazo: {}, Valor: {}", produtoValido.getNome(), simulacao.getPrazo(), simulacao.getValorDesejado());
         return saved;
     }
 
     public List<Simulacao> listarSimulacoes() {
+        logger.info("[AUDITORIA] Listando simulações");
         return simulacaoRepository.findAll();
     }
 }

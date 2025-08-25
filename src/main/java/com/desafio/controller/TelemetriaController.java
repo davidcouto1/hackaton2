@@ -1,4 +1,3 @@
-
 package com.desafio.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -57,9 +56,9 @@ public class TelemetriaController {
             ));
         }
         String dataReferencia = filtradas.isEmpty() ? null : filtradas.get(0).getDataReferencia().toString();
-        return java.util.Map.of(
-            "dataReferencia", dataReferencia,
-            "listaEndpoints", listaEndpoints
-        );
+        java.util.Map<String, Object> envelope = new java.util.HashMap<>();
+        envelope.put("dataReferencia", dataReferencia);
+        envelope.put("endpoints", listaEndpoints);
+        return envelope;
     }
 }

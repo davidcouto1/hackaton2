@@ -1,0 +1,272 @@
+2025-08-24T21:56:29.057-03:00  INFO 10680 --- [main] c.d.c.SimulacaoControllerIntegrationTest : Starting SimulacaoControllerIntegrationTest using Java 17.0.16 with PID 10680 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-24T21:56:29.063-03:00  INFO 10680 --- [main] c.d.c.SimulacaoControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T21:56:34.747-03:00  INFO 10680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-24T21:56:35.313-03:00  INFO 10680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 528 ms. Found 3 JPA repository interfaces.
+2025-08-24T21:56:38.143-03:00  INFO 10680 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-24T21:56:39.131-03:00  INFO 10680 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-24T21:56:39.139-03:00  INFO 10680 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-24T21:56:39.788-03:00  INFO 10680 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-24T21:56:40.046-03:00  INFO 10680 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-24T21:56:40.194-03:00  INFO 10680 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-24T21:56:41.303-03:00  INFO 10680 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-24T21:56:41.568-03:00  WARN 10680 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24T21:56:44.830-03:00  INFO 10680 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-24T21:56:44.841-03:00  INFO 10680 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T21:56:49.996-03:00  WARN 10680 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24T21:56:56.991-03:00  INFO 10680 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-24T21:56:56.992-03:00  INFO 10680 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-24T21:56:57.066-03:00  INFO 10680 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-08-24T21:56:57.197-03:00  INFO 10680 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 204 ms
+2025-08-24T21:56:57.541-03:00  INFO 10680 --- [main] c.d.c.SimulacaoControllerIntegrationTest : Started SimulacaoControllerIntegrationTest in 29.778 seconds (process running for 34.187)
+2025-08-24T21:57:01.078-03:00  INFO 10680 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@12bcedf8
+2025-08-24T21:57:01.080-03:00  INFO 10680 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T21:57:02.712-03:00  INFO 10680 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@1613e5ab
+2025-08-24T21:57:02.713-03:00  INFO 10680 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T21:57:03.140-03:00  INFO 10680 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T21:57:03.567-03:00  INFO 10680 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T21:57:03.609-03:00  INFO 10680 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-24T21:57:03.614-03:00  INFO 10680 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-24T21:58:11.906-03:00  INFO 13784 --- [main] .d.c.TelemetriaControllerIntegrationTest : Starting TelemetriaControllerIntegrationTest using Java 17.0.16 with PID 13784 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-24T21:58:11.923-03:00  INFO 13784 --- [main] .d.c.TelemetriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T21:58:19.084-03:00  INFO 13784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-24T21:58:19.572-03:00  INFO 13784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 451 ms. Found 3 JPA repository interfaces.
+2025-08-24T21:58:22.474-03:00  INFO 13784 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-24T21:58:23.476-03:00  INFO 13784 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-24T21:58:23.484-03:00  INFO 13784 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-24T21:58:24.190-03:00  INFO 13784 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-24T21:58:24.477-03:00  INFO 13784 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-24T21:58:24.617-03:00  INFO 13784 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-24T21:58:25.846-03:00  INFO 13784 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-24T21:58:26.054-03:00  WARN 13784 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24T21:58:29.740-03:00  INFO 13784 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-24T21:58:29.749-03:00  INFO 13784 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T21:58:34.584-03:00  WARN 13784 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24T21:58:40.741-03:00  INFO 13784 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-24T21:58:40.742-03:00  INFO 13784 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-24T21:58:40.786-03:00  INFO 13784 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-08-24T21:58:40.890-03:00  INFO 13784 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 148 ms
+2025-08-24T21:58:41.156-03:00  INFO 13784 --- [main] .d.c.TelemetriaControllerIntegrationTest : Started TelemetriaControllerIntegrationTest in 30.635 seconds (process running for 35.201)
+2025-08-24T21:58:43.070-03:00  INFO 13784 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T21:58:43.791-03:00  INFO 13784 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T21:58:43.801-03:00  INFO 13784 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-24T21:58:43.806-03:00  INFO 13784 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-24T21:59:34.738-03:00  INFO 14892 --- [main] .d.c.TelemetriaControllerIntegrationTest : Starting TelemetriaControllerIntegrationTest using Java 17.0.16 with PID 14892 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-24T21:59:34.742-03:00  INFO 14892 --- [main] .d.c.TelemetriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T21:59:40.155-03:00  INFO 14892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-24T21:59:40.871-03:00  INFO 14892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 679 ms. Found 3 JPA repository interfaces.
+2025-08-24T21:59:44.690-03:00  INFO 14892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-24T21:59:46.004-03:00  INFO 14892 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-24T21:59:46.012-03:00  INFO 14892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-24T21:59:46.956-03:00  INFO 14892 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-24T21:59:47.272-03:00  INFO 14892 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-24T21:59:47.434-03:00  INFO 14892 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-24T21:59:48.480-03:00  INFO 14892 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-24T21:59:48.628-03:00  WARN 14892 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24T21:59:52.368-03:00  INFO 14892 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-24T21:59:52.377-03:00  INFO 14892 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T21:59:59.937-03:00  WARN 14892 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24T22:00:08.382-03:00  INFO 14892 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-24T22:00:08.385-03:00  INFO 14892 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-24T22:00:08.437-03:00  INFO 14892 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-08-24T22:00:08.619-03:00  INFO 14892 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 226 ms
+2025-08-24T22:00:08.971-03:00  INFO 14892 --- [main] .d.c.TelemetriaControllerIntegrationTest : Started TelemetriaControllerIntegrationTest in 35.416 seconds (process running for 39.07)
+2025-08-24T22:00:10.724-03:00  INFO 14892 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:00:11.942-03:00  INFO 14892 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:00:11.957-03:00  INFO 14892 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-24T22:00:11.970-03:00  INFO 14892 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-24T22:02:18.849-03:00  INFO 13760 --- [main] .d.c.TelemetriaControllerIntegrationTest : Starting TelemetriaControllerIntegrationTest using Java 17.0.16 with PID 13760 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-24T22:02:18.856-03:00  INFO 13760 --- [main] .d.c.TelemetriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T22:02:24.193-03:00  INFO 13760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-24T22:02:24.730-03:00  INFO 13760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 504 ms. Found 3 JPA repository interfaces.
+2025-08-24T22:02:28.534-03:00  INFO 13760 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-24T22:02:29.788-03:00  INFO 13760 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-24T22:02:29.822-03:00  INFO 13760 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-24T22:02:30.953-03:00  INFO 13760 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-24T22:02:31.293-03:00  INFO 13760 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-24T22:02:31.469-03:00  INFO 13760 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-24T22:02:32.528-03:00  INFO 13760 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-24T22:02:32.801-03:00  WARN 13760 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24T22:02:36.521-03:00  INFO 13760 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-24T22:02:36.534-03:00  INFO 13760 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:02:42.576-03:00  WARN 13760 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24T22:02:50.339-03:00  INFO 13760 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-24T22:02:50.341-03:00  INFO 13760 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-24T22:02:50.389-03:00  INFO 13760 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-08-24T22:02:50.557-03:00  INFO 13760 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 215 ms
+2025-08-24T22:02:50.909-03:00  INFO 13760 --- [main] .d.c.TelemetriaControllerIntegrationTest : Started TelemetriaControllerIntegrationTest in 33.352 seconds (process running for 37.677)
+2025-08-24T22:02:53.518-03:00  INFO 13760 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:02:54.368-03:00  INFO 13760 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:02:54.606-03:00  INFO 13760 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:02:54.644-03:00  INFO 13760 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-24T22:02:54.726-03:00  INFO 13760 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-24T22:03:26.405-03:00  INFO 3372 --- [main] .d.c.TelemetriaControllerIntegrationTest : Starting TelemetriaControllerIntegrationTest using Java 17.0.16 with PID 3372 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-24T22:03:26.412-03:00  INFO 3372 --- [main] .d.c.TelemetriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T22:03:32.522-03:00  INFO 3372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-24T22:03:33.043-03:00  INFO 3372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 488 ms. Found 3 JPA repository interfaces.
+2025-08-24T22:03:36.790-03:00  INFO 3372 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-24T22:03:37.844-03:00  INFO 3372 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-24T22:03:37.859-03:00  INFO 3372 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-24T22:03:38.699-03:00  INFO 3372 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-24T22:03:39.000-03:00  INFO 3372 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-24T22:03:39.189-03:00  INFO 3372 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-24T22:03:40.310-03:00  INFO 3372 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-24T22:03:40.534-03:00  WARN 3372 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24T22:03:44.334-03:00  INFO 3372 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-24T22:03:44.343-03:00  INFO 3372 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:03:50.758-03:00  WARN 3372 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24T22:03:58.258-03:00  INFO 3372 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-24T22:03:58.260-03:00  INFO 3372 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-24T22:03:58.400-03:00  INFO 3372 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-08-24T22:03:58.599-03:00  INFO 3372 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 329 ms
+2025-08-24T22:03:59.443-03:00  INFO 3372 --- [main] .d.c.TelemetriaControllerIntegrationTest : Started TelemetriaControllerIntegrationTest in 34.336 seconds (process running for 38.407)
+2025-08-24T22:04:01.540-03:00  INFO 3372 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:04:02.518-03:00  INFO 3372 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:04:02.658-03:00  INFO 3372 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:04:02.671-03:00  INFO 3372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-24T22:04:02.725-03:00  INFO 3372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-24T22:06:36.067-03:00  INFO 11344 --- [main] .d.c.TelemetriaControllerIntegrationTest : Starting TelemetriaControllerIntegrationTest using Java 17.0.16 with PID 11344 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-24T22:06:36.072-03:00  INFO 11344 --- [main] .d.c.TelemetriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T22:06:42.149-03:00  INFO 11344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-24T22:06:42.734-03:00  INFO 11344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 540 ms. Found 3 JPA repository interfaces.
+2025-08-24T22:06:46.951-03:00  INFO 11344 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-24T22:06:48.297-03:00  INFO 11344 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-24T22:06:48.310-03:00  INFO 11344 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-24T22:06:49.331-03:00  INFO 11344 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-24T22:06:49.669-03:00  INFO 11344 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-24T22:06:49.906-03:00  INFO 11344 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-24T22:06:51.705-03:00  INFO 11344 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-24T22:06:51.961-03:00  WARN 11344 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24T22:06:55.654-03:00  INFO 11344 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-24T22:06:55.664-03:00  INFO 11344 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:07:03.548-03:00  WARN 11344 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24T22:07:10.818-03:00  INFO 11344 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-24T22:07:10.820-03:00  INFO 11344 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-24T22:07:10.872-03:00  INFO 11344 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-08-24T22:07:10.970-03:00  INFO 11344 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 148 ms
+2025-08-24T22:07:11.337-03:00  INFO 11344 --- [main] .d.c.TelemetriaControllerIntegrationTest : Started TelemetriaControllerIntegrationTest in 36.429 seconds (process running for 40.534)
+2025-08-24T22:07:13.258-03:00  INFO 11344 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@44ee788f
+2025-08-24T22:07:13.694-03:00  INFO 11344 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:07:14.491-03:00  INFO 11344 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:07:14.564-03:00  INFO 11344 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:07:14.666-03:00  INFO 11344 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:07:14.675-03:00  INFO 11344 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-24T22:07:14.684-03:00  INFO 11344 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-24T22:08:12.562-03:00  INFO 11624 --- [main] c.d.c.RelatorioControllerIntegrationTest : Starting RelatorioControllerIntegrationTest using Java 17.0.16 with PID 11624 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-24T22:08:12.568-03:00  INFO 11624 --- [main] c.d.c.RelatorioControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T22:08:19.047-03:00  INFO 11624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-24T22:08:19.473-03:00  INFO 11624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 396 ms. Found 3 JPA repository interfaces.
+2025-08-24T22:08:23.066-03:00  INFO 11624 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-24T22:08:24.187-03:00  INFO 11624 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-24T22:08:24.197-03:00  INFO 11624 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-24T22:08:25.000-03:00  INFO 11624 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-24T22:08:25.322-03:00  INFO 11624 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-24T22:08:25.530-03:00  INFO 11624 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-24T22:08:26.535-03:00  INFO 11624 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-24T22:08:26.763-03:00  WARN 11624 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24T22:08:30.092-03:00  INFO 11624 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-24T22:08:30.103-03:00  INFO 11624 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:08:36.583-03:00  WARN 11624 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24T22:08:43.830-03:00  INFO 11624 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-24T22:08:43.833-03:00  INFO 11624 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-24T22:08:43.925-03:00  INFO 11624 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-08-24T22:08:43.999-03:00  INFO 11624 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 164 ms
+2025-08-24T22:08:44.273-03:00  INFO 11624 --- [main] c.d.c.RelatorioControllerIntegrationTest : Started RelatorioControllerIntegrationTest in 33.051 seconds (process running for 37.042)
+2025-08-24T22:08:46.171-03:00  INFO 11624 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@2202eee0
+2025-08-24T22:08:46.173-03:00  INFO 11624 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:08:47.774-03:00  INFO 11624 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@3dc67c9e
+2025-08-24T22:08:47.775-03:00  INFO 11624 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:08:48.118-03:00  INFO 11624 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:08:49.341-03:00  INFO 11624 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:08:49.354-03:00  INFO 11624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-24T22:08:49.373-03:00  INFO 11624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-24T22:09:51.449-03:00  INFO 8692 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Starting AuditoriaControllerIntegrationTest using Java 17.0.16 with PID 8692 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-24T22:09:51.457-03:00  INFO 8692 --- [main] c.d.c.AuditoriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T22:09:56.829-03:00  INFO 8692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-24T22:09:57.374-03:00  INFO 8692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 514 ms. Found 3 JPA repository interfaces.
+2025-08-24T22:10:01.818-03:00  INFO 8692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-24T22:10:02.883-03:00  INFO 8692 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-24T22:10:02.899-03:00  INFO 8692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-24T22:10:03.783-03:00  INFO 8692 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-24T22:10:04.055-03:00  INFO 8692 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-24T22:10:04.163-03:00  INFO 8692 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-24T22:10:05.154-03:00  INFO 8692 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-24T22:10:05.368-03:00  WARN 8692 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24T22:10:09.100-03:00  INFO 8692 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-24T22:10:09.113-03:00  INFO 8692 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:10:15.869-03:00  WARN 8692 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24T22:10:23.088-03:00  INFO 8692 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-24T22:10:23.089-03:00  INFO 8692 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-24T22:10:23.169-03:00  INFO 8692 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-08-24T22:10:23.250-03:00  INFO 8692 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 159 ms
+2025-08-24T22:10:23.550-03:00  INFO 8692 --- [main] c.d.c.AuditoriaControllerIntegrationTest : Started AuditoriaControllerIntegrationTest in 33.526 seconds (process running for 37.505)
+2025-08-24T22:10:25.524-03:00  INFO 8692 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:10:25.534-03:00  INFO 8692 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-24T22:10:25.542-03:00  INFO 8692 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-24T22:12:41.586-03:00  INFO 15024 --- [main] c.d.c.SimulacaoControllerValidationTest  : Starting SimulacaoControllerValidationTest using Java 17.0.16 with PID 15024 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-24T22:12:41.591-03:00  INFO 15024 --- [main] c.d.c.SimulacaoControllerValidationTest  : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T22:12:47.157-03:00  INFO 15024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-24T22:12:47.759-03:00  INFO 15024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 568 ms. Found 3 JPA repository interfaces.
+2025-08-24T22:12:51.452-03:00  INFO 15024 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-24T22:12:52.533-03:00  INFO 15024 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-24T22:12:52.540-03:00  INFO 15024 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-24T22:12:53.404-03:00  INFO 15024 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-24T22:12:53.731-03:00  INFO 15024 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-24T22:12:53.911-03:00  INFO 15024 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-24T22:12:55.001-03:00  INFO 15024 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-24T22:12:55.159-03:00  WARN 15024 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24T22:12:58.651-03:00  INFO 15024 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-24T22:12:58.665-03:00  INFO 15024 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:13:04.257-03:00  WARN 15024 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24T22:13:11.497-03:00  INFO 15024 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-24T22:13:11.498-03:00  INFO 15024 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-24T22:13:11.544-03:00  INFO 15024 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-08-24T22:13:11.617-03:00  INFO 15024 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 118 ms
+2025-08-24T22:13:11.856-03:00  INFO 15024 --- [main] c.d.c.SimulacaoControllerValidationTest  : Started SimulacaoControllerValidationTest in 31.537 seconds (process running for 36.154)
+2025-08-24T22:13:14.148-03:00  INFO 15024 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:13:14.156-03:00  INFO 15024 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-24T22:13:14.164-03:00  INFO 15024 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-24T22:16:11.578-03:00  INFO 2164 --- [main] .d.c.TelemetriaControllerIntegrationTest : Starting TelemetriaControllerIntegrationTest using Java 17.0.16 with PID 2164 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-24T22:16:11.584-03:00  INFO 2164 --- [main] .d.c.TelemetriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T22:16:16.658-03:00  INFO 2164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-24T22:16:17.104-03:00  INFO 2164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 421 ms. Found 3 JPA repository interfaces.
+2025-08-24T22:16:19.760-03:00  INFO 2164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-24T22:16:20.570-03:00  INFO 2164 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-24T22:16:20.579-03:00  INFO 2164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-24T22:16:21.168-03:00  INFO 2164 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-24T22:16:21.370-03:00  INFO 2164 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-24T22:16:21.516-03:00  INFO 2164 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-24T22:16:22.592-03:00  INFO 2164 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-24T22:16:22.751-03:00  WARN 2164 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24T22:16:25.945-03:00  INFO 2164 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-24T22:16:25.957-03:00  INFO 2164 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:16:30.814-03:00  WARN 2164 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24T22:16:37.349-03:00  INFO 2164 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-24T22:16:37.350-03:00  INFO 2164 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-24T22:16:37.391-03:00  INFO 2164 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-08-24T22:16:37.461-03:00  INFO 2164 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 109 ms
+2025-08-24T22:16:37.748-03:00  INFO 2164 --- [main] .d.c.TelemetriaControllerIntegrationTest : Started TelemetriaControllerIntegrationTest in 27.401 seconds (process running for 32.619)
+2025-08-24T22:16:39.896-03:00  INFO 2164 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@2a670af9
+2025-08-24T22:16:40.227-03:00  INFO 2164 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:16:40.834-03:00  INFO 2164 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:16:40.885-03:00  INFO 2164 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetrias
+2025-08-24T22:16:40.935-03:00  INFO 2164 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.RelatorioControllerIntegrationTest]: RelatorioControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:16:40.946-03:00  INFO 2164 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.RelatorioControllerIntegrationTest
+2025-08-24T22:16:41.017-03:00  INFO 2164 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@5969665d
+2025-08-24T22:16:41.019-03:00  INFO 2164 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:16:42.565-03:00  INFO 2164 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@7986302f
+2025-08-24T22:16:42.566-03:00  INFO 2164 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:16:42.697-03:00  INFO 2164 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:16:42.876-03:00  INFO 2164 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.AuditoriaControllerIntegrationTest]: AuditoriaControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:16:42.885-03:00  INFO 2164 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.AuditoriaControllerIntegrationTest
+2025-08-24T22:16:42.931-03:00  INFO 2164 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.SimulacaoControllerValidationTest]: SimulacaoControllerValidationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:16:42.939-03:00  INFO 2164 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.SimulacaoControllerValidationTest
+2025-08-24T22:16:43.019-03:00  INFO 2164 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.desafio.controller.SimulacaoControllerIntegrationTest]: SimulacaoControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-24T22:16:43.028-03:00  INFO 2164 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.desafio.Hackaton2Application for test class com.desafio.controller.SimulacaoControllerIntegrationTest
+2025-08-24T22:16:43.052-03:00  INFO 2164 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Iniciando simulação: com.desafio.model.Simulacao@62b26bef
+2025-08-24T22:16:43.054-03:00  INFO 2164 --- [main] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-24T22:16:43.268-03:00  INFO 2164 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@1a100769
+2025-08-24T22:16:43.269-03:00  INFO 2164 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Calculando parcelas SAC e PRICE
+2025-08-24T22:16:43.312-03:00  INFO 2164 --- [main] com.desafio.service.SimulacaoService     : [AUDITORIA] Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 900.00
+2025-08-24T22:16:43.395-03:00  INFO 2164 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-24T22:16:43.402-03:00  INFO 2164 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-24T22:16:43.410-03:00  INFO 2164 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

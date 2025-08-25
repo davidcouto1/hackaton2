@@ -34,6 +34,12 @@ public class SimulacaoController {
     })
     @PostMapping
     public ResponseEntity<?> criarSimulacao(@org.springframework.web.bind.annotation.RequestBody Simulacao simulacao) {
+        if (simulacao.getValorDesejado() == null || simulacao.getValorDesejado().signum() <= 0) {
+            return ResponseEntity.badRequest().body(java.util.Map.of("erro", "Valor desejado deve ser positivo."));
+        }
+        if (simulacao.getPrazo() < 1) {
+            return ResponseEntity.badRequest().body(java.util.Map.of("erro", "Prazo deve ser maior ou igual a 1."));
+        }
         Simulacao resultado = simulacaoService.salvarSimulacao(simulacao);
         // Agrupar parcelas por tipo
         var sacParcelas = resultado.getParcelas().stream().filter(p -> "SAC".equals(p.getTipo())).toList();
