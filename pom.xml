@@ -95,6 +95,13 @@
                         <artifactId>caffeine</artifactId>
                         <version>3.1.8</version>
                     </dependency>
+
+        <!-- Zipkin Distributed Tracing -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+            <version>4.1.1</version>
+        </dependency>
     </dependencies>
 
     <build>

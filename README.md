@@ -70,9 +70,28 @@ Arquivo `hackaton2.json` incluso no projeto.
 > Exemplo de diagrama: Caso não visualize acima, consulte o arquivo docs/diagrama.png ou adicione um link para o diagrama da arquitetura.
 
 
-## Métricas e Monitoramento
+
+## Métricas, Monitoramento e Tracing
 - Métricas expostas em `/actuator/metrics` e `/actuator/prometheus`.
 - Monitoramento completo via Prometheus e Grafana pelo Docker Compose.
+- Tracing distribuído com Zipkin para visualizar o fluxo de requisições entre serviços.
+
+### Como usar Zipkin
+1. O serviço Zipkin é iniciado automaticamente pelo Docker Compose.
+2. Para ativar o tracing no Spring Boot, adicione a dependência:
+	```xml
+	<dependency>
+	  <groupId>org.springframework.cloud</groupId>
+	  <artifactId>spring-cloud-starter-zipkin</artifactId>
+	  <version>4.1.1</version>
+	</dependency>
+	```
+3. Configure no `application.properties`:
+	```properties
+	spring.zipkin.base-url=http://zipkin:9411
+	spring.sleuth.sampler.probability=1.0
+	```
+4. Acesse a interface do Zipkin em [http://localhost:9411](http://localhost:9411) para visualizar os traces.
 
 ### Como usar Prometheus e Grafana
 1. Execute:
