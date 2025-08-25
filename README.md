@@ -52,16 +52,13 @@ Arquivos relevantes:
 mvn test
 ```
 
+
 ### Cobertura de Testes (JaCoCo)
-Para gerar o relatório de cobertura Jacoco:
+O relatório Jacoco é gerado automaticamente em `target/site/jacoco/index.html` após rodar os testes com Maven:
 ```sh
-mvn clean test jacoco:report
+mvn test
 ```
-O relatório será gerado em:
-```
-target/site/jacoco/index.html
-```
-Abra esse arquivo no navegador para visualizar a cobertura dos testes do projeto.
+Basta abrir esse arquivo no navegador para visualizar a cobertura dos testes do projeto.
 
 ### Collection Postman
 Uma collection pronta para testar todos os endpoints está disponível em `postman_collection.json`.
@@ -191,8 +188,6 @@ Arquivo `hackaton2.json` incluso no projeto.
 - Monitoramento completo via Prometheus e Grafana pelo Docker Compose.
 - Tracing distribuído com OpenTelemetry/Spring Observability para visualizar o fluxo de requisições entre serviços.
 
-### Como usar Zipkin
-### Como usar tracing distribuído (OpenTelemetry/Spring Observability)
 
 
 ### Como usar Prometheus e Grafana
