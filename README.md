@@ -55,10 +55,21 @@ mvn test
 ## Endpoints
 - Documentados via Swagger em `/swagger-ui.html`
 
-## Auditoria
-- Endpoint `/api/auditoria` para consulta dos logs de operações (detalhes nos arquivos de log do serviço).
 
+
+## Auditoria e Logging Centralizado
+- Endpoint `/api/auditoria` para consulta dos logs de operações (detalhes nos arquivos de log do serviço).
 - Auditoria das operações registrada em `logs/hackaton2.log`.
+- O projeto utiliza logging local, mas pode ser facilmente integrado a soluções de logging centralizado como Papertrail, ELK Stack (Elasticsearch, Logstash, Kibana), Grafana Loki ou serviços cloud (Azure Monitor, AWS CloudWatch).
+- Papertrail é um serviço de log centralizado que permite visualizar e buscar logs de múltiplos serviços em tempo real, facilitando auditoria e troubleshooting.
+- Para integração com Papertrail:
+	1. Crie uma conta no Papertrail e obtenha o host e porta de syslog.
+	2. Adicione o arquivo `logback-papertrail.xml` (já incluso no projeto) em `src/main/resources`.
+	3. Configure o Spring Boot para usar esse arquivo:
+		 ```properties
+		 logging.config=classpath:logback-papertrail.xml
+		 ```
+	4. Substitua o host e porta no XML pelos dados do seu Papertrail.
 - Endpoint documentado no Swagger, detalhando retorno e finalidade.
 
 ## Collection Postman
@@ -74,24 +85,31 @@ Arquivo `hackaton2.json` incluso no projeto.
 ## Métricas, Monitoramento e Tracing
 - Métricas expostas em `/actuator/metrics` e `/actuator/prometheus`.
 - Monitoramento completo via Prometheus e Grafana pelo Docker Compose.
-- Tracing distribuído com Zipkin para visualizar o fluxo de requisições entre serviços.
+- Tracing distribuído com OpenTelemetry/Spring Observability para visualizar o fluxo de requisições entre serviços.
 
 ### Como usar Zipkin
-1. O serviço Zipkin é iniciado automaticamente pelo Docker Compose.
-2. Para ativar o tracing no Spring Boot, adicione a dependência:
-	```xml
-	<dependency>
-	  <groupId>org.springframework.cloud</groupId>
-	  <artifactId>spring-cloud-starter-zipkin</artifactId>
-	  <version>4.1.1</version>
-	</dependency>
-	```
-3. Configure no `application.properties`:
-	```properties
-	spring.zipkin.base-url=http://zipkin:9411
-	spring.sleuth.sampler.probability=1.0
-	```
-4. Acesse a interface do Zipkin em [http://localhost:9411](http://localhost:9411) para visualizar os traces.
+### Como usar tracing distribuído (OpenTelemetry/Spring Observability)
+1. Para ativar o tracing no Spring Boot 3.x, adicione a dependência:
+	 ```xml
+	 <dependency>
+		 <groupId>io.micrometer</groupId>
+		 <artifactId>micrometer-tracing-bridge-otel</artifactId>
+		 <version>1.2.2</version>
+	 </dependency>
+	 <dependency>
+		 <groupId>io.opentelemetry</groupId>
+		 <artifactId>opentelemetry-exporter-otlp</artifactId>
+		 <version>1.38.0</version>
+	 </dependency>
+	 ```
+2. Configure no `application.properties` para exportar traces:
+	 ```properties
+	 management.tracing.enabled=true
+	 management.tracing.sampling.probability=1.0
+	 management.otlp.tracing.endpoint=http://localhost:4318/v1/traces
+	 ```
+3. Use o Docker Compose para subir um collector OpenTelemetry e visualizar traces em ferramentas como Grafana Tempo ou Jaeger.
+4. Consulte a documentação oficial do Spring Boot 3.x para detalhes de integração.
 
 ### Como usar Prometheus e Grafana
 1. Execute:

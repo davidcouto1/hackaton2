@@ -1,0 +1,12 @@
+<configuration>
+    <appender name="SYSLOG" class="ch.qos.logback.classic.net.SyslogAppender">
+        <syslogHost>logsN.papertrailapp.com</syslogHost>
+        <port>XXXXX</port> <!-- Substitua pelo seu número de porta Papertrail -->
+        <suffixPattern>[%thread] %-5level %logger{35} - %msg%n</suffixPattern>
+        <facility>USER</facility>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="SYSLOG" />
+    </root>
+</configuration>
