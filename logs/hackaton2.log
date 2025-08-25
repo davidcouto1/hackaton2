@@ -8614,3 +8614,26 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2025-08-25T16:35:23.841-03:00  INFO 8396 --- [http-nio-8080-exec-10] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@732b8464
 2025-08-25T16:35:30.574-03:00  INFO 8396 --- [http-nio-8080-exec-1] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetria agregada por data: 2025-08-25
 2025-08-25T16:35:30.618-03:00  INFO 8396 --- [http-nio-8080-exec-1] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@bc20079
+2025-08-25T16:39:20.657-03:00  INFO 8396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-25T16:39:20.661-03:00  INFO 8396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-25T16:42:09.652-03:00  INFO 1260 --- [main] .d.c.TelemetriaControllerIntegrationTest : Starting TelemetriaControllerIntegrationTest using Java 17.0.16 with PID 1260 (started by David in C:\Desenvolvimento\projetos\hackaton2)
+2025-08-25T16:42:09.658-03:00  INFO 1260 --- [main] .d.c.TelemetriaControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2025-08-25T16:42:20.596-03:00  INFO 1260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-25T16:42:21.704-03:00  INFO 1260 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simulador user=SA
+2025-08-25T16:42:21.712-03:00  INFO 1260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-25T16:42:22.661-03:00  INFO 1260 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-25T16:42:22.968-03:00  INFO 1260 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-08-25T16:42:23.140-03:00  INFO 1260 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-25T16:42:24.593-03:00  WARN 1260 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-25T16:42:28.085-03:00  INFO 1260 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-25T16:42:45.608-03:00  INFO 1260 --- [main] .d.c.TelemetriaControllerIntegrationTest : Started TelemetriaControllerIntegrationTest in 37.63 seconds (process running for 41.903)
+2025-08-25T16:42:48.027-03:00  INFO 1260 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@4c3316bb
+2025-08-25T16:42:48.350-03:00  INFO 1260 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@2e2d04d7
+2025-08-25T16:42:48.400-03:00  INFO 1260 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetria agregada por data: 2025-08-25
+2025-08-25T16:42:48.895-03:00  INFO 1260 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@382e9e2a
+2025-08-25T16:42:49.138-03:00  INFO 1260 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetria agregada por data: 2025-08-25
+2025-08-25T16:42:49.172-03:00  INFO 1260 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@5afc307c
+2025-08-25T16:42:49.224-03:00  INFO 1260 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetria agregada por data: 2025-08-25
+2025-08-25T16:42:49.242-03:00  INFO 1260 --- [main] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@45f4a0ee
+2025-08-25T16:42:49.370-03:00  INFO 1260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-25T16:42:49.377-03:00  INFO 1260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

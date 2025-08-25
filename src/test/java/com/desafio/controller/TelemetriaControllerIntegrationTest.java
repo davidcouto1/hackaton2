@@ -29,18 +29,17 @@ public class TelemetriaControllerIntegrationTest {
 
     @Test
     void deveListarTelemetriaComSucesso() throws Exception {
-        mockMvc.perform(get("/api/telemetria"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.dataReferencia").exists())
-                .andExpect(jsonPath("$.endpoints").isArray());
+    mockMvc.perform(get("/api/telemetria"))
+        .andExpect(status().isOk())
+        .andExpect(jsonPath("$.dataReferencia").exists())
+        .andExpect(jsonPath("$.listaEndpoints").isArray());
     }
 
     @Test
     void deveListarTelemetriaSemDados() throws Exception {
-        mockMvc.perform(get("/api/telemetria"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.endpoints").isArray());
-        // dataReferencia pode não existir
+    mockMvc.perform(get("/api/telemetria"))
+        .andExpect(status().isOk())
+        .andExpect(jsonPath("$.listaEndpoints").isArray());
     }
 
     @Test
@@ -58,9 +57,9 @@ public class TelemetriaControllerIntegrationTest {
         ).andExpect(status().isOk());
 
         // Consulta telemetria
-        mockMvc.perform(get("/api/telemetria"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.dataReferencia").exists())
-                .andExpect(jsonPath("$.endpoints").isArray());
+    mockMvc.perform(get("/api/telemetria"))
+        .andExpect(status().isOk())
+        .andExpect(jsonPath("$.dataReferencia").exists())
+        .andExpect(jsonPath("$.listaEndpoints").isArray());
     }
 }
