@@ -62,31 +62,22 @@ http://localhost:8080
 ```
 O frontend está localizado em `src/main/resources/static/index.html` e exibe os resultados das APIs em tabelas organizadas, seguindo os melhores padrões de mercado.
 
-## Observações
-- O projeto segue boas práticas REST, documentação, testes, automação, balanceamento de carga via NGINX e múltiplas réplicas Docker.
-- Implementei resiliência contra falhas e sobrecarga, com cache, circuit breaker, rate limiter e load balance.
 
----
-- Configure variáveis sensíveis (senhas, tokens) em um arquivo `.env` e referencie no `docker-compose.yml`.
-- Nunca versionar arquivos `.env` com dados reais.
+## Observações
+- O projeto segue boas práticas REST, documentação, testes automatizados (JaCoCo), automação de deploy, balanceamento de carga via NGINX e múltiplas réplicas Docker.
+- Implementei resiliência contra falhas e sobrecarga, com cache, circuit breaker, rate limiter e load balance.
+- Configure variáveis sensíveis (senhas, tokens) em um arquivo `.env` e referencie no `docker-compose.yml`. Nunca versiono arquivos `.env` com dados reais.
 
 ## Testes
+Para rodar os testes automatizados:
 ```bash
 mvn test
 ```
+O relatório de cobertura é gerado automaticamente em `target/site/jacoco/index.html`.
 
-
-### Cobertura de Testes (JaCoCo)
-O relatório Jacoco é gerado automaticamente em `target/site/jacoco/index.html` após rodar os testes com Maven:
-```sh
-mvn test
-```
-Basta abrir esse arquivo no navegador para visualizar a cobertura dos testes do projeto.
-
-### Collection Postman
+## Collection Postman
 Uma collection pronta para testar todos os endpoints está disponível em `postman_collection.json`.
-
-**Como importar:**
+Para importar:
 1. Abra o Postman
 2. Clique em "Import"
 3. Selecione o arquivo `postman_collection.json`
