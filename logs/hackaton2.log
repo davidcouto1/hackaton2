@@ -2543,3 +2543,5 @@ CREATE INDEX IF NOT EXISTS IDX_Simulacao_CodigoProduto ON Simulacao (codigoProdu
 2025-08-26T16:11:36.369-03:00  INFO 15632 --- [http-nio-8080-exec-7] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@2a716f6c
 2025-08-26T16:11:37.920-03:00  INFO 15632 --- [http-nio-8080-exec-8] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetria agregada por data: 2025-08-26
 2025-08-26T16:11:37.935-03:00  INFO 15632 --- [http-nio-8080-exec-8] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@19d07e6c
+2025-08-26T16:18:52.897-03:00  INFO 15632 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-26T16:18:52.908-03:00  INFO 15632 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
