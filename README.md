@@ -62,6 +62,8 @@ http://localhost:8080
 ```
 O frontend está localizado em `src/main/resources/static/index.html` e exibe os resultados das APIs em tabelas organizadas, seguindo os melhores padrões de mercado.
 
+> **Observação:** As respostas exibidas no frontend são organizadas em tabelas para melhor visualização e experiência do usuário. No entanto, ao utilizar ferramentas como Postman, Insomnia ou qualquer outro cliente HTTP, a API retorna os dados em formato JSON puro, conforme solicitado no desafio técnico. Isso garante compatibilidade total com integrações e automações.
+
 
 -## Otimização de Consultas e Índices
 Para garantir alta performance e escalabilidade, implementei as seguintes melhorias:

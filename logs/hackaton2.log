@@ -6350,3 +6350,21 @@ CREATE INDEX IF NOT EXISTS IDX_Simulacao_CodigoProduto ON Simulacao (codigoProdu
 2025-08-26T17:12:39.456-03:00  INFO 9700 --- [http-nio-8080-exec-6] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@19c1bbd1
 2025-08-26T17:12:43.275-03:00  INFO 9700 --- [http-nio-8080-exec-7] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetria agregada por data: 2025-08-26
 2025-08-26T17:12:43.306-03:00  INFO 9700 --- [http-nio-8080-exec-7] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@67c12548
+2025-08-26T17:14:01.635-03:00  INFO 9700 --- [http-nio-8080-exec-10] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@641df12c
+2025-08-26T17:14:01.637-03:00  INFO 9700 --- [http-nio-8080-exec-10] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-26T17:14:02.356-03:00  INFO 9700 --- [http-nio-8080-exec-10] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@1e41efc3
+2025-08-26T17:14:06.073-03:00  INFO 9700 --- [http-nio-8080-exec-2] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Iniciando simulação: com.desafio.model.Simulacao@339c05be
+2025-08-26T17:14:06.074-03:00  INFO 9700 --- [http-nio-8080-exec-2] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-26T17:14:06.657-03:00  INFO 9700 --- [http-nio-8080-exec-2] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Produto selecionado para simulação: com.desafio.service.ProdutoService$ProdutoDTO@26e0de2c
+2025-08-26T17:14:06.659-03:00  INFO 9700 --- [http-nio-8080-exec-2] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Calculando parcelas SAC e PRICE
+2025-08-26T17:14:06.825-03:00  INFO 9700 --- [http-nio-8080-exec-2] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Simulação concluída. Produto: Produto 1, Prazo: 5, Valor: 9000.00
+2025-08-26T17:14:06.845-03:00  INFO 9700 --- [http-nio-8080-exec-2] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@58dc7c51
+2025-08-26T17:14:12.947-03:00  INFO 9700 --- [http-nio-8080-exec-3] com.desafio.service.SimulacaoService     : [AUDITORIA] Usuário: usuario-demo - Listando simulações
+2025-08-26T17:14:12.973-03:00  INFO 9700 --- [http-nio-8080-exec-3] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@2b76c87f
+2025-08-26T17:14:23.661-03:00  INFO 9700 --- [http-nio-8080-exec-4] com.desafio.service.ProdutoService       : [AUDITORIA] Buscando produtos no SQL Server
+2025-08-26T17:14:24.151-03:00  INFO 9700 --- [http-nio-8080-exec-4] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@445ec583
+2025-08-26T17:14:29.771-03:00  INFO 9700 --- [http-nio-8080-exec-6] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@2b4936ac
+2025-08-26T17:14:38.161-03:00  INFO 9700 --- [http-nio-8080-exec-5] com.desafio.service.TelemetriaService    : [AUDITORIA] Listando telemetria agregada por data: 2025-08-26
+2025-08-26T17:14:38.184-03:00  INFO 9700 --- [http-nio-8080-exec-5] com.desafio.service.TelemetriaService    : [AUDITORIA] Salvando telemetria: com.desafio.model.Telemetria@742327f0
+2025-08-26T17:16:50.438-03:00  INFO 9700 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-26T17:16:50.443-03:00  INFO 9700 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
