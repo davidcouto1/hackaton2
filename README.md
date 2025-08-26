@@ -200,7 +200,6 @@ Arquivo `hackaton2.json` incluso no projeto.
 ## Diagrama
 ![Diagrama](docs/diagrama.png)
 
-> Exemplo de diagrama: Caso não visualize acima, consulte o arquivo docs/diagrama.png ou adicione um link para o diagrama da arquitetura.
 
 
 
