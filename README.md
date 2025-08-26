@@ -63,7 +63,14 @@ http://localhost:8080
 O frontend está localizado em `src/main/resources/static/index.html` e exibe os resultados das APIs em tabelas organizadas, seguindo os melhores padrões de mercado.
 
 
-## Observações
+-## Otimização de Consultas e Índices
+Para garantir alta performance e escalabilidade, implementei as seguintes melhorias:
+- Índices automáticos: Os campos usados em filtros, agrupamentos e joins (ex: dataSimulacao, codigoProduto, nomeApi, dataReferencia) são indexados automaticamente no banco H2 local e no SQL Server Docker via scripts `schema.sql` e `import.sql`.
+- Consultas SQL otimizadas: As operações de agregação (SUM, COUNT, GROUP BY) são realizadas diretamente no banco, evitando processamento desnecessário na aplicação.
+- Cache de resultados: Utilizo o `@Cacheable` (Spring) nos métodos de consulta agregada dos serviços de Telemetria e Relatório, acelerando respostas e reduzindo carga no banco.
+- View materializada: Para relatórios agregados, criei uma view materializada no SQL Server (`vw_relatorio_produto_dia`), atualizável via job SQL Server.
+- Monitoramento: Prometheus e Grafana integrados para identificar gargalos e ajustar índices ou queries conforme necessário.
+
 - O projeto segue boas práticas REST, documentação, testes automatizados (JaCoCo), automação de deploy, balanceamento de carga via NGINX e múltiplas réplicas Docker.
 - Implementei resiliência contra falhas e sobrecarga, com cache, circuit breaker, rate limiter e load balance.
 - Configure variáveis sensíveis (senhas, tokens) em um arquivo `.env` e referencie no `docker-compose.yml`. Nunca versiono arquivos `.env` com dados reais.
