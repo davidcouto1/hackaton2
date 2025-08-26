@@ -77,9 +77,21 @@ public class SimulacaoController {
         } catch (RuntimeException e) {
             String msg = e.getMessage();
             if (msg != null && msg.contains("Nenhum produto válido encontrado")) {
-                return ResponseEntity.badRequest().body(java.util.Map.of("erro", "Parâmetros fora dos limites permitidos para os produtos. Verifique valor e prazo."));
+                return ResponseEntity.status(400)
+                    .header("Content-Type", "application/json")
+                    .body(java.util.Map.of(
+                        "erro", "Parâmetros fora dos limites permitidos para os produtos. Verifique valor e prazo.",
+                        "codigo", 400,
+                        "detalhe", "O valor ou prazo informado está fora dos limites permitidos para os produtos disponíveis. Consulte as regras e tente novamente."
+                    ));
             }
-            return ResponseEntity.status(500).body(java.util.Map.of("erro", "Erro interno na simulação."));
+            return ResponseEntity.status(500)
+                .header("Content-Type", "application/json")
+                .body(java.util.Map.of(
+                    "erro", "Erro interno na simulação.",
+                    "codigo", 500,
+                    "detalhe", msg != null ? msg : "Erro inesperado."
+                ));
         }
     }
 

@@ -9,6 +9,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import com.desafio.model.Simulacao;
 import com.desafio.repository.SimulacaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
@@ -34,8 +35,17 @@ public class RelatorioController {
     })
     @Cacheable("relatorioPorProdutoDia")
     @GetMapping("/por-produto-dia")
-    public Map<String, Object> relatorioPorProdutoDia(@RequestParam("data") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate data) {
+    public ResponseEntity<?> relatorioPorProdutoDia(@RequestParam(value = "data", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate data) {
+        if (data == null) {
+            return ResponseEntity.status(400)
+                .header("Content-Type", "application/json")
+                .body(Map.of(
+                    "erro", "Selecione uma data.",
+                    "codigo", 400,
+                    "detalhe", "O parâmetro 'data' é obrigatório para consultar o relatório por produto e dia."
+                ));
+        }
         var resultado = simulacaoRepository.buscarPorProdutoEDia(data);
-        return Map.of("dataReferencia", data, "simulacoes", resultado);
+        return ResponseEntity.ok(Map.of("dataReferencia", data, "simulacoes", resultado));
     }
 }
