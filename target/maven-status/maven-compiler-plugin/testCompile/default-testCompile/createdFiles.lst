@@ -4,4 +4,5 @@ com\desafio\integration\ApplicationIntegrationTest.class
 com\desafio\controller\SimulacaoControllerValidationTest.class
 com\desafio\controller\TelemetriaControllerIntegrationTest.class
 com\desafio\controller\AuditoriaControllerIntegrationTest.class
+com\desafio\service\EventHubServiceTest.class
 com\desafio\controller\SimulacaoControllerIntegrationTest.class
