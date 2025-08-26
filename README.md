@@ -1,3 +1,22 @@
+# Otimização de Consultas e Escalabilidade
+
+Este projeto foi desenvolvido considerando as melhores práticas para alta performance e escalabilidade, especialmente para consultas agregadas e cenários de grande volume de acesso (API nacional). As principais estratégias implementadas e recomendadas são:
+
+1. **Indexação eficiente**: Todos os campos utilizados em filtros, agrupamentos e joins estão devidamente indexados no banco de dados (H2 local e SQL Server Docker), garantindo consultas rápidas mesmo com grandes volumes de dados. Os índices são criados automaticamente via scripts `schema.sql` e `import.sql` ao iniciar a aplicação.
+
+2. **Consultas SQL otimizadas**: As operações de agregação (SUM, COUNT, GROUP BY) são realizadas diretamente no banco, evitando processamento desnecessário na aplicação.
+
+3. **Paginação e limites**: Todas as APIs que retornam listas ou dados agregados implementam paginação (limit/offset), evitando sobrecarga e garantindo resposta rápida ao usuário.
+
+4. **Cache de resultados**: Implementado com `@Cacheable` (Spring) nos métodos de consulta agregada dos serviços de Telemetria e Relatório, utilizando Caffeine. Isso garante respostas rápidas e reduz a carga no banco para dados que mudam pouco.
+
+5. **Pré-agrupamento e visões materializadas**: Foi criada uma view materializada no SQL Server (`vw_relatorio_produto_dia`) para relatórios agregados, conforme script em `docs/view_materializada_relatorio.sql`. Recomenda-se atualizar periodicamente via job SQL Server.
+
+6. **Evitar N+1 queries**: Todas as consultas agregadas são feitas em uma única chamada ao banco, evitando múltiplas queries e gargalos de performance.
+
+7. **Monitoramento e ajuste contínuo**: O projeto utiliza Prometheus e Grafana para monitorar métricas de consulta, identificando gargalos e ajustando índices ou queries conforme necessário.
+
+Essas práticas garantem que a API está preparada para uso massivo por todos os brasileiros, com alta disponibilidade, performance e escalabilidade.
 # Hackaton2 - Simulador de Crédito
 
 ## Frontend para Testes

@@ -9,6 +9,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import com.desafio.model.Simulacao;
 import com.desafio.repository.SimulacaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,9 +32,10 @@ public class RelatorioController {
         @ApiResponse(responseCode = "400", description = "Parâmetros inválidos", content = @Content),
         @ApiResponse(responseCode = "500", description = "Erro interno", content = @Content)
     })
+    @Cacheable("relatorioPorProdutoDia")
     @GetMapping("/por-produto-dia")
     public Map<String, Object> relatorioPorProdutoDia(@RequestParam("data") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate data) {
-    var resultado = simulacaoRepository.buscarPorProdutoEDia(data);
-    return Map.of("dataReferencia", data, "simulacoes", resultado);
+        var resultado = simulacaoRepository.buscarPorProdutoEDia(data);
+        return Map.of("dataReferencia", data, "simulacoes", resultado);
     }
 }
