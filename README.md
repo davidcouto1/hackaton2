@@ -1,5 +1,15 @@
 # Hackaton2 - Simulador de Crédito
 
+## Frontend para Testes
+
+O projeto inclui um frontend moderno para testar todos os endpoints da API diretamente pelo navegador. Basta acessar:
+
+```
+http://localhost:8080
+```
+O frontend está localizado em `src/main/resources/static/index.html` e exibe os resultados das APIs em tabelas organizadas, seguindo os melhores padrões de mercado.
+# Hackaton2 - Simulador de Crédito
+
 ## Descrição
 API para simulação de crédito, consulta de produtos, persistência de simulações e telemetria. Desenvolvido em Java (Spring Boot), seguindo padrões REST e preparado para rodar em qualquer ambiente.
 
@@ -11,6 +21,12 @@ API para simulação de crédito, consulta de produtos, persistência de simula�
 - Docker (opcional)
 
 ### Rodando localmente
+
+```powershell
+mvn clean spring-boot:run
+```
+
+Ou, se preferir gerar o JAR:
 ```powershell
 mvn clean package
 mvn spring-boot:repackage
