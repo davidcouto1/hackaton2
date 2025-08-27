@@ -27,6 +27,12 @@ java -jar target\hackaton2-1.0-SNAPSHOT.jar
 docker build -t hackaton2 .
 docker run -p 8080:8080 hackaton2
 ```
+> **Atenção:** Antes de rodar os comandos acima, é necessário gerar o JAR do projeto com:
+```
+mvn clean package
+mvn spring-boot:repackage
+```
+O arquivo JAR será criado na pasta `target` e utilizado pelo Docker. Certifique-se de executar esses comandos sempre que fizer alterações no código.
 
 ### Rodando com Docker Compose (com Load Balance)
 ```powershell
@@ -95,6 +101,10 @@ Para importar:
 ### Exemplos de uso dos principais endpoints
 
 #### Simulação de Crédito
+**Endpoint:**
+```
+POST /api/simulacoes
+```
 **Requisição (POST):**
 ```json
 {
