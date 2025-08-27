@@ -101,11 +101,17 @@ Para importar:
 ### Exemplos de uso dos principais endpoints
 
 #### Simulação de Crédito
+**Requisição (POST):**
+```json
+{
+	"valorDesejado": 900.00,
+	"prazo": 5
+}
+```
 **Endpoint:**
 ```
 POST /api/simulacoes
 ```
-**Requisição (POST):**
 ```json
 {
 	"valorDesejado": 900.00,
@@ -177,6 +183,32 @@ GET /api/telemetria?data=2025-07-30
 }
 ```
 
+#### Relatório por Produto e Dia
+**Requisição (GET):**
+```
+GET /api/relatorio/por-produto-dia?data=2025-07-30
+```
+**Resposta:**
+```json
+[
+	{
+		"dataReferencia": "2025-07-30",
+		"codigoProduto": 1,
+		"nomeProduto": "Produto 1",
+		"qtdSimulacoes": 10,
+		"valorTotalSimulado": 9000.00,
+		"valorMedioSimulado": 900.00
+	},
+	{
+		"dataReferencia": "2025-07-30",
+		"codigoProduto": 2,
+		"nomeProduto": "Produto 2",
+		"qtdSimulacoes": 5,
+		"valorTotalSimulado": 4500.00,
+		"valorMedioSimulado": 900.00
+	}
+]
+```
 ### Visualizando cobertura de testes (JaCoCo)
 Após rodar os testes, abra o relatório gerado em:
 ```
@@ -208,7 +240,6 @@ O arquivo Swagger/OpenAPI gerado (`openapi.json`) está disponível na raiz do p
 - Endpoint documentado no Swagger, detalhando retorno e finalidade.
 
 ## Collection Postman
-Arquivo `postman_collection.json` incluso no projeto.
 
 ## Diagrama
 ![Diagrama](docs/diagrama.png)
