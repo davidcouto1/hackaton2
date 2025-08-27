@@ -316,8 +316,11 @@ O arquivo Swagger/OpenAPI gerado (`openapi.json`) está disponível na raiz do p
 ## Diagrama
 ![Diagrama](docs/diagrama.png)
 
+## Evidências do Projeto
 
+O projeto possui um arquivo de evidências que documenta as principais etapas, decisões e resultados do desenvolvimento. Você pode acessar o arquivo em PDF pelo link abaixo:
 
+[Evidências do Projeto (PDF)](docs/Evidencias.pdf)
 
 ## Métricas, Monitoramento e Tracing
 - Métricas expostas em `/actuator/metrics` e `/actuator/prometheus`.
