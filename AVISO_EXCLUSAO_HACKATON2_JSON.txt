@@ -1,0 +1,1 @@
+O arquivo hackaton2.json pode ser apagado com segurança, pois o arquivo correto para a Collection Postman é o postman_collection.json, já referenciado no README e presente na raiz do projeto.

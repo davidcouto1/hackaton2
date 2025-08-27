@@ -198,7 +198,8 @@ Para importar:
 	- `mvn spring-boot:run` (sem gerar o JAR)
 	- ou siga os comandos de build/JAR para rodar manualmente
 
-
+## Swagger/OpenAPI (openapi.json)
+O arquivo Swagger/OpenAPI gerado (`openapi.json`) está disponível na raiz do projeto. Você pode consultar ou importar este arquivo em ferramentas como Swagger Editor, Postman ou Insomnia para visualizar e testar todos os endpoints documentados da API.
 
 ## Auditoria e Logging Centralizado
 - Endpoint `/api/auditoria` para consulta dos logs de operações (detalhes nos arquivos de log do serviço).
@@ -207,7 +208,7 @@ Para importar:
 - Endpoint documentado no Swagger, detalhando retorno e finalidade.
 
 ## Collection Postman
-Arquivo `hackaton2.json` incluso no projeto.
+Arquivo `postman_collection.json` incluso no projeto.
 
 ## Diagrama
 ![Diagrama](docs/diagrama.png)
