@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulação JSON - HACKATON</title>
+    <style>
+        body {
+            font-family: monospace;
+            background: #f8fbfd;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            padding: 32px 24px;
+        }
+        h1 {
+            color: #005ca9;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        label, input, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+        button {
+            background: #005ca9;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0070c0;
+        }
+        pre {
+            background: #eaf6fb;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 1rem;
+            overflow-x: auto;
+        }
+        .info {
+            background: #f0f8ff;
+            color: #005ca9;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 18px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Visualizador JSON - HACKATON</h1>
+    <div class="info">
+        Faça chamadas aos principais endpoints da API e veja a resposta em JSON puro, como no Postman.<br>
+        <b>Ideal para testes técnicos, integração e depuração.</b>
+    </div>
+    <div class="endpoint-section">
+        <div class="endpoint-title">Simulação de Crédito (POST /api/simulacoes)</div>
+        <form id="formSimulacao">
+            <label for="valorSim">Valor:</label>
+            <input type="number" id="valorSim" required>
+            <label for="parcelasSim">Parcelas:</label>
+            <input type="number" id="parcelasSim" required>
+            <button type="submit">Enviar Simulação</button>
+        </form>
+        <pre id="jsonSimulacao"></pre>
+    </div>
+    <div class="endpoint-section">
+        <div class="endpoint-title">Listar Simulações (GET /api/simulacoes)</div>
+        <button onclick="listarSimulacoesJson()">Listar Simulações</button>
+        <pre id="jsonListarSimulacoes"></pre>
+    </div>
+    <div class="endpoint-section">
+        <div class="endpoint-title">Listar Produtos (GET /api/produtos)</div>
+        <button onclick="listarProdutosJson()">Listar Produtos</button>
+        <pre id="jsonProdutos"></pre>
+    </div>
+    <div class="endpoint-section">
+        <div class="endpoint-title">Relatório por Produto e Dia (GET /api/relatorio/por-produto-dia?data=YYYY-MM-DD)</div>
+        <input type="date" id="relatorioDataJson">
+        <button onclick="getRelatorioPorProdutoDiaJson()">Consultar Relatório</button>
+        <pre id="jsonRelatorio"></pre>
+    </div>
+    <div class="endpoint-section">
+        <div class="endpoint-title">Listar Telemetria (GET /api/telemetria?data=YYYY-MM-DD)</div>
+        <input type="date" id="telemetriaDataJson">
+        <button onclick="getTelemetriaJson()">Consultar Telemetria</button>
+        <pre id="jsonTelemetria"></pre>
+    </div>
+</div>
+<script>
+// Simulação
+ document.getElementById('formSimulacao').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const valor = document.getElementById('valorSim').value;
+    const parcelas = document.getElementById('parcelasSim').value;
+    document.getElementById('jsonSimulacao').textContent = 'Carregando...';
+    fetch('/api/simulacoes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ valorDesejado: valor, prazo: parcelas })
+    })
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById('jsonSimulacao').textContent = JSON.stringify(data, null, 2);
+    })
+    .catch(err => {
+        document.getElementById('jsonSimulacao').textContent = 'Erro: ' + err;
+    });
+ });
+// Listar Simulações
+ function listarSimulacoesJson() {
+    document.getElementById('jsonListarSimulacoes').textContent = 'Carregando...';
+    fetch('/api/simulacoes')
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById('jsonListarSimulacoes').textContent = JSON.stringify(data, null, 2);
+    })
+    .catch(err => {
+        document.getElementById('jsonListarSimulacoes').textContent = 'Erro: ' + err;
+    });
+ }
+// Listar Produtos
+ function listarProdutosJson() {
+    document.getElementById('jsonProdutos').textContent = 'Carregando...';
+    fetch('/api/produtos')
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById('jsonProdutos').textContent = JSON.stringify(data, null, 2);
+    })
+    .catch(err => {
+        document.getElementById('jsonProdutos').textContent = 'Erro: ' + err;
+    });
+ }
+// Relatório por Produto/Dia
+ function getRelatorioPorProdutoDiaJson() {
+    const data = document.getElementById('relatorioDataJson').value;
+    if (!data) {
+        document.getElementById('jsonRelatorio').textContent = 'Selecione uma data.';
+        return;
+    }
+    document.getElementById('jsonRelatorio').textContent = 'Carregando...';
+    fetch('/api/relatorio/por-produto-dia?data=' + data)
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById('jsonRelatorio').textContent = JSON.stringify(data, null, 2);
+    })
+    .catch(err => {
+        document.getElementById('jsonRelatorio').textContent = 'Erro: ' + err;
+    });
+ }
+// Telemetria
+ function getTelemetriaJson() {
+    const data = document.getElementById('telemetriaDataJson').value;
+    let url = '/api/telemetria';
+    if (data) url += '?data=' + data;
+    document.getElementById('jsonTelemetria').textContent = 'Carregando...';
+    fetch(url)
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById('jsonTelemetria').textContent = JSON.stringify(data, null, 2);
+    })
+    .catch(err => {
+        document.getElementById('jsonTelemetria').textContent = 'Erro: ' + err;
+    });
+ }
+</script>
+</body>
+</html>

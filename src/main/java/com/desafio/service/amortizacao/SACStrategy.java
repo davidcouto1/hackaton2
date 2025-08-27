@@ -1,5 +1,7 @@
 package com.desafio.service.amortizacao;
 
+import com.desafio.service.amortizacao.ParcelaDTO;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;

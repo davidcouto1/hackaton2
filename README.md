@@ -62,13 +62,23 @@ Arquivos relevantes:
 - GitHub Actions (CI/CD)
 
 ## Frontend para Testes
-Incluí um frontend moderno para testar todos os endpoints da API diretamente pelo navegador. Basta acessar:
-```
-http://localhost:8080
-```
-O frontend está localizado em `src/main/resources/static/index.html` e exibe os resultados das APIs em tabelas organizadas, seguindo os melhores padrões de mercado.
 
-> **Observação:** As respostas exibidas no frontend são organizadas em tabelas para melhor visualização e experiência do usuário. No entanto, ao utilizar ferramentas como Postman, Insomnia ou qualquer outro cliente HTTP, a API retorna os dados em formato JSON puro, conforme solicitado no desafio técnico. Isso garante compatibilidade total com integrações e automações.
+Incluí dois frontends para testar os endpoints da API:
+
+1. **Frontend visual (index.html):**
+	- Interface moderna, exibe resultados em tabelas organizadas.
+	- Localização: `src/main/resources/static/index.html`
+	- Acesse em: `http://localhost:8080`
+
+2. **Frontend JSON puro (json.html):**
+	- Exibe a resposta da simulação diretamente em formato JSON, sem formatação visual.
+	- Útil para testes, integração ou para ver o formato bruto da resposta.
+	- Localização: `src/main/resources/static/json.html`
+	- Acesse em: `http://localhost:8080/json.html` (ou configure para servir em outra porta, ex: 8081, se desejar separar os ambientes)
+
+No frontend principal há um link para o visualizador JSON, e uma explicação sobre sua finalidade.
+
+> **Observação:** As respostas exibidas no frontend visual são organizadas em tabelas para melhor experiência. O visualizador JSON mostra o retorno bruto da API, útil para integração ou depuração. Ferramentas como Postman, Insomnia ou qualquer outro cliente HTTP também recebem o JSON puro.
 
 
 -## Otimização de Consultas e Índices

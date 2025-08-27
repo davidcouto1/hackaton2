@@ -21,6 +21,11 @@ import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import com.desafio.dto.SimulacaoEnvelopeDTO;
+import com.desafio.dto.ResultadoSimulacaoDTO;
+import com.desafio.dto.SimulacaoResumoDTO;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -61,7 +66,7 @@ public class SimulacaoService {
             logger.error("[AUDITORIA] Usuário: {} - Erro ao consultar produtos para simulação: {}", usuario, simulacao, e);
         throw new RuntimeException("Erro ao consultar produtos", e);
     }
-    if (produtoValido == null) throw new RuntimeException("Nenhum produto válido encontrado para os parâmetros informados.");
+    if (produtoValido == null) throw new RuntimeException("Nenhum produto válido encontrado");
     logger.info("[AUDITORIA] Usuário: {} - Produto selecionado para simulação: {}", usuario, produtoValido);
     simulacao.setCodigoProduto(produtoValido.getCodigo());
     simulacao.setNomeProduto(produtoValido.getNome());
@@ -72,28 +77,28 @@ public class SimulacaoService {
     List<Parcela> parcelas = new ArrayList<>();
     BigDecimal totalSac = BigDecimal.ZERO;
     BigDecimal totalPrice = BigDecimal.ZERO;
-    for (AmortizacaoStrategy.ParcelaDTO p : sacParcelas) {
-            Parcela parcela = new Parcela();
-            parcela.setTipo("SAC");
-            parcela.setNumero(p.numero);
-            parcela.setValorAmortizacao(p.valorAmortizacao);
-            parcela.setValorJuros(p.valorJuros);
-            parcela.setValorPrestacao(p.valorPrestacao);
-            parcela.setSimulacao(simulacao);
-            parcelas.add(parcela);
-            totalSac = totalSac.add(p.valorPrestacao);
-        }
-        for (AmortizacaoStrategy.ParcelaDTO p : priceParcelas) {
-            Parcela parcela = new Parcela();
-            parcela.setTipo("PRICE");
-            parcela.setNumero(p.numero);
-            parcela.setValorAmortizacao(p.valorAmortizacao);
-            parcela.setValorJuros(p.valorJuros);
-            parcela.setValorPrestacao(p.valorPrestacao);
-            parcela.setSimulacao(simulacao);
-            parcelas.add(parcela);
-            totalPrice = totalPrice.add(p.valorPrestacao);
-        }
+    for (com.desafio.service.amortizacao.ParcelaDTO p : sacParcelas) {
+        Parcela parcela = new Parcela();
+        parcela.setTipo("SAC");
+        parcela.setNumero(p.numero);
+        parcela.setValorAmortizacao(p.valorAmortizacao);
+        parcela.setValorJuros(p.valorJuros);
+        parcela.setValorPrestacao(p.valorPrestacao);
+        parcela.setSimulacao(simulacao);
+        parcelas.add(parcela);
+        totalSac = totalSac.add(p.valorPrestacao);
+    }
+    for (com.desafio.service.amortizacao.ParcelaDTO p : priceParcelas) {
+        Parcela parcela = new Parcela();
+        parcela.setTipo("PRICE");
+        parcela.setNumero(p.numero);
+        parcela.setValorAmortizacao(p.valorAmortizacao);
+        parcela.setValorJuros(p.valorJuros);
+        parcela.setValorPrestacao(p.valorPrestacao);
+        parcela.setSimulacao(simulacao);
+        parcelas.add(parcela);
+        totalPrice = totalPrice.add(p.valorPrestacao);
+    }
         simulacao.setParcelas(parcelas);
         simulacao.setValorTotalSac(totalSac);
         simulacao.setValorTotalPrice(totalPrice);
@@ -107,10 +112,50 @@ public class SimulacaoService {
         return saved;
     }
 
-    public List<Simulacao> listarSimulacoes() {
+    public Map<String, Object> listarSimulacoesPaginadas(int pagina, int qtdRegistrosPagina) {
         String usuario = obterUsuarioAtual(); // mock para auditoria
-        logger.info("[AUDITORIA] Usuário: {} - Listando simulações", usuario);
-        return simulacaoRepository.findAll();
+        logger.info("[AUDITORIA] Usuário: {} - Listando simulações paginadas", usuario);
+        org.springframework.data.domain.Pageable pageable = org.springframework.data.domain.PageRequest.of(pagina - 1, qtdRegistrosPagina);
+        org.springframework.data.domain.Page<Simulacao> page = simulacaoRepository.findAll(pageable);
+        List<SimulacaoResumoDTO> registrosFormatados = new ArrayList<>();
+        for (Simulacao simulacao : page.getContent()) {
+            SimulacaoResumoDTO dto = new SimulacaoResumoDTO();
+            dto.idSimulacao = simulacao.getIdSimulacao();
+            dto.descricaoProduto = simulacao.getNomeProduto();
+            dto.valorDesejado = simulacao.getValorDesejado();
+            dto.prazo = simulacao.getPrazo();
+            dto.valorTotalPrice = simulacao.getValorTotalPrice();
+            dto.valorTotalSac = simulacao.getValorTotalSac();
+            registrosFormatados.add(dto);
+        }
+        Map<String, Object> envelope = new HashMap<>();
+    envelope.put("pagina", pagina);
+    envelope.put("qtdRegistrosPagina", qtdRegistrosPagina);
+    envelope.put("qtdRegistros", page.getTotalElements());
+    envelope.put("registros", registrosFormatados);
+        return envelope;
+    }
+
+    public SimulacaoEnvelopeDTO montarEnvelopeSimulacao(Simulacao resultado) {
+        SimulacaoEnvelopeDTO dto = new SimulacaoEnvelopeDTO();
+        dto.idSimulacao = resultado.getIdSimulacao();
+    dto.codigoProduto = resultado.getCodigoProduto();
+    dto.descricaoProduto = resultado.getNomeProduto();
+    dto.taxaJuros = resultado.getTaxaJuros();
+        ResultadoSimulacaoDTO sac = new ResultadoSimulacaoDTO();
+        sac.tipo = "SAC";
+        sac.parcelas = resultado.getParcelas().stream()
+            .filter(p -> "SAC".equals(p.getTipo()))
+            .map(p -> new com.desafio.service.amortizacao.ParcelaDTO(p.getNumero(), p.getValorAmortizacao(), p.getValorJuros(), p.getValorPrestacao()))
+            .toList();
+        ResultadoSimulacaoDTO price = new ResultadoSimulacaoDTO();
+        price.tipo = "PRICE";
+        price.parcelas = resultado.getParcelas().stream()
+            .filter(p -> "PRICE".equals(p.getTipo()))
+            .map(p -> new com.desafio.service.amortizacao.ParcelaDTO(p.getNumero(), p.getValorAmortizacao(), p.getValorJuros(), p.getValorPrestacao()))
+            .toList();
+        dto.resultadosSimulacao = List.of(sac, price);
+        return dto;
     }
 
     // Mock para obter usuário atual

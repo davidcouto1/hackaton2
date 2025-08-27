@@ -1,9 +1,11 @@
 C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\service\amortizacao\AmortizacaoStrategy.java
+C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\dto\SimulacaoEnvelopeDTO.java
 C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\service\TelemetriaService.java
 C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\config\TelemetriaInterceptor.java
 C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\repository\ParcelaRepository.java
 C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\service\ProdutoService.java
 C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\service\amortizacao\TipoAmortizacao.java
+C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\service\amortizacao\ParcelaDTO.java
 C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\controller\AuditoriaController.java
 C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\config\WebConfig.java
 C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\model\Parcela.java
@@ -23,7 +25,9 @@ C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\model\Simulacao.
 C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\service\amortizacao\PRICEStrategy.java
 C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\service\amortizacao\SACStrategy.java
 C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\service\SimulacaoService.java
+C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\dto\ResultadoSimulacaoDTO.java
 C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\service\EventHubService.java
+C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\dto\SimulacaoResumoDTO.java
 C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\dto\TelemetriaDTO.java
 C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\exception\GlobalExceptionHandler.java
 C:\Desenvolvimento\projetos\hackaton2\src\main\java\com\desafio\service\AmortizacaoService.java

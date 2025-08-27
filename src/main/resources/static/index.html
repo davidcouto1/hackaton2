@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <title>Simulação de Empréstimo - HACKATON</title>
     <style>
+        .spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 18px 0;
+        }
+        .spinner div {
+            width: 24px;
+            height: 24px;
+            border: 4px solid #cce6f6;
+            border-top: 4px solid #005ca9;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -140,9 +158,21 @@
 <body>
 <div class="container">
     <h1>Simulação de Empréstimo - HACKATON</h1>
+    <div style="background:linear-gradient(90deg,#eaf6fb 0%,#cce6f6 100%);color:#005ca9;padding:18px 16px;border-radius:12px;margin-bottom:28px;box-shadow:0 2px 8px rgba(0,92,169,0.08);display:flex;align-items:center;gap:18px;justify-content:center;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><circle cx="12" cy="12" r="12" fill="#cce6f6"/><path d="M8 12h8M12 8v8" stroke="#005ca9" stroke-width="2" stroke-linecap="round"/></svg>
+        <div style="flex:1;text-align:center;">
+            <span style="font-size:1.15rem;font-weight:500;">Prefere ver as respostas dos endpoints em <b>JSON puro</b>?</span><br>
+            <span style="font-size:1rem;">Acesse o visualizador alternativo para ver o retorno da API exatamente como no Postman ou Insomnia.<br>
+            Útil para integração, testes técnicos ou depuração.</span>
+            <div style="margin-top:14px;">
+                <a href="json.html" style="background:#005ca9;color:#fff;padding:12px 32px;border-radius:10px;font-weight:bold;text-decoration:none;box-shadow:0 2px 8px rgba(0,92,169,0.08);transition:background 0.2s;display:inline-block;font-size:1.08rem;">Abrir Visualizador JSON</a>
+            </div>
+            <span style="font-size:0.95rem;color:#0070c0;display:block;margin-top:8px;">Saiba mais no README.</span>
+        </div>
+    </div>
 
     <div class="section">
-        <h2>Simulação de Crédito</h2>
+    <h2>Simulação de Crédito</h2>
         <form id="simulacaoForm">
             <input type="number" id="valor" placeholder="Valor">
             <input type="number" id="parcelas" placeholder="Parcelas">
@@ -152,26 +182,26 @@
     </div>
 
     <div class="section">
-        <h2>Listar Simulações</h2>
+    <h2>Listar Simulações</h2>
         <button onclick="listarSimulacoes()">Listar Simulações</button>
         <div id="listarSimulacoesResult" class="result"></div>
     </div>
 
     <div class="section">
-        <h2>Listar Produtos</h2>
+    <h2>Listar Produtos</h2>
         <button onclick="listarProdutos()">Listar Produtos</button>
         <div id="produtosResult" class="result"></div>
     </div>
 
     <div class="section">
-        <h2>Relatório por Produto e Dia</h2>
+    <h2>Relatório por Produto e Dia</h2>
         <input type="date" id="relatorioData">
         <button onclick="getRelatorioPorProdutoDia()">Consultar Relatório</button>
         <div id="relatorioProdutoDiaResult" class="result"></div>
     </div>
 
     <div class="section">
-        <h2>Listar Telemetria</h2>
+    <h2>Listar Telemetria</h2>
         <input type="date" id="telemetriaData" placeholder="Data de referência">
         <button onclick="getTelemetria()">Consultar Telemetria</button>
         <div id="telemetriaResult" class="result"></div>
@@ -182,6 +212,11 @@
 function showError(id, message) {
     const container = document.getElementById(id);
     container.innerHTML = `<div style='background:#ffeaea;border:1px solid #ffb3b3;color:#a80000;padding:16px;border-radius:8px;font-weight:bold;text-align:center;margin:8px 0;'>${message}</div>`;
+}
+
+function showLoading(id) {
+    const container = document.getElementById(id);
+    container.innerHTML = `<div class="spinner"><div></div></div>`;
 }
 
 function showTable(id, data, columns) {
@@ -226,6 +261,7 @@ simulacaoForm.addEventListener('submit', function(e) {
     e.preventDefault();
     const valor = document.getElementById('valor').value;
     const parcelas = document.getElementById('parcelas').value;
+    showLoading('simulacaoResult');
     fetch('/api/simulacoes', {
         method: 'POST',
         headers: {
@@ -235,6 +271,8 @@ simulacaoForm.addEventListener('submit', function(e) {
     })
     .then(res => res.json())
     .then(data => {
+        // Limpa o spinner
+        document.getElementById('simulacaoResult').innerHTML = '';
         if (data && data.erro) {
             showError('simulacaoResult', data.erro);
         } else if (data && typeof data === 'object') {
@@ -253,7 +291,10 @@ simulacaoForm.addEventListener('submit', function(e) {
             showResult('simulacaoResult', data);
         }
     })
-    .catch(err => showError('simulacaoResult', err));
+    .catch(err => {
+        document.getElementById('simulacaoResult').innerHTML = '';
+        showError('simulacaoResult', err);
+    });
 });
 
 function showTableHtml(data, columns) {

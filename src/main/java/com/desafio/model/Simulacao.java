@@ -13,6 +13,7 @@ public class Simulacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idSimulacao;
+    @Column(nullable = false)
     private BigDecimal valorDesejado;
     private Integer prazo;
     private Integer codigoProduto;
