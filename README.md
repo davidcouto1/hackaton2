@@ -264,22 +264,26 @@ GET /api/relatorio/por-produto-dia?data=2025-07-30
 **Resposta:**
 ```json
 [
-	{
-		"dataReferencia": "2025-07-30",
-		"codigoProduto": 1,
-		"nomeProduto": "Produto 1",
-		"qtdSimulacoes": 10,
-		"valorTotalSimulado": 9000.00,
-		"valorMedioSimulado": 900.00
-	},
-	{
-		"dataReferencia": "2025-07-30",
-		"codigoProduto": 2,
-		"nomeProduto": "Produto 2",
-		"qtdSimulacoes": 5,
-		"valorTotalSimulado": 4500.00,
-		"valorMedioSimulado": 900.00
-	}
+  {
+    "codigoProduto": 1,
+    "descricaoProduto": "Produto 1",
+    "taxaMediaJuro": 0.0179,
+    "valorMedioPrestacaoSAC": 900.00,
+    "valorMedioPrestacaoPrice": 900.00,
+    "valorTotalDesejado": 9000.00,
+    "valorTotalCreditoSac": 9500.00,
+    "valorTotalCreditoPrice": 9600.00
+  },
+  {
+    "codigoProduto": 2,
+    "descricaoProduto": "Produto 2",
+    "taxaMediaJuro": 0.0185,
+    "valorMedioPrestacaoSAC": 800.00,
+    "valorMedioPrestacaoPrice": 810.00,
+    "valorTotalDesejado": 4500.00,
+    "valorTotalCreditoSac": 4700.00,
+    "valorTotalCreditoPrice": 4800.00
+  }
 ]
 ```
 ### Visualizando cobertura de testes (JaCoCo)
