@@ -24,7 +24,7 @@ Este projeto foi construído considerando as principais recomendações para se 
 - **Teste de carga**: Scripts K6/JMeter e resultados disponíveis para consulta.
 - **Padrões de projeto e SOLID**: Strategy/Factory e princípios SOLID garantem extensibilidade e manutenção.
 
-> **Comentário inteligente:** Todas as práticas acima não só facilitam a avaliação, mas também garantem que o projeto seja escalável, seguro, resiliente e pronto para produção real. O README serve como guia para avaliadores e futuros desenvolvedores, tornando o onboarding rápido e transparente.
+> **Comentário:** Todas as práticas acima não só facilitam a avaliação, mas também garantem que o projeto seja escalável, seguro, resiliente e pronto para produção real. O README serve como guia para avaliadores e futuros desenvolvedores, tornando o onboarding rápido e transparente.
 
 ## Como rodar
 
@@ -260,13 +260,6 @@ target/site/jacoco/index.html
 ```
 Esse arquivo pode ser aberto no navegador para visualizar a cobertura dos testes.
 
-### Importando a Collection Postman
-O arquivo `postman_collection.json` está na raiz do projeto.
-Para importar:
-1. Abra o Postman
-2. Clique em "Import"
-3. Selecione o arquivo `postman_collection.json`
-4. Todos os endpoints principais estarão disponíveis para teste.
 
 ## Endpoints
 - Documentados via Swagger: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
@@ -286,8 +279,6 @@ O arquivo Swagger/OpenAPI gerado (`openapi.json`) está disponível na raiz do p
 - Endpoint documentado no Swagger, detalhando retorno e finalidade.
 
 > **Dica:** Auditoria e logging centralizado são diferenciais para projetos corporativos, facilitando rastreabilidade e conformidade.
-
-## Collection Postman
 
 ## Diagrama
 ![Diagrama](docs/diagrama.png)
@@ -355,11 +346,6 @@ Arquivo de configuração Prometheus: `prometheus.yml` já incluso.
 > **Comentário:** Teste de carga demonstra preocupação com performance e escalabilidade.
 
 
-## Observações
-- Projeto pronto para avaliação, seguindo boas práticas REST, documentação, testes, automação e agora com balanceamento de carga via NGINX e múltiplas réplicas Docker.
-- Resiliente contra falhas e sobrecarga, com cache, circuit breaker, rate limiter e load balance.
-
-> **Dica:** O projeto foi desenhado para ser facilmente avaliado, mantido e evoluído, seguindo as melhores práticas do mercado e recomendações de gestores.
 
 ## Padrões de Projeto
 - O cálculo das parcelas de amortização (SAC/PRICE) foi refatorado usando os padrões Strategy + Factory, facilitando extensibilidade e manutenção.
