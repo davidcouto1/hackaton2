@@ -45,6 +45,25 @@ java -jar target\hackaton2-1.0-SNAPSHOT.jar
 ```
 
 ### Rodando com Docker
+Para rodar o projeto em um container Docker individual:
+
+1. Gere o JAR atualizado:
+	```powershell
+	mvn clean package
+	mvn spring-boot:repackage
+	```
+2. Construa a imagem Docker:
+	```powershell
+	docker build -t hackaton2 .
+	```
+3. Execute o container:
+	```powershell
+	docker run -p 8080:8080 hackaton2
+	```
+
+> **Observação:** Sempre gere o JAR antes de buildar a imagem para garantir que o código está atualizado.
+
+### Rodando com Docker
 ```powershell
 docker build -t hackaton2 .
 docker run -p 8080:8080 hackaton2
@@ -56,16 +75,36 @@ mvn spring-boot:repackage
 ```
 O arquivo JAR será criado na pasta `target` e utilizado pelo Docker. Certifique-se de executar esses comandos sempre que fizer alterações no código.
 
-### Rodando com Docker Compose (com Load Balance)
-```powershell
-docker-compose up
-```
-O ambiente sobe múltiplas réplicas do app e um NGINX como proxy reverso para balanceamento de carga.
+
+### Rodando com Docker Compose (ambiente completo e balanceamento de carga)
+Para subir todos os serviços integrados (aplicação, banco, NGINX, Prometheus, Grafana, Zipkin):
+
+1. Gere o JAR atualizado:
+	```powershell
+	mvn clean package
+	mvn spring-boot:repackage
+	```
+2. (Recomendado) Construa as imagens:
+	```powershell
+	docker-compose build
+	```
+3. Suba o ambiente completo:
+	```powershell
+	docker-compose up
+	```
+
+O ambiente irá:
+- Subir múltiplas réplicas do app
+- Configurar NGINX como proxy reverso para balanceamento de carga
+- Integrar banco SQL Server, Prometheus, Grafana, Zipkin
+
 O acesso à API será feito via `http://localhost:8080` (NGINX distribui as requisições entre as instâncias).
 
 Arquivos relevantes:
 - `docker-compose.yml`: define réplicas e serviços
 - `nginx.conf`: configuração do balanceamento
+
+> **Dica:** Sempre execute `docker-compose build` após alterações no código para garantir que as imagens estejam atualizadas.
 
 > **Dica:** O uso de Docker Compose e NGINX demonstra preocupação com escalabilidade e alta disponibilidade, requisitos comuns em ambientes corporativos.
 
