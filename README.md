@@ -48,50 +48,40 @@ java -jar target\hackaton2-1.0-SNAPSHOT.jar
 Para rodar o projeto em um container Docker individual:
 
 1. Gere o JAR atualizado:
-	```powershell
-	mvn clean package
-	mvn spring-boot:repackage
-	```
+   ```powershell
+   mvn clean package
+   ```
+   O arquivo JAR será criado na pasta `target` e utilizado pelo Docker. Certifique-se de executar esse comando sempre que fizer alterações no código.
+
 2. Construa a imagem Docker:
-	```powershell
-	docker build -t hackaton2 .
-	```
+   ```powershell
+   docker build -t hackaton2 .
+   ```
+
 3. Execute o container:
-	```powershell
-	docker run -p 8080:8080 hackaton2
-	```
+   ```powershell
+   docker run -p 8080:8080 hackaton2
+   ```
 
 > **Observação:** Sempre gere o JAR antes de buildar a imagem para garantir que o código está atualizado.
-
-### Rodando com Docker
-```powershell
-docker build -t hackaton2 .
-docker run -p 8080:8080 hackaton2
-```
-> **Atenção:** Antes de rodar os comandos acima, é necessário gerar o JAR do projeto com:
-```
-mvn clean package
-mvn spring-boot:repackage
-```
-O arquivo JAR será criado na pasta `target` e utilizado pelo Docker. Certifique-se de executar esses comandos sempre que fizer alterações no código.
-
 
 ### Rodando com Docker Compose (ambiente completo e balanceamento de carga)
 Para subir todos os serviços integrados (aplicação, banco, NGINX, Prometheus, Grafana, Zipkin):
 
 1. Gere o JAR atualizado:
-	```powershell
-	mvn clean package
-	mvn spring-boot:repackage
-	```
+   ```powershell
+   mvn clean package
+   ```
+   O arquivo JAR será criado na pasta `target` e utilizado pelo Docker. Certifique-se de executar esse comando sempre que fizer alterações no código.
+
 2. (Recomendado) Construa as imagens:
-	```powershell
-	docker-compose build
-	```
+   ```powershell
+   docker-compose build
+   ```
 3. Suba o ambiente completo:
-	```powershell
-	docker-compose up
-	```
+   ```powershell
+   docker-compose up
+   ```
 
 O ambiente irá:
 - Subir múltiplas réplicas do app
