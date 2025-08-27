@@ -46,6 +46,13 @@ public class RelatorioController {
                 ));
         }
         var resultado = simulacaoRepository.buscarPorProdutoEDia(data);
+        if (resultado == null || resultado.isEmpty()) {
+            return ResponseEntity.ok(Map.of(
+                "dataReferencia", data,
+                "simulacoes", Collections.emptyList(),
+                "mensagem", "Nenhum registro encontrado para a data selecionada."
+            ));
+        }
         return ResponseEntity.ok(Map.of("dataReferencia", data, "simulacoes", resultado));
     }
 }

@@ -62,6 +62,9 @@ public class TelemetriaController {
         java.util.Map<String, Object> envelope = new java.util.HashMap<>();
         envelope.put("dataReferencia", dataRef);
         envelope.put("listaEndpoints", listaEndpoints);
+        if (listaEndpoints == null || listaEndpoints.isEmpty()) {
+            envelope.put("mensagem", "Nenhum dado de telemetria encontrado para a data selecionada.");
+        }
         return envelope;
     }
 }

@@ -71,11 +71,14 @@
       "request": {
         "method": "GET",
         "url": {
-          "raw": "http://localhost:8080/api/telemetria",
+          "raw": "http://localhost:8080/api/telemetria?data=2025-08-25",
           "protocol": "http",
           "host": ["localhost"],
           "port": "8080",
-          "path": ["api", "telemetria"]
+          "path": ["api", "telemetria"],
+          "query": [
+            { "key": "data", "value": "2025-08-25" }
+          ]
         }
       }
     }
